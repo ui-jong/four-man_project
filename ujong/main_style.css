@@ -1,0 +1,88 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+main {
+    background-color: beige;
+    width: 1200px;
+    margin: auto;
+}
+
+
+
+.main_banner_container { /*main banner부모*/
+    margin: 0;
+}
+
+.main_banner { /*메인배너+배너이동요소 부모*/
+    height: 100vh;
+    width: calc(100vw - 19px);
+    background-color: antiquewhite;
+}
+
+.main_banner_img { /*메인배너 이미지 클래스*/
+    background-image: url(https://i.namu.wiki/i/yYpbOREazswQsw5QR0AtyQUOxplVAgMCzqyw-VJHa3mF30Q7RBaWj3RwrV3AVKNdr89oZinenl976Kv2osaaSw.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: inline-block;
+    height: 100vh;
+    width: calc(100vw - 19px);
+}
+
+/* 메인배너 네비게이터 */
+
+.main_navigator {
+    margin-top: -100px;
+    margin-left: 30px;
+    font-size: 0;
+}
+
+.main_navigator li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.main_navigator a {
+    display: inline-block;
+    background-color: darkgray;
+    height: 50px;
+    width: 30px;
+}
+
+/* 이 달의 공연 */
+
+#month_banner {
+    height: 800px;
+    background-color:tan;
+    
+}
+
+#month_banner div:nth-of-type(1) {
+float: left;
+    height: calc(800px - 32px);
+    width: 50%;
+    background-color:coral;
+}
+#month_banner div:nth-of-type(2) {
+    display: inline-block;
+    height: calc(800px - 32px);
+    width: 50%;
+    background-color: chocolate;
+    overflow-y: auto;
+}
+
+.month_sub {
+    display: block;
+    height: 300px;
+    width: 200px;
+    margin: 10px;
+    background-color: aliceblue;
+}
+
+#announce {
+    height: 600px;
+    background-color: lawngreen;
+}
