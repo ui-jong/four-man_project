@@ -1,45 +1,62 @@
-*  {
-    padding: 0;
+*{
     margin: 0;
+    padding: 0;
     list-style: none;
+    scroll-behavior: smooth;
 }
-main{
-    width: 80vw;
-    /* margin:auto; */
-    margin: 0 10%;
+hr {
+    margin : 10px;
 }
-main img{
-    width: 100%;
-}
-aside{
-    /* background-color: aqua; */
-    margin-top: 5vh;
-    position: fixed;
-    vertical-align: top;
-    margin-left: 10px;
-    display: inline-block;
-    width: 30vw;
-}
-.kr_year{
-    background-color: antiquewhite;
-}
-.kr_day{
-    background-color: lightcoral;
-}
-    
-.kr_contents {
-    display: inline-block;
-    width: 60%;
-    /* margin : 0px 5%; */
-    padding: 0px 5%;
-    border-right: 1px solid gray;
+header {
+    text-align: center;
+    height: 10vh;
 }
 
-aside table {
+.kr_poster {
+    text-align: center;
+}
+
+.kr_poster img { 
+    height: 70vh;
+    margin: auto; 
+    transition: transform 2s; 
+}
+
+/* 포스터 호버시 확대되며 주변 블러처리 (미구현) */
+/* .kr_poster img:hover {
+    transform: scale(1.3);
+    outline:2000px solid black;
+} */
+
+nav{
+    text-align: center;
+}
+
+main {
+    display: inline-block;
+    width: calc(1024px * 0.6);
+    text-align: left;
+}
+main img {
+    width: 100%;
+}
+
+aside{
+    text-align: left;
+    display: inline-block;
+    position: sticky;
+    vertical-align: top;
+
+    /* width: 30vw;
+    max-width: 410px;
+    min-width: 250px; */
+}
+
+.kr_calender {
     margin: auto;
     border-collapse: collapse;
 }
-aside th, aside td {
+.kr_calender th, .kr_calender td {
     border: none;
     width: 38px;
     height: 36px;
@@ -47,15 +64,8 @@ aside th, aside td {
     text-align: center;
 }
 
-.information {
-    width: 100%;
-}
-main table {
-    margin: auto;
-}
-
 /* 활성화된 셀 */
-button.active {
+button.kr_active {
     display: inline-block;
     height: 100%;
     width: 100%;
@@ -63,24 +73,43 @@ button.active {
     background-color: pink;
     border: none;
     cursor: pointer;
-}
-.kr_contents{
-    /* border-right: 5px solid black; */
+    transition: all 0.2s ease;
 }
 
 /* 활성화된 셀에 마우스를 올렸을 때 강조 */
-button.active:hover {
+button.kr_active:hover {
     background-color: red;
     color: white;
     font-weight: bold;
+    outline: 2px solid red;
 }
 
 /* 비활성화된 셀 */
-button.inactive {
+button.kr_inactive {
     display: inline-block;
     height: 100%;
     width: 100%;
     color: gray;
     background-color: lightgray;
     border: none;
+}
+.kr_top_button {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAYFBMVEX///9RUVFKSkpOTk5mZmb19fX5+fnZ2dlkZGRFRUXd3d1oaGhHR0dCQkLb29vf39+qqqqFhYWysrJ9fX3t7e1ubm5UVFS+vr6IiIjn5+fGxsaPj4+Xl5e3t7daWlqfn58V8fP7AAAEkUlEQVR4nO2c63aqMBSENakiFsRL1d5O+/5veUSLCnJJJglJXPOt/i1h1p7J3oGFkwkhhBBCCCGEEEIIIYQQQgghhBBCCCGEEEJItBTbzX5xYr/ZLn3fiwPm22meCXlGZPlhO/d9R5Y5/qRyeodMD0ff92SVTV7Td9aYb3zflT3m+6ypryTbP4tTZy+iTeB0KhYz3/dmhflrh8CTxJdnkNgjsJQYv1FnfQKfoYoDAuOXOO/aZJ7FqL0ZfAaJnW2iITHapjGYwavE1zglKlm0qmKMRtUQGGcWlS1aSYzNqAptIm6JWhatJMZkVE2L/kmMqGlAAmMyqnYGb1WMw6hABm9VjEGi4qjWVcXwjQpm8FbF0CUaWLSqYthGNRYYehUNLRq+RLhNxCLRgkUriWFm0ahNNCQG2TSsZPAqMUCjWsrgVWJwTcNaBq8SA8uixQxeJQaVResVPEsMKItOBIaURau7aE1iIFV0JjAUiZbbRFOif6M6ymA4Eh20iYZEz03DYQavEr2+tnFs0T+JHpvGKAJ9ZtF5Bm8S/RjVaZsIQeJIFq0kjm9U0KLy/IdIHLuKYJuQclnIKCSCGZQymUwSUOKoTQPMoMxX5X+vUrCK40mcLTCBorj8f5GBVRzLqHAGk+oKK9CoIw1wqEVFcrtGIgLOIpzB2hcISzSL7quI9kG5ql9nCVbRuUSTNlEHbRqOJaIWzR4EnrYbcEd12jRQi2ZF29UKMIsOm4Z5m6iDNg1nRrWXwYrABjhUYL7qvmZQAxw8qvV+iVegrd++UVGB3Ra9EEzTQC0qBgQGM8ChbSJvbRN1ghjgYIv2bDJ3Ev0bde4ogxVwFm0ZFc1gqlTBEs8DHGrR9lGtHa+nfldtoo7PU7+FE70KcBaNBe5snOhVAAe4bGcocJtDAvtHtXbAU3++NRL4Bi2qmcEK0KjyzUThd+uH9ENLtp3olSRCVcx+DQTOEY/KVKNN1MEGuMygKx5TQKDaqNYO1DTST3zBd/2NFMxgBZJF8YWv96O9XO+JXkmivlHlD7zaTH8xnVGtHWCAE3AQtXuFoUUv6GdRwP3iQzOG2qNaO9pNI4MVatYQGNXa0W0aAh+/9QSatImGRL0qSnylV42FrGSwQqtpyD2+0K96EGVmrYIlicaOKgzGtpXy1GYwqrWj8drGKP4LxWUsZrBCuWlIo0PwUa2IVjNYoZrF3OyH3/YqqxiPau2onfpN9pmSQmGvgU70SourbDfCdAMY9qkTi15QMKqhR0vWAxItjWrtDA5w+drCKv0SlV6+4AwMcFYEniT2nPQdtIk6va9tLAnsq6LDDFb0ZNGawG6JGi9fcDpf21gU2CXRwolehY4BzqrA8tn34yriMNLPAS+nj11ZGj7rfuRTNldJ9x+W1+jkY9/c7IQweITYwdsmv2tOMrNskgHW+V0apch3Ro/yuyjeD+n555xFli3WI38dMFsvsr/F08O7s/zPkvXXZrf5/jfKDtOk+Pd9WvxrnYTwYSkhhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEKIP/4D3505bndtyS8AAAAASUVORK5CYII=);
+    background-position: center;
+    background-size: cover;
+    margin: 20px;
+    border: 2px solid black;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+.kr_top_button:hover {
+    width: 55px;
+    height: 55px;
+    margin: 17.5px;
 }
