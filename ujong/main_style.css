@@ -19,11 +19,12 @@ main {
 .main_banner { /*메인배너+배너이동요소 부모*/
     height: 100vh;
     width: calc(100vw - 19px);
+    min-width: 1200px;
     background-color: antiquewhite;
 }
 
 .main_banner_img { /*메인배너 이미지 클래스*/
-    background-image: url(https://i.namu.wiki/i/yYpbOREazswQsw5QR0AtyQUOxplVAgMCzqyw-VJHa3mF30Q7RBaWj3RwrV3AVKNdr89oZinenl976Kv2osaaSw.gif);
+    background-image: url(https://res.klook.com/image/upload/u_activities:upgjtxp3nwtivafwiokg,h_1.0,ar_960:460,c_scale,e_blur:10000/c_fill,w_1265,h_712/q_80/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/upgjtxp3nwtivafwiokg.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -63,13 +64,13 @@ main {
 #month_banner div:nth-of-type(1) {
 float: left;
     height: calc(800px - 32px);
-    width: 50%;
+    width: 40%;
     background-color:coral;
 }
 #month_banner div:nth-of-type(2) {
     display: inline-block;
     height: calc(800px - 32px);
-    width: 50%;
+    width: 60%;
     background-color: chocolate;
     overflow-y: auto;
 }
