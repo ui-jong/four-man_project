@@ -30,6 +30,9 @@ aside{
 .kr_contents {
     display: inline-block;
     width: 60%;
+    /* margin : 0px 5%; */
+    padding: 0px 5%;
+    border-right: 1px solid gray;
 }
 
 aside table {
@@ -60,6 +63,9 @@ button.active {
     background-color: pink;
     border: none;
     cursor: pointer;
+}
+.kr_contents{
+    /* border-right: 5px solid black; */
 }
 
 /* 활성화된 셀에 마우스를 올렸을 때 강조 */
