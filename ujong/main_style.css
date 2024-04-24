@@ -27,8 +27,7 @@ main {
 }
 
 
-.main_banner_img { /*메인배너 이미지 클래스*/
-    background-image: url(https://res.klook.com/image/upload/u_activities:upgjtxp3nwtivafwiokg,h_1.0,ar_960:460,c_scale,e_blur:10000/c_fill,w_1265,h_712/q_80/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/upgjtxp3nwtivafwiokg.webp);
+.main_banner_default { /*메인배너 이미지 클래스*/
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -38,6 +37,13 @@ main {
     /* float: left; */
 }
 
+.img1 {
+    background-image: url(https://res.klook.com/image/upload/u_activities:upgjtxp3nwtivafwiokg,h_1.0,ar_960:460,c_scale,e_blur:10000/c_fill,w_1265,h_712/q_80/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/upgjtxp3nwtivafwiokg.webp);
+}
+
+.img2 {
+    background-image: url(https://image.yes24.com/themusical/fileStorage/ThemusicalAdmin/Media/Image/20190502061224be477586b9a54afebf7abde93ef1026a.jpg);
+} 
 /* 메인배너 네비게이터 */
 
 .main_navigator {
