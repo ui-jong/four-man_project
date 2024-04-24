@@ -24,15 +24,14 @@ main {
     display: flex;
     flex-direction: row;
     width: 300vw;
-    animation: slide 30s infinite;
-    /* justify-content: flex-end; */
+    animation: silde 5s infinite;
 }
 
 @keyframes slide {
-    0% { transform: translateX(0); }
-    33% { transform: translateX(calc(-100vw + 19px)); }   /* 첫 번째 슬라이드 크기만큼 이동 */
-    66% { transform: translateX(calc(-200vw + 38px)); }   /* 첫 번째 슬라이드 크기만큼 이동 */
-    100% { transform: translateX(0); }       /* 원래 위치로 이동 */
+    0% { transform: translateX(0);  }
+    33% { transform: translateX(calc(-100vw + 19px)); }   
+    66% { transform: translateX(calc(-200vw + 38px)); }   
+    100% { transform: translateX(0); }       
 }
 
 .main_banner_default { /*메인배너 이미지 클래스*/
@@ -55,6 +54,8 @@ main {
 .img3 {
     background-image: url(https://lh5.googleusercontent.com/proxy/GdVUy0eZKngThZ7yQaRPblPJsIaPczsYxSLet_b-3K2HaBV7F5GXcQH4ccV4vXDJl3ha9nrxrQ1iwuL42Tn2YRf1Z2OWreq6KfHXZDaXYEyAxt19EM7P3foxaZ80-LucN5UA1eDiwE8y-MFJ6GQcnjIRbPWEXn3haLlGVJXmZBmo3LJH);
 }
+
+
 
 /* 메인배너 네비게이터 */
 
