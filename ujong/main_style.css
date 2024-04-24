@@ -13,28 +13,35 @@ main {
 
 
 
-.main_banner { /*메인배너+배너이동요소 부모*/
+.main_banner { /*main_banner_container부모*/
     height: 100vh;
     width: calc(100vw - 19px);
     /* min-width: 1200px; */
     background-color: antiquewhite;
 }
 
-#main_banner_container { /*a링크 직접 담고있는 li*/
+#main_banner_container { /*메인배너 이미지 집합 컨테이너*/
     display: flex;
-    /* overflow-x: scroll; */
-    margin: 0;
+    flex-direction: row;
+    width: 300vw;
+    animation: slide 30s infinite;
+    /* justify-content: flex-end; */
 }
 
+@keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(calc(-100vw + 19px)); }   /* 첫 번째 슬라이드 크기만큼 이동 */
+    66% { transform: translateX(calc(-200vw + 38px)); }   /* 첫 번째 슬라이드 크기만큼 이동 */
+    100% { transform: translateX(0); }       /* 원래 위치로 이동 */
+}
 
 .main_banner_default { /*메인배너 이미지 클래스*/
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     display: inline-block;
     height: 100vh;
     width: calc(100vw - 19px);
-    /* float: left; */
 }
 
 .img1 {
@@ -44,6 +51,11 @@ main {
 .img2 {
     background-image: url(https://image.yes24.com/themusical/fileStorage/ThemusicalAdmin/Media/Image/20190502061224be477586b9a54afebf7abde93ef1026a.jpg);
 } 
+
+.img3 {
+    background-image: url(https://lh5.googleusercontent.com/proxy/GdVUy0eZKngThZ7yQaRPblPJsIaPczsYxSLet_b-3K2HaBV7F5GXcQH4ccV4vXDJl3ha9nrxrQ1iwuL42Tn2YRf1Z2OWreq6KfHXZDaXYEyAxt19EM7P3foxaZ80-LucN5UA1eDiwE8y-MFJ6GQcnjIRbPWEXn3haLlGVJXmZBmo3LJH);
+}
+
 /* 메인배너 네비게이터 */
 
 .main_navigator {
