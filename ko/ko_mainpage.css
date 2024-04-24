@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../image/ass.jpeg);
+}
+
+header {
+  background-color: transparent; /* 초기 투명한 배경색 */
+  color: #ffffff0a; /* 초기 투명한 텍스트 색상 */
+  padding: 20px 0;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s; /* 배경색과 텍스트 색상 변화에 대한 transition 효과 설정 */
+}
+
+header:hover {
+  background-color: #333333; /* 마우스가 올라갔을 때의 배경색 */
+  color: #fff; /* 마우스가 올라갔을 때의 텍스트 색상 */
+}
+
+header h1 {
+  margin-bottom: 10px;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+li img {
+  width: 80px; /* 원하는 크기로 조정 */
+}
+
+main {
+  padding: 20px;
+}
+
+.highlight, .schedule {
+  margin-bottom: 20px;
+}
+
+footer {
+  background-color: #333333;
+  color: #ffffff79;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
