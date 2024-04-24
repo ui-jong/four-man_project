@@ -12,16 +12,20 @@ main {
 
 
 
-.main_banner_container { /*main banner부모*/
-    margin: 0;
-}
 
 .main_banner { /*메인배너+배너이동요소 부모*/
     height: 100vh;
     width: calc(100vw - 19px);
-    min-width: 1200px;
+    /* min-width: 1200px; */
     background-color: antiquewhite;
 }
+
+#main_banner_container { /*a링크 직접 담고있는 li*/
+    display: flex;
+    /* overflow-x: scroll; */
+    margin: 0;
+}
+
 
 .main_banner_img { /*메인배너 이미지 클래스*/
     background-image: url(https://res.klook.com/image/upload/u_activities:upgjtxp3nwtivafwiokg,h_1.0,ar_960:460,c_scale,e_blur:10000/c_fill,w_1265,h_712/q_80/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/upgjtxp3nwtivafwiokg.webp);
@@ -31,6 +35,7 @@ main {
     display: inline-block;
     height: 100vh;
     width: calc(100vw - 19px);
+    /* float: left; */
 }
 
 /* 메인배너 네비게이터 */
@@ -67,6 +72,7 @@ float: left;
     width: 40%;
     background-color:coral;
 }
+
 #month_banner div:nth-of-type(2) {
     display: inline-block;
     height: calc(800px - 32px);
