@@ -1,42 +1,39 @@
-*{
+* {
     margin: 0;
     padding: 0;
     list-style: none;
     scroll-behavior: smooth;
 }
+
 hr {
-    margin : 10px;
+    margin: 10px;
 }
+
 header {
     text-align: center;
     height: 10vh;
 }
 
-/* .kr_back {
-    text-align: center;
-} */
+
 
 .kr_poster {
     text-align: center;
 }
 
-.kr_poster img { 
+.kr_poster img {
     height: 85vh;
-    margin: auto; 
-    transition: transform 2s; 
+    transition: transform 2s;
 }
 
-/* .kr_next {
-    text-align: center;
-} */
 
-/* 포스터 호버시 확대되며 주변 블러처리 (미구현) */
-/* .kr_poster img:hover {
+
+포스터 호버시 확대되며 주변 블러처리 (미구현)
+.kr_poster img:hover {
     transform: scale(1.3);
     outline:2000px solid black;
-} */
+}
 
-nav{
+nav {
     text-align: center;
     min-width: 800px;
 }
@@ -52,7 +49,7 @@ main table {
     width: 100%;
 }
 
-main table li{
+main table li {
     margin: 10px 0px;
 }
 
@@ -64,13 +61,13 @@ main img {
     white-space: pre-line;
 }
 
-aside{
+aside {
     margin-top: 50px;
     /* background-color: antiquewhite; */
     text-align: left;
     display: inline-block;
-    position: sticky ;
-    top : 80px;
+    position: sticky;
+    top: 80px;
     vertical-align: top;
 
     /* width: 30vw;
@@ -82,7 +79,9 @@ aside{
     margin: auto;
     border-collapse: collapse;
 }
-.kr_calender th, .kr_calender td {
+
+.kr_calender th,
+.kr_calender td {
     border: none;
     width: 50px;
     height: 48px;
@@ -90,7 +89,7 @@ aside{
     text-align: center;
 }
 
-.kr_calender th{
+.kr_calender th {
     background-color: antiquewhite;
     /* border: 3px solid white; */
 }
@@ -104,9 +103,16 @@ aside{
     border: 1px solid black;
 }
 
-/* 활성화된 셀 */
-button.kr_active {
+#kr_sellect1,
+#kr_sellect2,
+#kr_sellect3,
+#kr_sellect4 {
+    display: none;
+}
+
+.kr_calender tr span{
     display: inline-block;
+    line-height: 50px;
     height: 100%;
     width: 100%;
     color: black;
@@ -116,13 +122,30 @@ button.kr_active {
     transition: all 0.2s ease;
 }
 
-/* 활성화된 셀에 마우스를 올렸을 때 강조 */
-button.kr_active:hover {
+#kr_sellect1:checked + label span,
+#kr_sellect2:checked + label span,
+#kr_sellect3:checked + label span,
+#kr_sellect4:checked + label span{
     background-color: red;
     color: white;
     font-weight: bold;
     outline: 4px solid red;
 }
+
+.kr_calender tr span:hover{
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    outline: 4px solid red;
+}
+
+/* 활성화된 셀에 마우스를 올렸을 때 강조 */
+/* button.kr_active:hover {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    outline: 4px solid red;
+} */
 
 /* 비활성화된 셀 */
 button.kr_inactive {
@@ -133,6 +156,9 @@ button.kr_inactive {
     background-color: lightgray;
     border: none;
 }
+
+
+
 .kr_top_button {
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAYFBMVEX///9RUVFKSkpOTk5mZmb19fX5+fnZ2dlkZGRFRUXd3d1oaGhHR0dCQkLb29vf39+qqqqFhYWysrJ9fX3t7e1ubm5UVFS+vr6IiIjn5+fGxsaPj4+Xl5e3t7daWlqfn58V8fP7AAAEkUlEQVR4nO2c63aqMBSENakiFsRL1d5O+/5veUSLCnJJJglJXPOt/i1h1p7J3oGFkwkhhBBCCCGEEEIIIYQQQgghhBBCCCGEEEJItBTbzX5xYr/ZLn3fiwPm22meCXlGZPlhO/d9R5Y5/qRyeodMD0ff92SVTV7Td9aYb3zflT3m+6ypryTbP4tTZy+iTeB0KhYz3/dmhflrh8CTxJdnkNgjsJQYv1FnfQKfoYoDAuOXOO/aZJ7FqL0ZfAaJnW2iITHapjGYwavE1zglKlm0qmKMRtUQGGcWlS1aSYzNqAptIm6JWhatJMZkVE2L/kmMqGlAAmMyqnYGb1WMw6hABm9VjEGi4qjWVcXwjQpm8FbF0CUaWLSqYthGNRYYehUNLRq+RLhNxCLRgkUriWFm0ahNNCQG2TSsZPAqMUCjWsrgVWJwTcNaBq8SA8uixQxeJQaVResVPEsMKItOBIaURau7aE1iIFV0JjAUiZbbRFOif6M6ymA4Eh20iYZEz03DYQavEr2+tnFs0T+JHpvGKAJ9ZtF5Bm8S/RjVaZsIQeJIFq0kjm9U0KLy/IdIHLuKYJuQclnIKCSCGZQymUwSUOKoTQPMoMxX5X+vUrCK40mcLTCBorj8f5GBVRzLqHAGk+oKK9CoIw1wqEVFcrtGIgLOIpzB2hcISzSL7quI9kG5ql9nCVbRuUSTNlEHbRqOJaIWzR4EnrYbcEd12jRQi2ZF29UKMIsOm4Z5m6iDNg1nRrWXwYrABjhUYL7qvmZQAxw8qvV+iVegrd++UVGB3Ra9EEzTQC0qBgQGM8ChbSJvbRN1ghjgYIv2bDJ3Ev0bde4ogxVwFm0ZFc1gqlTBEs8DHGrR9lGtHa+nfldtoo7PU7+FE70KcBaNBe5snOhVAAe4bGcocJtDAvtHtXbAU3++NRL4Bi2qmcEK0KjyzUThd+uH9ENLtp3olSRCVcx+DQTOEY/KVKNN1MEGuMygKx5TQKDaqNYO1DTST3zBd/2NFMxgBZJF8YWv96O9XO+JXkmivlHlD7zaTH8xnVGtHWCAE3AQtXuFoUUv6GdRwP3iQzOG2qNaO9pNI4MVatYQGNXa0W0aAh+/9QSatImGRL0qSnylV42FrGSwQqtpyD2+0K96EGVmrYIlicaOKgzGtpXy1GYwqrWj8drGKP4LxWUsZrBCuWlIo0PwUa2IVjNYoZrF3OyH3/YqqxiPau2onfpN9pmSQmGvgU70SourbDfCdAMY9qkTi15QMKqhR0vWAxItjWrtDA5w+drCKv0SlV6+4AwMcFYEniT2nPQdtIk6va9tLAnsq6LDDFb0ZNGawG6JGi9fcDpf21gU2CXRwolehY4BzqrA8tn34yriMNLPAS+nj11ZGj7rfuRTNldJ9x+W1+jkY9/c7IQweITYwdsmv2tOMrNskgHW+V0apch3Ro/yuyjeD+n555xFli3WI38dMFsvsr/F08O7s/zPkvXXZrf5/jfKDtOk+Pd9WvxrnYTwYSkhhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEKIP/4D3505bndtyS8AAAAASUVORK5CYII=);
     background-position: center;
@@ -148,8 +174,52 @@ button.kr_inactive {
     border-radius: 50%;
     transition: all 0.2s ease;
 }
+
 .kr_top_button:hover {
     width: 55px;
     height: 55px;
     margin: 17.5px;
+    cursor: pointer;
 }
+
+.kr_reservation{
+    display: block;
+}
+
+/* ============================================== */
+/* input:checked .kr_date {
+    display: block;
+} */
+
+/* button.kr_reservation {
+    display: block;
+    margin: auto;
+    width: 50%;
+    height: 50px;
+    cursor: pointer;
+    margin-top: 30px;
+} */
+
+/* .kr_date {
+    display: none;
+}
+
+#date:checked .kr_date h3 {
+    margin-top: 20px;
+}
+
+.kr_date table {
+    background-color: pink;
+    width: 90%;
+    line-height: 40px;
+    margin: auto;
+}
+
+.kr_date td {
+    background-color: white;
+    cursor: pointer;
+    display: inline-block;
+    width: 45%;
+    border: none;
+    text-align: center;
+} */
