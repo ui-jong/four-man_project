@@ -3,25 +3,33 @@
     padding: 0;
     list-style: none;
 }
-nav{
-    text-align: center;
+
+nav {
+    /* text-align: center; */
 }
+
+.asdf ul li {
+    /* margin-left: 30%; */
+}
+
 main {
-    text-align: center;
-    margin: 0 20%;
+    /* text-align: center; */
+    margin: 10px;
 }
 
 nav div:nth-child(1),
 nav div ul,
 nav div div,
 nav div,
-.detail_search div {
+.detail_search div ul li {
     display: inline-block;
 }
 
 /* ========================================================== */
 /* nav */
-
+.sb_hr{
+    margin-top: 10px; ;
+}
 
 /* 검색 다음에 돋보기 버튼 */
 .arrow button::after {
@@ -34,6 +42,7 @@ nav>div>a::after {
     content: "\f124";
     font-family: fontawesome;
 }
+
 /*  */
 nav>div:nth-child(2) {
     width: 200px;
@@ -51,51 +60,97 @@ nav>div:nth-child(1) {
 
 /* 자리는 사이즈 정해지고 나서 바꾸기 */
 .sb_upper {
-    position: absolute;
+    /* position: absolute;
     right: 30vw;
-    top: 26vh;
+    top: 26vh; */
 }
 
-/* 상세검색 누르기 전 안보이는거 */
-.detail_search {
-    /* display: none; */
-}
-
-/* 상세검색 누르면 보이는 구현안되는거 */
-.detail_search:target {
-    /* display: block; */
-}
-/* =================================================== */
-/* label, input */
-
-label{
-    /* width: 50px;
-    height: 10px; */
-}
-
-.detail_search>div, #dtsearch{
+/* 상세검색의 체크박스 / 상세검색의 내용들 안보이게 하기 */
+.detail_search>div,
+#dtsearch {
     display: none;
 }
-.detail_search>input:checked + label+div{
+
+/* 상세검색을 눌렀을 때 밑에 있는 것들이 보이게 하는 것 */
+.detail_search>input:checked+label+div {
     display: inline-block;
 }
 
-.detail_search{
-    /* margin: auto; */
-    /* width: 80vh; */
-    /* height: 5%; */
+/* 상세검색 정보들의 외모 */
+.detail_search div ul li span {
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid;
+    border-radius: 50%;
+    margin: auto;
+    text-align: center;
 }
+
+
+
+/* ================================================= */
+/* 클릭했을 때 배경이 변화하는 것 */
+/* 상세검색의 체크박스를 안보이게 하는 것 */
+#concert1,
+#concert2,
+#genre1,
+#genre2,
+#genre3,
+#genre4,
+#status1,
+#status2,
+#hall1,
+#hall2,
+#hall3 {
+    display: none;
+}
+
+/* 상세검색의 내용을 인라인블럭으로 바꾸는 것 */
+.asdf>ul>li span {
+    display: inline-block;
+}
+
+/* 상세검색의 내용을 호버했을 때 변하게 하는 것 */
+.asdf>ul>li span:hover {
+    background-color: red;
+}
+
+/* 상세검색의 내용을 클릭했을 때 바뀌는 정보 */
+#concert1:checked+label span,
+#concert2:checked+label span,
+#genre1:checked+label span,
+#genre2:checked+label span,
+#genre3:checked+label span,
+#genre4:checked+label span,
+#status1:checked+label span,
+#status2:checked+label span,
+#hall1:checked+label span,
+#hall2:checked+label span,
+#hall3:checked+label span {
+    background-color: aqua;
+}
+
+
+
+
+
 
 /* =================================================== */
 
+.asdf {
+    width: 1000px;
+    height: 80px;
+}
 
 .detail_search ul {
-    width: 300px;
-    height: 30px;
+    /* width: 600px; */
+    /* height: 50px; */
+    /* height: 30px; */
     /* font-size: .5rem; */
     /* white-space: nowrap; */
-    line-height: 30px;
-    margin: auto;
+    /* line-height: 30px; */
+    /* margin: auto; */
 }
 
 
@@ -115,3 +170,7 @@ img {
     width: 10vw;
     height: 20vh;
 }
+
+
+/* =========================================== */
+
