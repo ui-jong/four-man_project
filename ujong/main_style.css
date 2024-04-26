@@ -7,8 +7,9 @@
 
 main {
     background-color: beige;
-    width: 80vw;
-    min-width: 1600px;
+    box-sizing: border-box;
+    width: calc(100vw-19px);
+    min-width: 1400px;
     margin: auto;
 }
 
@@ -17,14 +18,17 @@ main {
 
 .main_banner { /*main_banner_container부모*/
     height: 100vh;
-    width: calc(100vw - 19px);
-    /* min-width: 1200px; */
+    width: calc(100vw-19px);
     background-color: antiquewhite;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    font-size: 0;
 }
 
 #main_banner_container { /*메인배너 이미지 집합 컨테이너*/
-    display: flex;
+    flex-flow: row wrap;
     flex-direction: row;
+    height: 100vh;
     width: 300vw;
 }
 
@@ -35,7 +39,7 @@ main {
     background-size: cover;
     background-attachment: fixed;
     display: inline-block;
-    height: 100vh;
+    height: 100%;
     width: calc(100vw - 19px);
 }
 
@@ -73,19 +77,23 @@ main {
     width: 30px;
 }
 
+
+
 /* 이 달의 공연 */
 
 #month_banner {
     height: 100vh;
-    background-color:tan;
+    /* background-color:tan; */
+    background-color: dimgray;
     position: relative;
+    padding: 0 15vw 0 15vw;
 }
 
 #month_banner_main {
     float: left;
     /* position: absolute; */
-    height: calc(100% - 32px);
-    width: 30%;
+    height: 70%;
+    width: 40%;
     background-color:azure;
 }
 
@@ -101,20 +109,19 @@ main {
 #month_banner_sub {
     display: inline-block;
     box-sizing: border-box;
-    height: calc(100% - 32px);
-    width: 70%;
+    height: calc(100%);
+    width: 60%;
+    padding-left: 10%;
     background-color: rgb(68, 67, 67);
     overflow-y: auto;
     scrollbar-width: none;
-    position: relative;
-    /* text-align: justify; */
 }
 
 .month_sub {
     position: relative;
     display: inline-block;
-    height: 500px;
-    width: 400px;
+    height: 400px;
+    width: 85%;
     box-sizing: border-box;
     background-color: aliceblue;
     position: relative;
@@ -160,9 +167,22 @@ main {
 
 /* 공지 */
 
-
-#announce {
+#notice_block {
+    background-color: darkcyan;
+    height: 300px;
     display: flex;
-    height: 600px;
-    background-color: lawngreen;
+    flex-direction: row;
+}
+
+#notice_block>span {
+    display: inline-block;
+    width: 20%;
+}
+
+#notice_container {
+    flex-flow: row nowrap;
+    overflow-x: scroll;
+    height: 80%;
+    width: 80%;
+    background-color:lightgray;
 }
