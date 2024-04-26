@@ -40,7 +40,7 @@ main {
 }
 
 .img1 {
-    background-image: url(https://res.klook.com/image/upload/u_activities:upgjtxp3nwtivafwiokg,h_1.0,ar_960:460,c_scale,e_blur:10000/c_fill,w_1265,h_712/q_80/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/upgjtxp3nwtivafwiokg.webp);
+    background-image: url(https://www.sac.or.kr/upfile/uploadfile/asa/banner/banner/kr/2024/04/48fa4470e35950b9e849e3f43a85b8d3.jpg);
 }
 
 .img2 {
@@ -162,6 +162,7 @@ main {
 
 
 #announce {
+    display: flex;
     height: 600px;
     background-color: lawngreen;
 }
