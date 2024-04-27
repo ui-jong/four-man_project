@@ -1,3 +1,5 @@
+/* 기본설정 */
+
 * {
     padding: 0;
     margin: 0;
@@ -7,40 +9,33 @@
 
 main {
     background-color: beige;
-    box-sizing: border-box;
-    width: calc(100vw-19px);
-    min-width: 1400px;
+    /* width: 70vw; */
+    min-width: 1000px;
     margin: auto;
 }
 
 
+/* 메인배너 */
 
-
-.main_banner { /*main_banner_container부모*/
+.main_banner_view { /*main_banner_container부모*/
     height: 100vh;
-    width: calc(100vw-19px);
-    background-color: antiquewhite;
-    overflow-x: scroll;
-    scrollbar-width: none;
     font-size: 0;
+    overflow-x: hidden;
 }
 
 #main_banner_container { /*메인배너 이미지 집합 컨테이너*/
     flex-flow: row wrap;
     flex-direction: row;
-    height: 100vh;
+    height: 100%;
     width: 300vw;
 }
 
-
-
-.main_banner_default { /*메인배너 이미지 클래스*/
+.main_banner { /*메인배너 이미지 클래스*/
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
     display: inline-block;
     height: 100%;
-    width: calc(100vw - 19px);
+    width: 100vW;
 }
 
 .img1 {
@@ -55,12 +50,9 @@ main {
     background-image: url(https://lh5.googleusercontent.com/proxy/GdVUy0eZKngThZ7yQaRPblPJsIaPczsYxSLet_b-3K2HaBV7F5GXcQH4ccV4vXDJl3ha9nrxrQ1iwuL42Tn2YRf1Z2OWreq6KfHXZDaXYEyAxt19EM7P3foxaZ80-LucN5UA1eDiwE8y-MFJ6GQcnjIRbPWEXn3haLlGVJXmZBmo3LJH);
 }
 
-
-
-/* 메인배너 네비게이터 */
-
 .main_navigator {
     margin-top: -100px;
+    margin-bottom: 50px;
     margin-left: 30px;
     font-size: 0;
 }
@@ -79,22 +71,33 @@ main {
 
 
 
+
+
 /* 이 달의 공연 */
 
-#month_banner {
-    height: 100vh;
-    /* background-color:tan; */
+#month_banner_block {
     background-color: dimgray;
-    position: relative;
-    padding: 0 15vw 0 15vw;
+    
+    display: flex;
+    flex-flow:row wrap;
+
+    box-sizing: border-box;
+    height: 100vh;
+    width: calc(100vw-19px);
+    padding: 0 10vw 0 10vw;
+    
+    font-size: 0; /*코드 줄바꿈으로 인한 이격 방지*/
 }
 
 #month_banner_main {
-    float: left;
-    /* position: absolute; */
-    height: 70%;
-    width: 40%;
     background-color:azure;
+    
+    display: inline-block;
+    
+    height: 100%;
+    width: 40%;
+
+    font-size: medium;
 }
 
 .month_main_img {
@@ -107,82 +110,130 @@ main {
 }
 
 #month_banner_sub {
-    display: inline-block;
+    background-color: dimgray;
+    /* background-color: rgb(68, 67, 67); */
+
+    display: flex;
+    flex-flow: row wrap;
+    
     box-sizing: border-box;
-    height: calc(100%);
+    height: 100%;
     width: 60%;
-    padding-left: 10%;
-    background-color: rgb(68, 67, 67);
+    
     overflow-y: auto;
+
     scrollbar-width: none;
+
+    font-size: medium;
+    
+    vertical-align: top; /*정렬하기*/
 }
 
 .month_sub {
-    position: relative;
-    display: inline-block;
+    background-color: aliceblue;
+
+    box-sizing: border-box;
     height: 400px;
     width: 85%;
-    box-sizing: border-box;
-    background-color: aliceblue;
-    position: relative;
-    padding: 10px;
+
+    margin:auto;
     transition: all 0.3s ease;
 }
-.month_sub:hover {
+
+/* .month_sub:hover {
     transform: scale(1.05);
-}
+} */
 
 #leftlist {
-    float: left;
+    padding-top: 1rem;
+    height: 100%;
     width: 50%;
-    text-align: center;
 }
+
 #rightlist {
-    float: left;
+    height: 100%;
     width: 50%;
-    text-align: center;
-    padding-top: 100px;
+    padding-top: 200px;
 }
 
 
 .left {
     display: inline-block;
+    margin-left: calc((100% - 85%)/2); 
     margin-bottom: 150px;
 }
 
 .right {
     display: inline-block;
+    margin-left: calc((100% - 85%)/2); 
     margin-top: 150px;
 }
 
 .sub_img1 {
     background-image: url(https://img.freepik.com/free-photo/portrait-of-person-with-wavy-texture_23-2150169248.jpg);
-    background-position: center;
     display: inline-block;
-    background-color: black;
+    
     width: 100%;
     height: 50%;
+    
+    background-position: center;    
 } 
+
+
 
 
 /* 공지 */
 
 #notice_block {
-    background-color: darkcyan;
-    height: 300px;
+    /* background-color:lightgray; */
+    box-sizing: border-box;
+    height: 250px;
+    padding-top: 15px;
+
     display: flex;
     flex-direction: row;
 }
 
-#notice_block>span {
+#notice_block>:nth-child(1) {
     display: inline-block;
-    width: 20%;
+    background-color:lightgray;
+
+    box-sizing: border-box;
+    width: calc(100% / 6);
+    height: 70%;
+
+    text-align: center;
+    line-height: calc(250px * .7);
+
+    font-size: 3rem;
 }
 
 #notice_container {
-    flex-flow: row nowrap;
-    overflow-x: scroll;
-    height: 80%;
-    width: 80%;
+    display: inline-block;
+    
     background-color:lightgray;
+    height: 70%;
+    width: calc(100% * (5/6));
+    
+    white-space: nowrap;
+    overflow-x: scroll;
+
+    /* scrollbar-width: none; */
 }
+
+.notice {
+    display: inline-block;
+
+    box-sizing: border-box;
+    height: 100%;
+    width: 20%;
+    padding: 2rem;
+
+    border: 0px solid black;
+    border-width: 0px 0px 0px 1px;
+
+    text-align: center;
+}
+
+.notice span {
+    color: gray;
