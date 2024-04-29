@@ -7,6 +7,12 @@
     text-decoration: none;
 }
 
+/* html {
+    display: flex;
+    flex-flow: row wrap;
+    /* align-items: flex-start; */
+} */
+
 main {
     background-color: beige;
     /* width: 70vw; */
@@ -50,7 +56,7 @@ main {
     background-image: url(https://lh5.googleusercontent.com/proxy/GdVUy0eZKngThZ7yQaRPblPJsIaPczsYxSLet_b-3K2HaBV7F5GXcQH4ccV4vXDJl3ha9nrxrQ1iwuL42Tn2YRf1Z2OWreq6KfHXZDaXYEyAxt19EM7P3foxaZ80-LucN5UA1eDiwE8y-MFJ6GQcnjIRbPWEXn3haLlGVJXmZBmo3LJH);
 }
 
-.main_navigator {
+/* .main_navigator {
     margin-top: -100px;
     margin-bottom: 50px;
     margin-left: 30px;
@@ -67,10 +73,26 @@ main {
     background-color: darkgray;
     height: 50px;
     width: 30px;
+} */
+
+/* 가로광고배너 */
+
+#row_ad_container {
+    display: flex;
+    height: 20vh;
+
+    justify-content: center;
+    align-items: center;
 }
 
+#row_ad {
+    display: inline-block;
+    width: 70%;
+    height: 20%;
+    background-color: crimson;
 
 
+}
 
 
 /* 이 달의 공연 */
@@ -81,10 +103,14 @@ main {
     display: flex;
     flex-flow:row wrap;
 
+    align-content: center;
+    
+    padding: 0 15vw 0 15vw;
+
     box-sizing: border-box;
-    height: 100vh;
+    height: 80vh;
     width: calc(100vw-19px);
-    padding: 0 10vw 0 10vw;
+
     
     font-size: 0; /*코드 줄바꿈으로 인한 이격 방지*/
 }
@@ -92,12 +118,15 @@ main {
 #month_banner_main {
     background-color:azure;
     
-    display: inline-block;
+    /* display: inline-block; */
+    float: left;
     
-    height: 100%;
+    height: 50rem;
     width: 40%;
 
     font-size: medium;
+
+    margin-top: -10vh;
 }
 
 .month_main_img {
@@ -133,8 +162,8 @@ main {
     background-color: aliceblue;
 
     box-sizing: border-box;
-    height: 400px;
-    width: 85%;
+    height: 30rem;
+    width: 20rem;
 
     margin:auto;
     transition: all 0.3s ease;
@@ -145,7 +174,7 @@ main {
 } */
 
 #leftlist {
-    padding-top: 1rem;
+    padding-top: 2rem;
     height: 100%;
     width: 50%;
 }
@@ -153,7 +182,7 @@ main {
 #rightlist {
     height: 100%;
     width: 50%;
-    padding-top: 200px;
+    padding-top: 15rem;
 }
 
 
