@@ -1,0 +1,32 @@
+* {
+    *margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+footer {
+    position: relative;
+    height: 150px;
+}
+
+.kr_ft1 {
+    width: 500px;
+    position: absolute;
+    right: 60%;
+    letter-spacing: 5px;
+}
+
+.kr_ft2 {
+    width: 500px;
+    position: absolute;
+    left: 60%;
+    letter-spacing: 5px;
+}
+
+footer>div {
+    text-align: center;
+    width: 600px;
+    position: absolute;
+    bottom: 10px;
+    left: calc(50vw - 300px);
+}
