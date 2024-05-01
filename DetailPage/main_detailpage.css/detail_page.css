@@ -4,9 +4,7 @@
     list-style: none;
     scroll-behavior: smooth;
 }
-body {
-    background-color: rgb(225, 225, 225);
-}
+
 /* 전체적인 큰 틀속성을 가질 플랙스 클래스====================== */
 .kr_flex {
     width: 100vw;
@@ -64,58 +62,63 @@ main section p{
     display: flex;
 }
 
-section {
-    width: 60%;
+main section {
+    flex: 6;
 }
 
-aside{
-    width: 40%;
+main aside{
+    flex: 4;
     background-color: antiquewhite;
 }
 /* 메인섹션 - (aside calender)===================================== */
 
 
 .kr_calender{
+    top: 0;
+    margin-top: 0;
     position: sticky;
-    top: 20%;
-    height: 60vh;
+}
+.kr_daylist {
+    display: grid;
+    height: 100%;
+    grid-template-columns: repeat(7, 1fr);
+}
+.kr_date{
+    justify-content: center;
+    align-items: center;
+    background-color: pink;
+    margin: 2px;
+    transition: all 0.2s ease;
+    display: flex;
+    height: 38px;
 }
 
-.kr_day {
-
-}
-
-kr_date_dis {
-    color: gray;
-    background-color: lightgray;
-    border: none;
+.kr_day{
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    margin: 2px;
+    transition: all 0.2s ease;
+    display: flex;
+    height: 38px;
 }
 
 input[id*="kr_date"] {
     display: none;
 }
-.kr_calender div{
 
-}
-
-input[id*="kr_date"]:checked+label span {
+input[id*="kr_date"]:checked + label,
+.kr_dateckh:hover {
     background-color: red;
     color: white;
     font-weight: bold;
     outline: 4px solid red;
-}
-
-.kr_dateckh:hover span{
-    background-color: red;
-    color: white;
-    font-weight: bold;
-    outline: 4px solid red;
-    cursor: pointer;
 }
 
 .kr_reservation{
-    display: inline-block;
+    display: flex;
     margin: auto;
+    justify-content: center;
     margin-top: 20px;
     background-color: pink;
     width: 80%;
@@ -130,6 +133,9 @@ input[id*="kr_date"]:checked+label span {
     cursor: pointer;
 }
 
+main aside>a {
+    text-decoration: none;
+}
 
 /* 우측섹션 - 최상단 페이지로===================================== */
 
