@@ -75,14 +75,17 @@ main {
     width: 30px;
 } */
 
+
 /* 가로광고배너 */
 
 #row_ad_container {
     display: flex;
-    height: 20vh;
+    height: 10vh;
 
     justify-content: center;
     align-items: center;
+
+    background-color: bisque;
 }
 
 #row_ad {
@@ -95,6 +98,61 @@ main {
 }
 
 
+#ticket_open_container {
+
+    height: 80vh;
+    width: 70%;
+    white-space: nowrap;
+    overflow-x: hidden;
+
+    margin: auto;
+
+    padding-top: 3rem;
+
+}
+
+.ticket_open {
+    display: inline-block;
+
+    height: 70%;
+    width: calc(25% - 1rem);
+    margin-bottom: calc(40vh * .25);
+    margin-right: 1rem;
+
+    background-image: url(https://www.lgart.com/Down/Display/202312/690x905_3.png);
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+}
+
+.naration_box {
+    position: relative;
+    bottom: -100%;
+
+    box-sizing: border-box;
+    height: 25%;
+    width: 100%;
+    padding: 0.5rem;
+
+    background-color: white;
+}
+
+.title {
+    font-size: 2rem;
+    color: black;
+}
+.title + hr {
+    color: black;
+}
+.venue {
+    font-size: 1.5rem;
+    color: red;
+}
+.date {
+    color: grey;
+}
+
 /* 이 달의 공연 */
 
 #month_banner_block {
@@ -102,13 +160,15 @@ main {
     
     display: flex;
     flex-flow:row wrap;
+    /* flex-grow: 2 6 ; */
 
     align-content: center;
+    justify-content: center;
     
     padding: 0 15vw 0 15vw;
 
     box-sizing: border-box;
-    height: 80vh;
+    /* height: 80vh; */
     width: calc(100vw-19px);
 
     
@@ -118,15 +178,14 @@ main {
 #month_banner_main {
     background-color:azure;
     
-    /* display: inline-block; */
-    float: left;
-    
-    height: 50rem;
-    width: 40%;
+    position: sticky;
+    top: 1rem;
+
+    height: 40rem;
+    width: 30rem;
 
     font-size: medium;
 
-    margin-top: -10vh;
 }
 
 .month_main_img {
@@ -154,16 +213,15 @@ main {
     scrollbar-width: none;
 
     font-size: medium;
-    
-    vertical-align: top; /*정렬하기*/
+
 }
 
 .month_sub {
     background-color: aliceblue;
 
     box-sizing: border-box;
-    height: 30rem;
-    width: 20rem;
+    height: 40rem;
+    width: 25rem;
 
     margin:auto;
     transition: all 0.3s ease;
@@ -220,7 +278,7 @@ main {
     padding-top: 15px;
 
     display: flex;
-    flex-direction: row;
+    flex-direction: row wrap;
 }
 
 #notice_block>:nth-child(1) {
@@ -228,10 +286,12 @@ main {
     background-color:lightgray;
 
     box-sizing: border-box;
-    width: calc(100% / 6);
+    flex-basis: 25%;
     height: 70%;
 
-    text-align: center;
+    white-space: wrap;
+
+    text-align: left;
     line-height: calc(250px * .7);
 
     font-size: 3rem;
@@ -242,10 +302,12 @@ main {
     
     background-color:lightgray;
     height: 70%;
-    width: calc(100% * (5/6));
+    flex
     
     white-space: nowrap;
     overflow-x: scroll;
+
+    scrollbar-width: none;
 
     /* scrollbar-width: none; */
 }
