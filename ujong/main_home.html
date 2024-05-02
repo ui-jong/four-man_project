@@ -14,18 +14,29 @@
     
     <main>
         <div> <!--메인배너-->
-            <div class="main_banner_view">
-                <div id="main_banner_container">
+            <div class="main_slider">
+                <div id="main_nav_box">
+                    <label for="banner1" class="img1"></label>
+                    <label for="banner2" class="img2"></label>
+                    <label for="banner3" class="img3"></label>
+                </div>
+                
+                <div class="main_banner_view">
+                    <input type="radio" name="main_slide" id="banner1" checked>
+                    <input type="radio" name="main_slide" id="banner2">
+                    <input type="radio" name="main_slide" id="banner3">
+                    
+                    
+                    <div id="main_banner_container">
                         <a href="#" class="main_banner img1"></a>
                         <a href="#" class="main_banner img2"></a>
                         <a href="#" class="main_banner img3"></a>
+                    </div>
+                    
                 </div>
-            </div>
     
-                <div class="main_navigator">
-                    <div id="next"></div>
-                    <div id="prev"></div>
-                </div>
+
+            </div>
         </div>
 
         
@@ -36,9 +47,9 @@
         </div>
         
         <div> <!--예매시작-->
-            <div id="slider">
-                <input type="radio" name="slide" id="slide01" checked>
-                <input type="radio" name="slide" id="slide02">
+            <div id="ticket_open_block">
+                <input type="radio" name="ticket_slide" id="prev" checked>
+                <input type="radio" name="ticket_slide" id="next">
 
 
                 <div id="ticket_open_container">
@@ -74,14 +85,49 @@
                             <p class="date"> 2237.05.17 ~ 07.28</p>
                         </div>
                     </a>
-                    
+                    <a href="#" class="ticket_open">
+                        <div class="naration_box">
+                            <h3 class="title"> 파가니니 소나타 </h3>
+                            <hr>
+                            <p class="venue">아우터홀</p>
+                            <p class="date"> 2237.05.17 ~ 07.28</p>
+                        </div>
+                    </a>
+                    <a href="#" class="ticket_open">
+                        <div class="naration_box">
+                            <h3 class="title"> 파가니니 소나타 </h3>
+                            <hr>
+                            <p class="venue">아우터홀</p>
+                            <p class="date"> 2237.05.17 ~ 07.28</p>
+                        </div>
+                    </a>
+                    <a href="#" class="ticket_open">
+                        <div class="naration_box">
+                            <h3 class="title"> 파가니니 소나타 </h3>
+                            <hr>
+                            <p class="venue">아우터홀</p>
+                            <p class="date"> 2237.05.17 ~ 07.28</p>
+                        </div>
+                    </a>
+                    <a href="#" class="ticket_open">
+                        <div class="naration_box">
+                            <h3 class="title"> 파가니니 소나타 </h3>
+                            <hr>
+                            <p class="venue">아우터홀</p>
+                            <p class="date"> 2237.05.17 ~ 07.28</p>
+                        </div>
+                    </a>
                 </div>
+                <nav>
+                    <label for="prev"></label>
+                    <label for="next"></label>
+                </nav>
             </div>
         </div>
         
 
-        <div id="month_banner_block">
-            <div id="month_banner_main"><!--메인공연-->
+        <div id="month_banner_block"><!--메인공연-->
+            <div id="month_banner_main">
                 <div class="month_main_img"></div>
                 <h2>마이크를 먹는 여자</h2>
                 <p> 대충설명 </p>

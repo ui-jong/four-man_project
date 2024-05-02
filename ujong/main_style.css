@@ -7,6 +7,10 @@
     text-decoration: none;
 }
 
+body {
+    font-size: 0; /*이격방지*/
+}
+
 /* html {
     display: flex;
     flex-flow: row wrap;
@@ -20,6 +24,7 @@ main {
     margin: auto;
 }
 
+/* ====================================================== */
 
 /* 메인배너 */
 
@@ -30,15 +35,17 @@ main {
 }
 
 #main_banner_container { /*메인배너 이미지 집합 컨테이너*/
-    flex-flow: row wrap;
     flex-direction: row;
     height: 100%;
-    width: 300vw;
+    /* width: 300vw; */
+    width: 100vw;
+    white-space: nowrap;
 }
 
 .main_banner { /*메인배너 이미지 클래스*/
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     display: inline-block;
     height: 100%;
     width: 100vW;
@@ -49,42 +56,87 @@ main {
 }
 
 .img2 {
-    background-image: url(https://image.yes24.com/themusical/fileStorage/ThemusicalAdmin/Media/Image/20190502061224be477586b9a54afebf7abde93ef1026a.jpg);
+    background-image: url(https://www.sac.or.kr/upfile/uploadfile/asa/banner/banner/kr/2024/03/bc447b017436e051a315817ad59bfdba.jpg);
 } 
 
 .img3 {
-    background-image: url(https://lh5.googleusercontent.com/proxy/GdVUy0eZKngThZ7yQaRPblPJsIaPczsYxSLet_b-3K2HaBV7F5GXcQH4ccV4vXDJl3ha9nrxrQ1iwuL42Tn2YRf1Z2OWreq6KfHXZDaXYEyAxt19EM7P3foxaZ80-LucN5UA1eDiwE8y-MFJ6GQcnjIRbPWEXn3haLlGVJXmZBmo3LJH);
+    background-image: url(https://www.sac.or.kr/upfile/uploadfile/asa/banner/banner/kr/2024/04/2cb5b7fbeb003e39b82d2644bea753a3.jpg);
 }
 
-/* .main_navigator {
-    margin-top: -100px;
-    margin-bottom: 50px;
-    margin-left: 30px;
-    font-size: 0;
+
+
+
+
+
+/* ====================================================== */
+/* 메인배너 슬라이드 */
+
+#banner1:checked ~ #main_banner_container{
+    transform: translateX(0);
+    transition: 1s;
 }
 
-.main_navigator li {
-    display: inline-block;
-    margin-left: 20px;
+#banner2:checked ~ #main_banner_container{
+    transform: translateX(-100vw);
+    transition: 1s;
 }
 
-.main_navigator a {
-    display: inline-block;
-    background-color: darkgray;
-    height: 50px;
-    width: 30px;
-} */
+#banner3:checked ~ #main_banner_container{
+    transform: translateX(-200vw);
+    transition: 1s;
+}
+
+#main_nav_box{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    
+    height: 25%;
+    width: 100%;
+
+    justify-content: center;
+    align-items: end;
+    z-index: 2;
+
+    opacity: 0;
+    transition: 1s;
+}
+
+.main_banner_view>input {
+    height: 0;
+}
+
+#main_nav_box:hover{
+    opacity: 0.95;
+    transition: 1s;
+}
+
+#main_nav_box>label{
+    background-color: gray;
+    height: 13rem;
+    width: calc(13rem * (3/4));
+    margin: 0 0 2rem 2rem;
+
+    background-size: cover;
+    background-position: center;
+}
+
+#main_nav_box>label:hover {
+    scale: 110%;
+
+}
 
 
+/* ====================================================== */
 /* 가로광고배너 */
 
 #row_ad_container {
     display: flex;
     height: 10vh;
-
+    
     justify-content: center;
     align-items: center;
-
+    
     background-color: bisque;
 }
 
@@ -93,31 +145,39 @@ main {
     width: 70%;
     height: 20%;
     background-color: crimson;
-
-
 }
 
 
-#ticket_open_container {
-
-    height: 80vh;
-    width: 70%;
-    white-space: nowrap;
-    overflow-x: hidden;
-
+/* ====================================================== */
+/* 티켓오픈 */
+#ticket_open_block{
+    width: 70vw;
     margin: auto;
+    overflow-x: hidden;
+}
 
-    padding-top: 3rem;
+#ticket_open_container {
+    box-sizing: border-box;
+    height: 49rem;
+    width: 70vw;
+    white-space: nowrap;
+    
+    margin: auto;
+    
 
+    padding-top: 3rem; 
 }
 
 .ticket_open {
     display: inline-block;
-
-    height: 70%;
+    
+    height: calc(((70vw * .25) * 4/3));
     width: calc(25% - 1rem);
     margin-bottom: calc(40vh * .25);
     margin-right: 1rem;
+
+    border: 3px solid black;
+
 
     background-image: url(https://www.lgart.com/Down/Display/202312/690x905_3.png);
     background-size: cover;
@@ -127,11 +187,9 @@ main {
 }
 
 .naration_box {
-    position: relative;
-    bottom: -100%;
 
     box-sizing: border-box;
-    height: 25%;
+    height: 20%;
     width: 100%;
     padding: 0.5rem;
 
@@ -150,9 +208,58 @@ main {
     color: red;
 }
 .date {
+    font-size: 1rem;
     color: grey;
 }
 
+/* 티켓오픈 슬라이드 */
+
+    #ticket_open_block{
+        position: relative;
+    }
+
+    #ticket_open_block>input{
+        height: 0;
+    }
+    #prev:checked ~ #ticket_open_container {
+        transform: translateX(0);
+        transition: 1s;
+    }
+
+    #next:checked ~ #ticket_open_container {
+        transform: translateX(-101%);
+        transition: 1s;
+    }
+
+    #ticket_open_block>nav {
+        display: flex;
+        height: 5rem;
+        background-color: cadetblue;
+        margin-top: -1.5rem;
+    }
+
+    #ticket_open_block>label{
+
+        height: 4rem;
+        width: 3rem;
+
+        background-color: black;
+
+        z-index: 3;
+    }
+
+    #ticket_open_block>label[for*="prev"] {
+        left: calc(50% - 6rem);
+    }
+    #ticket_open_block>label[for*="next"] {
+        left: calc(50% + 6rem);
+    }
+
+
+
+
+
+/* ====================================================== */
 /* 이 달의 공연 */
 
 #month_banner_block {
