@@ -7,9 +7,11 @@
 footer {
     position: relative;
     height: 150px;
+    background-color: lightgray;
 }
 
 .kr_ft1 {
+    margin-top: 10px;
     width: 500px;
     position: absolute;
     right: 60%;
@@ -17,6 +19,7 @@ footer {
 }
 
 .kr_ft2 {
+    margin-top: 10px;
     width: 500px;
     position: absolute;
     left: 60%;

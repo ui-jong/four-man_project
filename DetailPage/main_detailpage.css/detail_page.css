@@ -8,97 +8,172 @@
 /* 전체적인 큰 틀속성을 가질 플랙스 클래스====================== */
 .kr_flex {
     width: 100vw;
-    /* gap: 10px; */
     display: flex;
 }
 
-.kr_container{
+.kr_container {
     /* flex-direction: row; */
     width: 100%;
     flex-flow: row-rap;
 }
 
-.kr_item1{
+.kr_item1 {
     /* background-color: red; */
     width: calc((100% - 1024px) / 2);
     margin-top: 100vh;
 }
-.kr_item2{
-    background-color: rgb(225, 225, 225);
+
+.kr_item2 {
     width: 1024px;
+    /* background-color: rgb(242, 242, 242); */
 }
 
-.kr_item3{
+.kr_item3 {
     /* background-color: yellow; */
     width: calc((100% - 1024px) / 2);
     margin-top: 100vh;
 }
+
 /* 메인섹션 - 포스터 (nav)===================================== */
 .kr_home {
     text-align: center;
     margin: 7vh;
 }
 
-main nav{
+main .kr_banner {
     text-align: center;
 }
 
-.kr_poster{
+.kr_poster {
     height: 80vh;
     margin-bottom: 10px;
 }
+
 /* 메인섹션 - (section)===================================== */
 
-.kr_detailimg{
+.kr_indextable {
+    position: sticky;
+    top: 0px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color: antiquewhite;
+    padding: 5px;
+}
+
+.kr_indextable a{
+    width: calc((100% / 4) - 10px);
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    background-color: rgb(222, 213, 201);
+    height: 50px;
+    /* border-radius: 10%; */
+}
+
+.kr_detailimg {
     width: 100%;
 }
 
-main section p{
+.kr_showinfo,
+.kr_casting_info,
+.kr_saleinfo,
+.kr_expact{
+    padding-top: 10px;
+    text-align: center;
+    /* background-color: beige; */
+    font-size: larger;
+    font-weight: bold;
+    p {
+        text-align: left;
+        font-size: small;
+        font-weight: normal;
+        white-space: pre-line;
+    }
+    img{
+        width: 100%;
+        margin-top: 30px;
+    } 
+    padding-bottom: 30px;
+}
+
+.kr_saleinfotable {
+    
+    margin-top: 10px;
+    border: 1px solid rgb(221, 210, 196);
+    display: grid;
+    grid-template: repeat(6, 1fr) / repeat(2, 1fr);
+    text-align: left;
+    font-size: small;
+    font-weight: normal;
+    .kr_subhd{
+        margin-top: 30px;
+        font-weight: bold;
+    }
+}
+.kr_saleinfotable div {
+    margin-left: 15px;
+}
+
+.kr_CKbox a {
+    display: flex;
+    text-decoration: none;
+}
+
+.kr_CKbox p {
     white-space: pre-line;
 }
+
 /* 메인섹션플랙스 - (section / aside)===================================== */
 
-.kr_inflex{
+.kr_inflex {
+    margin-top: 30px ;
     display: flex;
 }
 
-main section {
-    flex: 6;
+main .kr_CKbox {
+    flex: 9;
 }
 
-main aside{
-    flex: 4;
-    background-color: antiquewhite;
+.kr_per {
+    flex: 0.5;
 }
+
+main aside {
+    flex: 3.5;
+    /* background-color: antiquewhite; */
+}
+
 /* 메인섹션 - (aside calender)===================================== */
-
-
-.kr_calender{
-    top: 0;
-    margin-top: 0;
-    position: sticky;
-}
 .kr_daylist {
+    border: 1px solid black;
+    border-radius: 5%;
+    padding: 2%;
+    position: sticky;
+    top: 100px;
     display: grid;
-    height: 100%;
-    grid-template-columns: repeat(7, 1fr);
+    height: 350px;
+    grid-template: repeat(7, 42px) / repeat(7, 1fr) ;
 }
-.kr_date{
+
+.kr_date {
     justify-content: center;
     align-items: center;
-    background-color: pink;
+    background-color: lightgray;
+    color: gray;
     margin: 2px;
     transition: all 0.2s ease;
     display: flex;
     height: 38px;
 }
 
-.kr_day{
+.kr_day {
     justify-content: center;
     align-items: center;
-    background-color: aqua;
+    background-color: beige;
     margin: 2px;
-    transition: all 0.2s ease;
     display: flex;
     height: 38px;
 }
@@ -107,15 +182,41 @@ input[id*="kr_date"] {
     display: none;
 }
 
-input[id*="kr_date"]:checked + label,
-.kr_dateckh:hover {
+.kr_daylist div label {
+    border-radius: 5%;
+    transition: all 0.2s ease;
+    background-color: pink;
+    color: black;
+    text-align: center;
+    line-height: 38px;
+    width: 100%;
+    height: 100%;
+}
+
+input[id*="kr_date"]:checked+label,
+.kr_dateckh:hover label {
     background-color: red;
     color: white;
     font-weight: bold;
     outline: 4px solid red;
 }
 
-.kr_reservation{
+.kr_reservation {
+    transition: all 0.2s ease;
+    grid-area: 7 / 1 / 8/ -1;
+    font-weight: bold;
+}
+
+.kr_reservation:hover a {
+    background-color: red;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+
+main aside>div a {
+    color: black;
+    text-decoration: none;
     display: flex;
     margin: auto;
     justify-content: center;
@@ -125,16 +226,6 @@ input[id*="kr_date"]:checked + label,
     line-height: 70px;
     text-align: center;
     transition: all 0.2s ease;
-}
-
-.kr_reservation:hover {
-    background-color: red;
-    transform: scale(1.1);
-    cursor: pointer;
-}
-
-main aside>a {
-    text-decoration: none;
 }
 
 /* 우측섹션 - 최상단 페이지로===================================== */
