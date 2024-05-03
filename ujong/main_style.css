@@ -45,6 +45,16 @@ main {
     width: 100vW;
 }
 
+/* ======================================= */
+/* 메인배너 상세설명 */
+
+.detail_in_banner {
+    position: absolute;
+    top: 50%;
+    height: 3rem;
+    width: 3rem;
+    background-color: azure;
+}
 
 
 /* ======================================= */
@@ -112,8 +122,8 @@ main {
 
 #main_nav_box>label{
     background-color: gray;
-    height: 13rem;
-    width: calc(13rem * (3/4));
+    height: calc(20vh * .9);
+    width: calc( 20vh * .9 * (3/4));
     margin: 0 0 2rem 2rem;
 
     background-size: cover;
@@ -122,7 +132,6 @@ main {
 
 #main_nav_box>label:hover {
     scale: 110%;
-
 }
 
 
@@ -135,51 +144,68 @@ main {
     
     justify-content: center;
     align-items: center;
-    
-    background-color: bisque;
+
+    margin: .5rem 0 .5rem 0;
 }
 
 #row_ad {
     display: inline-block;
+    
     width: 70%;
-    height: 20%;
+    height: 90%;
+    
+    border: 1px solid white;
+    border-radius: 2rem;
     background-color: crimson;
 }
 
 
 /* ====================================================== */
 /* 티켓오픈 */
-#ticket_open_block{
-    width: 70vw;
-    margin: auto;
+h2 {
+    font-size:2rem;
+    margin: 1rem 0 0 1rem;
+}
 
-    overflow-x: hidden;
+#ticket_open_block{
+    box-sizing: border-box;
+
+    width: 70vw;
+    height: 41rem;
+    margin: auto;
+    padding-bottom: 2rem;
+    overflow: hidden;
 }
 
 #ticket_open_container {
-
+    display: flex;
+    justify-content: space-evenly;
+    width: 140vw;
     box-sizing: border-box;
 
-    height: 49rem;
     white-space: nowrap;
     
     margin: auto;
-    
-    padding-top: 3rem; 
+    margin-bottom: 2rem;
+    padding-top: 1rem; 
 }
 
 .border {
     display: inline-block;
 
     box-sizing: border-box;
-    border: 3px solid black;
-    border-radius: 8% 8%;
+    border: 1.5px solid rgb(0, 0, 0);
+    border-radius: 1rem 1rem 0 0;
 
     overflow: hidden;
 
     width: calc(70vw * .25 - 1rem);    
 
-    margin-right: 1rem;
+    /* margin: 0 0 0 0; */
+}
+
+.border:hover {
+    box-shadow: 2px 2px 2px 2px rgb(194, 194, 194);
 }
 
 .ticket_open {
@@ -193,7 +219,9 @@ main {
 
 .border > .naration_box {
     box-sizing: border-box;
+ 
     padding: 0 1rem;
+
 }
 
 
@@ -220,35 +248,55 @@ main {
     #ticket_open_block{
         position: relative;
     }
-
     #ticket_open_block>input{
         height: 0;
     }
+
+    /* 이동효과 */
     #prev:checked ~ #ticket_open_container {
         transform: translateX(0);
         transition: 1s;
     }
-
     #next:checked ~ #ticket_open_container {
-        transform: translateX(-101%);
+        transform: translateX(-50%);
         transition: 1s;
     }
 
-    #ticket_open_block>nav {
-        display: flex;
-        height: 5rem;
-        background-color: cadetblue;
-        margin-top: -1.5rem;
+
+    #next:checked ~ nav>label[for*="next"] {
+        opacity: 0.3;
+    }
+    #prev:checked ~ nav>label[for*="prev"] {
+        opacity: 0.3;
     }
 
-    #ticket_open_block>label{
+    /* 슬라이드 버튼 */
+    #ticket_open_block>nav {
+        display: flex;
+        justify-content: space-between;
+        
+        box-sizing: border-box;
+        height: 3rem;
+        width: 12rem;
 
-        height: 4rem;
+        margin: auto;
+        background-color: transparent;
+    }
+
+    #ticket_open_block>nav>label:nth-of-type(1){
+        height: 3rem;
         width: 3rem;
-
-        background-color: black;
-
-        z-index: 3;
+        background-image: url(./images/pngwing.com.png);
+        background-position: center;
+        background-size: 100% 100%;
+    }
+    #ticket_open_block>nav>label:nth-of-type(2){
+        height: 3rem;
+        width: 3rem;
+        background-image: url(./images/pngwing.com.png);
+        transform: scaleX(-1);
+        background-position: center;
+        background-size: 100% 100%;
     }
 
     #ticket_open_block>label[for*="prev"] {
@@ -257,6 +305,7 @@ main {
     #ticket_open_block>label[for*="next"] {
         left: calc(50% + 6rem);
     }
+
 /* ====================================================== */
 /* 티켓오픈 이미지 모음 */
 
@@ -264,7 +313,7 @@ main {
     background-image: url(https://www.lgart.com/Down/Display/202312/690x905_3.png);
 }
 
-.tkop_img2 {
+.t_img2 {
 
 }
 
@@ -286,7 +335,6 @@ main {
     padding: 0 15vw 0 15vw;
 
     box-sizing: border-box;
-    /* height: 80vh; */
     width: calc(100vw-19px);
 
     
@@ -295,12 +343,13 @@ main {
 
 #month_banner_main {
     background-color:azure;
-    
-    position: sticky;
-    top: 1rem;
+    margin-top: 3rem;
 
-    height: 40rem;
-    width: 30rem;
+    position: sticky;
+    top: 3rem;
+
+    height: calc(70vw * 0.3 * (4 / 3));
+    width: calc(70vw * 0.3);
 
     font-size: medium;
 
@@ -324,7 +373,7 @@ main {
     
     box-sizing: border-box;
     height: 100%;
-    width: 60%;
+    width: calc((70vw * .6));
     
     overflow-y: auto;
 
@@ -338,8 +387,8 @@ main {
     background-color: aliceblue;
 
     box-sizing: border-box;
-    height: 40rem;
-    width: 25rem;
+    height: calc((70vw * .6) * .5 * .9 * ( 4 /3 ));
+    width: calc((70vw * .6) * .5 * .9);
 
     margin:auto;
     transition: all 0.3s ease;
