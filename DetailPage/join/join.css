@@ -15,8 +15,9 @@ main {
     height: 100vh;
 }
 
-.kr_signup-form>img{
-    margin-left: -20px;
+.kr_signup-form>a>img{
+    margin-left: -10px;
+    width: 300px;
 }
 
 .kr_signup-form h2{
