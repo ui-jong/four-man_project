@@ -100,7 +100,7 @@ main .kr_banner {
 }
 
 .kr_saleinfotable {
-    
+    height: 50vh;
     margin-top: 10px;
     border: 1px solid rgb(221, 210, 196);
     display: grid;
