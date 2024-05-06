@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+header:not(.h_open) {
+    display: grid;
+
+    /* place-content: center; */
+    grid-template: 1fr 1fr / 2fr repeat(5, 1fr);
+    height: 15vh;
+}
+
+header>div:not(:nth-child(2)) {
+    display: grid;
+    place-content: center;
+}
+
+header>div a {
+    color: black;
+    text-decoration: none;
+}
+
+.h_logo {
+    grid-area: 1 / 1 / 3 / 2;
+}
+
+.h_outer {
+    grid-area: 1 / 2 / 2 / 5;
+}
+header>.h_outer{
+    display: flex;
+    align-items: end;
+    /* justify-content: center; */
+}
+
+.h_notice {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.h_introduction {
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+.h_path {
+    grid-area: 2 / 4 / 3 / 5;
+}
+
+
+.h_login {
+    grid-area: 1 / 5 / 3 / 7;
+}
+
+.h_logo>a {
+    display: block;
+    width: 20vw;
+    height: 15vh;
+    background: url(../image/as.png) center / 100% 100% no-repeat;
+}
+
+header>.h_outer>button {
+    width: 50px;
+    border-radius: 20px;
+    height: 40px;
+    outline: none;
+
+}
+header>.h_outer>input{
+    width: 300px;
+    height: 40px;
+    border-radius: 20px;
+    margin-right: 10px;
+    margin-left: 20px;
+    outline: none;
+    padding-left: 10px;
+}
+
+.h_outer>a {
+    font-size: 2em;
+    font-weight: 800;
+    margin-top: 15px;
+}
+@media (width <=70rem) {
+    .h_notice>a, .h_introduction, .h_path{
+        font-size: .8em;
+    }
+}
+
+@media (width <=40rem) {
+    .h_notice>a, .h_introduction, .h_path{
+        font-size: .5em;
+    }
+}
+
+header>div>a {
+    /* font-family: serif; */
+}
+
+.h_login>a {
+    font-size: 30px;
+}
+
+.h_search>label,
+/* .h_login>a, */
+.h_logo>a {
+    text-indent: -9999em;
+}
+
+#h_ssearch:not(:checked)+label+.h_open {
+    display: none;
+}
+
+/* .h_open,  */
+#h_ssearch,
+#h_llogin {
+    /* visibility: hidden; */
+    display: none;
+    position: absolute;
+    top: 10vh;
+    /* background-color: beige; */
+}
+
+.h_open {
+    position: absolute;
+    top: 16vh;
+    right: 15vw;
+    background-color: none !important;
+}
+
+/* 고치기 */
+.h_login>label {
+    position: absolute;
+    top: 5.8vh;
+    right: 6%;
+    /* z-index: 100; */
+    width: 30px;
+    height: 31px;
+    /* cursor: pointer; */
+}
+
+#h_llogin:checked #h_ssearch:checked+label+.h_open {
+    /* visibility: visible; */
+    /* display: grid; */
+    display: block !important;
+    /* display: none; */
+}
+
+/* ===================================================== */
+/* section */
+
+
+/* 버튼 아이콘 */
+.h_outer>button::after {
+    /* 검색 아이콘의 유니코드 값 */
+    content: "\f002";
+    /* 또는 "Font Awesome 5 Pro" 등 사용중인 Font Awesome의 패밀리 이름 */
+    font-family: "Font Awesome 5 Free";
+    /* 없애버리고 싶지만 없애버리면 에러뜨는 asshole */
+    font-weight: 900;
+    font-size: 15px;
+    /* cursor: pointer; */
+    color: black;
+    text-align: center;
+    /* line-height: 30px;*/
+}
+
+
+header {
+    /* background-color: black; */
+    height: 10vh;
+    /* padding-top: 1vh; */
+}
+
+header>div {
+    background-color: transparent;
+    /* color: #ffffff0a; */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header:hover,
+header:hover div a,
+header:hover div {
+    color: white;
+    background-color: black;
+}
+
+header:hover .h_search::after,
+header:hover .h_login::before {
+    color: white;
+}
+
+header:hover .h_open {
+    background-color: white;
+}
+
+/* 돋보기 커서 */
+.h_search>label {
+    cursor: pointer;
+}
+
+/* 검색창 사이즈 */
+.h_open>input {
+    width: ;
+    height: ;
+}
+
+/* 버튼 사이즈 */
+.h_open>button {
+    width: ;
+    height: ;
+}
+
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'LINESeedKR-Bd';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'TheJamsil5Bold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Orbit-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/Orbit-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'InfinitySans-RegularA1';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/InfinitySans-RegularA1.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+font-family:'DNFForgedBlade';font-style:normal;font-weight:300;
+src:url('//cdn.df.nexon.com/img/common/font/DNFForgedBlade-Light.otf')format('opentype')}
+
+@font-face{
+font-family:'DNFForgedBlade';font-style:normal;font-weight:500;
+src:url('//cdn.df.nexon.com/img/common/font/DNFForgedBlade-Medium.otf')format('opentype')}
+
+@font-face{
+font-family:'DNFForgedBlade';font-style:normal;font-weight:700;
+src:url('//cdn.df.nexon.com/img/common/font/DNFForgedBlade-Bold.otf')format('opentype')}
+
+@font-face {
+    font-family: 'SOGANGUNIVERSITYTTF';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/SOGANGUNIVERSITYTTF.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+.h_notice, .h_introduction, .h_path{
+/* font-family:'DNFForgedBlade';font-style:normal;font-weight:500; */
+font-family: 'InfinitySans-RegularA1';
+font-family: 'Orbit-Regular';
+font-family: 'TheJamsil5Bold';
+font-family: 'Pretendard-Regular';
+font-size: 1.5rem;
+    
+}
