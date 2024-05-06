@@ -17,7 +17,7 @@
     justify-content: center;
 }
 .sb_check{
-    grid-area: 2 / 2  /5 / 3 ;
+    grid-area: 2 / 2  /3 / 3 ;
     display: grid;
     /* border: 1px solid; */
     grid-template-columns: repeat(3, 1fr);
@@ -34,7 +34,3 @@
 }
 .sb_check>div>a{
 }
-.sb_check>input{
-    display: none;
-}
-
