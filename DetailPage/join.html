@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="./join/join.css">
+</head>
+
+<body>
+    <main>
+
+        <div class="kr_signup-form">
+            <div class="kr_logo">
+                <a href="#">
+                    <img src="https://media.discordapp.net/attachments/1230444003338489950/1230695268911943741/LOGO.png?ex=6636e449&is=663592c9&hm=5e7106df9bf0df57bba927c68d1ae38b1e411ea1c351bbd2b026c6df182717fa&=&format=webp&quality=lossless&width=687&height=256"
+                        alt="로고">
+                </a>
+            </div>
+
+            <form action="#"> <!-- 로그인 페이지로 연동 -->
+                <div>아이디</div>
+                <label>
+                    <input type="text" placeholder="아이디" required>
+                </label>
+
+                <div>비밀번호</div>
+                <label>
+                    <input type="password" placeholder="8자이상 15자이하" minlength="8" maxlength="16" required>
+                </label>
+
+                <div>이름</div>
+                <label>
+                    <input type="text" placeholder="이름" required>
+                </label>
+
+                <div>이메일</div>
+                <div class="kr_emailinput">
+                    <div>
+                        <input type="text" placeholder="이메일" required>
+                    </div>
+                    <div>
+                        <p>@</p>
+                    </div>
+                    <div>
+                        <input type="text" list="kr_adress" placeholder="직접입력" required>
+                        <datalist id="kr_adress">
+                            <option value="gmail.com">
+                            <option value="naver.com">
+                            <option value="daum.net">
+                        </datalist>
+                    </div>
+                </div>
+
+                <div>휴대폰 번호</div>
+                <label>
+                    <input type="tel" placeholder="휴대폰 번호" required>
+                </label>
+                <button type="submit">가입</button>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>

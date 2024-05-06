@@ -3,193 +3,226 @@
     padding: 0;
     list-style: none;
     scroll-behavior: smooth;
+    font-family: 'Pretendard-Regular';
 }
 
-hr {
-    margin: 10px;
+/* 전체적인 큰 틀속성을 가질 플랙스 클래스====================== */
+.kr_flex {
+    width: 100vw;
+    display: flex;
 }
 
-header {
+.kr_container {
+    /* flex-direction: row; */
+    width: 100%;
+    flex-flow: row-rap;
+}
+
+.kr_item1 {
+    /* background-color: red; */
+    width: calc((100% - 1024px) / 2);
+    margin-top: 100vh;
+}
+
+.kr_item2 {
+    width: 1024px;
+    /* background-color: rgb(242, 242, 242); */
+}
+
+.kr_item3 {
+    /* background-color: yellow; */
+    width: calc((100% - 1024px) / 2);
+    margin-top: 100vh;
+}
+
+/* 메인섹션 - 포스터 (nav)===================================== */
+
+main .kr_banner {
     text-align: center;
-    height: 10vh;
-}
-
-.kr_Previous,
-.kr_next {
-    text-indent: -9999px;
-    position: absolute;
-    width: 100px;
-    height: 100px;
-}
-
-.kr_Previous {
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwDLz4AHb7i2lRoC20sE7zmiCImIJ1PwzGHA&s);
-    background-size: cover;
-    left: 30px;
-}
-
-.kr_next{
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwDLz4AHb7i2lRoC20sE7zmiCImIJ1PwzGHA&s);
-    right: 30px;
 }
 
 .kr_poster {
+    height: 80vh;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+/* 메인섹션 - (section)===================================== */
+
+.kr_indextable {
+    position: sticky;
+    top: 0px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 5px;
+}
+
+.kr_indextable a{
+    width: calc((100% / 4) - 10px);
     text-align: center;
+    /* line-height: 50px; */
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    height: 30px;
+    border-bottom: 1px solid black;
 }
 
-.kr_poster img {
-    height: 85vh;
-    transition: transform 2s;
+.kr_detailimg {
+    width: 100%;
 }
 
-
-
-/* 포스터 호버시 확대되며 주변 블러처리 (미구현)
-.kr_poster img:hover {
-    transform: scale(1.3);
-    outline:2000px solid black;
-} */
-
-nav {
+.kr_showinfo,
+.kr_casting_info,
+.kr_saleinfo,
+.kr_expact{
+    padding-top: 10px;
     text-align: center;
-    min-width: 800px;
+    /* background-color: beige; */
+    font-size: larger;
+    font-weight: bold;
+    p {
+        text-align: left;
+        font-size: small;
+        font-weight: normal;
+        white-space: pre-line;
+        font-family: 'InfinitySans-RegularA1';
+        font-size: 14px;
+    }
+    img{
+        width: 100%;
+        margin-top: 30px;
+    } 
+    padding-bottom: 30px;
 }
 
-main {
-    margin-top: 80px;
-    display: inline-block;
-    width: calc(100vw * 0.45);
+.kr_saleinfotable {
+    height: 50vh;
+    margin-top: 10px;
+    border: 1px solid rgb(221, 210, 196);
+    display: grid;
+    grid-template: repeat(6, 1fr) / repeat(2, 1fr);
     text-align: left;
+    font-size: small;
+    font-weight: normal;
+    .kr_subhd{
+        margin-top: 30px;
+        font-weight: bold;
+    }
+}
+.kr_saleinfotable div {
+    margin-left: 15px;
 }
 
-main table {
-    width: 100%;
+.kr_CKbox a {
+    display: flex;
+    text-decoration: none;
 }
 
-main table li {
-    margin: 10px 0px;
-}
-
-main img {
-    width: 100%;
-}
-
-.kr_announcement {
+.kr_CKbox p {
+    font-family: 'InfinitySans-RegularA1';
+    font-size: 14px;
     white-space: pre-line;
 }
 
-aside {
-    /* background-color: violet; */
-    margin-top: 50px;
-    text-align: left;
-    display: inline-block;
-    position: sticky;
-    top: 80px;
-    vertical-align: top;
-    /* width: 30vw;
-    max-width: 410px;
-    min-width: 250px; */
+/* 메인섹션플랙스 - (section / aside)===================================== */
+
+.kr_inflex {
+    margin-top: 30px ;
+    display: flex;
 }
 
-.kr_calender {
-    margin: auto;
-    margin-top: 10px;
-    border-collapse: collapse;
+main .kr_CKbox {
+    flex: 9;
 }
 
-.kr_calender th,
-.kr_calender td {
-    border: none;
-    width: 50px;
-    height: 48px;
-    padding: 2px;
-    text-align: center;
+.kr_per {
+    flex: 0.5;
 }
 
-.kr_calender th {
-    background-color: antiquewhite;
+main aside {
+    flex: 3.5;
+    /* background-color: antiquewhite; */
 }
 
-.kr_calender th div {
-    background-color: pink;
-    vertical-align: middle;
-    display: inline-block;
-    width: 12px;
-    height: 12px;
+/* 메인섹션 - (aside calender)===================================== */
+.kr_daylist {
     border: 1px solid black;
+    border-radius: 5%;
+    padding: 2%;
+    position: sticky;
+    top: 100px;
+    display: grid;
+    height: 350px;
+    grid-template: repeat(7, 42px) / repeat(7, 1fr) ;
 }
 
-#kr_sellect1,
-#kr_sellect2,
-#kr_sellect3,
-#kr_sellect4 {
+.kr_date {
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+    color: gray;
+    margin: 2px;
+    transition: all 0.2s ease;
+    display: flex;
+    height: 38px;
+}
+
+.kr_day {
+    justify-content: center;
+    align-items: center;
+    background-color: beige;
+    margin: 2px;
+    display: flex;
+    height: 38px;
+}
+
+input[id*="kr_date"] {
     display: none;
 }
 
-.kr_calender tr span{
-    display: inline-block;
-    line-height: 50px;
-    height: 100%;
-    width: 100%;
-    color: black;
+.kr_daylist div label {
+    border-radius: 5%;
+    transition: all 0.2s ease;
     background-color: pink;
-    border: none;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-#kr_sellect1:checked + label span,
-#kr_sellect2:checked + label span,
-#kr_sellect3:checked + label span,
-#kr_sellect4:checked + label span{
-    background-color: red;
-    color: white;
-    font-weight: bold;
-    outline: 4px solid red;
-}
-
-.kr_calender tr span:hover{
-    background-color: red;
-    color: white;
-    font-weight: bold;
-    outline: 4px solid red;
-}
-
-/* 비활성화된 셀 */
-button.kr_inactive {
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    color: gray;
-    background-color: lightgray;
-    border: none;
-}
-
-.kr_top_button {
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAYFBMVEX///9RUVFKSkpOTk5mZmb19fX5+fnZ2dlkZGRFRUXd3d1oaGhHR0dCQkLb29vf39+qqqqFhYWysrJ9fX3t7e1ubm5UVFS+vr6IiIjn5+fGxsaPj4+Xl5e3t7daWlqfn58V8fP7AAAEkUlEQVR4nO2c63aqMBSENakiFsRL1d5O+/5veUSLCnJJJglJXPOt/i1h1p7J3oGFkwkhhBBCCCGEEEIIIYQQQgghhBBCCCGEEEJItBTbzX5xYr/ZLn3fiwPm22meCXlGZPlhO/d9R5Y5/qRyeodMD0ff92SVTV7Td9aYb3zflT3m+6ypryTbP4tTZy+iTeB0KhYz3/dmhflrh8CTxJdnkNgjsJQYv1FnfQKfoYoDAuOXOO/aZJ7FqL0ZfAaJnW2iITHapjGYwavE1zglKlm0qmKMRtUQGGcWlS1aSYzNqAptIm6JWhatJMZkVE2L/kmMqGlAAmMyqnYGb1WMw6hABm9VjEGi4qjWVcXwjQpm8FbF0CUaWLSqYthGNRYYehUNLRq+RLhNxCLRgkUriWFm0ahNNCQG2TSsZPAqMUCjWsrgVWJwTcNaBq8SA8uixQxeJQaVResVPEsMKItOBIaURau7aE1iIFV0JjAUiZbbRFOif6M6ymA4Eh20iYZEz03DYQavEr2+tnFs0T+JHpvGKAJ9ZtF5Bm8S/RjVaZsIQeJIFq0kjm9U0KLy/IdIHLuKYJuQclnIKCSCGZQymUwSUOKoTQPMoMxX5X+vUrCK40mcLTCBorj8f5GBVRzLqHAGk+oKK9CoIw1wqEVFcrtGIgLOIpzB2hcISzSL7quI9kG5ql9nCVbRuUSTNlEHbRqOJaIWzR4EnrYbcEd12jRQi2ZF29UKMIsOm4Z5m6iDNg1nRrWXwYrABjhUYL7qvmZQAxw8qvV+iVegrd++UVGB3Ra9EEzTQC0qBgQGM8ChbSJvbRN1ghjgYIv2bDJ3Ev0bde4ogxVwFm0ZFc1gqlTBEs8DHGrR9lGtHa+nfldtoo7PU7+FE70KcBaNBe5snOhVAAe4bGcocJtDAvtHtXbAU3++NRL4Bi2qmcEK0KjyzUThd+uH9ENLtp3olSRCVcx+DQTOEY/KVKNN1MEGuMygKx5TQKDaqNYO1DTST3zBd/2NFMxgBZJF8YWv96O9XO+JXkmivlHlD7zaTH8xnVGtHWCAE3AQtXuFoUUv6GdRwP3iQzOG2qNaO9pNI4MVatYQGNXa0W0aAh+/9QSatImGRL0qSnylV42FrGSwQqtpyD2+0K96EGVmrYIlicaOKgzGtpXy1GYwqrWj8drGKP4LxWUsZrBCuWlIo0PwUa2IVjNYoZrF3OyH3/YqqxiPau2onfpN9pmSQmGvgU70SourbDfCdAMY9qkTi15QMKqhR0vWAxItjWrtDA5w+drCKv0SlV6+4AwMcFYEniT2nPQdtIk6va9tLAnsq6LDDFb0ZNGawG6JGi9fcDpf21gU2CXRwolehY4BzqrA8tn34yriMNLPAS+nj11ZGj7rfuRTNldJ9x+W1+jkY9/c7IQweITYwdsmv2tOMrNskgHW+V0apch3Ro/yuyjeD+n555xFli3WI38dMFsvsr/F08O7s/zPkvXXZrf5/jfKDtOk+Pd9WvxrnYTwYSkhhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEKIP/4D3505bndtyS8AAAAASUVORK5CYII=);
-    background-position: center;
-    background-size: cover;
-    margin: 20px;
-    border: 2px solid black;
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    width: 50px;
-    height: 50px;
+    color: black;
     text-align: center;
-    border-radius: 50%;
-    transition: all 0.2s ease;
+    line-height: 38px;
+    width: 100%;
+    height: 100%;
 }
 
-.kr_top_button:hover {
-    width: 55px;
-    height: 55px;
-    margin: 17.5px;
+input[id*="kr_date"]:checked+label,
+.kr_dateckh:hover label {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    outline: 4px solid red;
     cursor: pointer;
 }
 
 .kr_reservation {
+    transition: all 0.2s ease;
+    grid-area: 7 / 1 / 8/ -1;
+    font-weight: bold;
+}
+
+.kr_reservation:hover a {
+    background-color: red;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+
+main aside>div a {
+    color: black;
+    text-decoration: none;
+    display: flex;
     margin: auto;
+    justify-content: center;
     margin-top: 20px;
     background-color: pink;
     width: 80%;
@@ -197,7 +230,42 @@ button.kr_inactive {
     text-align: center;
     transition: all 0.2s ease;
 }
-.kr_reservation:hover {
-    background-color: red;
-    transform: scale(1.1);
+
+/* 우측섹션 - 최상단 페이지로===================================== */
+
+.kr_top {
+    display: inline-block;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAYFBMVEX///9RUVFKSkpOTk5mZmb19fX5+fnZ2dlkZGRFRUXd3d1oaGhHR0dCQkLb29vf39+qqqqFhYWysrJ9fX3t7e1ubm5UVFS+vr6IiIjn5+fGxsaPj4+Xl5e3t7daWlqfn58V8fP7AAAEkUlEQVR4nO2c63aqMBSENakiFsRL1d5O+/5veUSLCnJJJglJXPOt/i1h1p7J3oGFkwkhhBBCCCGEEEIIIYQQQgghhBBCCCGEEEJItBTbzX5xYr/ZLn3fiwPm22meCXlGZPlhO/d9R5Y5/qRyeodMD0ff92SVTV7Td9aYb3zflT3m+6ypryTbP4tTZy+iTeB0KhYz3/dmhflrh8CTxJdnkNgjsJQYv1FnfQKfoYoDAuOXOO/aZJ7FqL0ZfAaJnW2iITHapjGYwavE1zglKlm0qmKMRtUQGGcWlS1aSYzNqAptIm6JWhatJMZkVE2L/kmMqGlAAmMyqnYGb1WMw6hABm9VjEGi4qjWVcXwjQpm8FbF0CUaWLSqYthGNRYYehUNLRq+RLhNxCLRgkUriWFm0ahNNCQG2TSsZPAqMUCjWsrgVWJwTcNaBq8SA8uixQxeJQaVResVPEsMKItOBIaURau7aE1iIFV0JjAUiZbbRFOif6M6ymA4Eh20iYZEz03DYQavEr2+tnFs0T+JHpvGKAJ9ZtF5Bm8S/RjVaZsIQeJIFq0kjm9U0KLy/IdIHLuKYJuQclnIKCSCGZQymUwSUOKoTQPMoMxX5X+vUrCK40mcLTCBorj8f5GBVRzLqHAGk+oKK9CoIw1wqEVFcrtGIgLOIpzB2hcISzSL7quI9kG5ql9nCVbRuUSTNlEHbRqOJaIWzR4EnrYbcEd12jRQi2ZF29UKMIsOm4Z5m6iDNg1nRrWXwYrABjhUYL7qvmZQAxw8qvV+iVegrd++UVGB3Ra9EEzTQC0qBgQGM8ChbSJvbRN1ghjgYIv2bDJ3Ev0bde4ogxVwFm0ZFc1gqlTBEs8DHGrR9lGtHa+nfldtoo7PU7+FE70KcBaNBe5snOhVAAe4bGcocJtDAvtHtXbAU3++NRL4Bi2qmcEK0KjyzUThd+uH9ENLtp3olSRCVcx+DQTOEY/KVKNN1MEGuMygKx5TQKDaqNYO1DTST3zBd/2NFMxgBZJF8YWv96O9XO+JXkmivlHlD7zaTH8xnVGtHWCAE3AQtXuFoUUv6GdRwP3iQzOG2qNaO9pNI4MVatYQGNXa0W0aAh+/9QSatImGRL0qSnylV42FrGSwQqtpyD2+0K96EGVmrYIlicaOKgzGtpXy1GYwqrWj8drGKP4LxWUsZrBCuWlIo0PwUa2IVjNYoZrF3OyH3/YqqxiPau2onfpN9pmSQmGvgU70SourbDfCdAMY9qkTi15QMKqhR0vWAxItjWrtDA5w+drCKv0SlV6+4AwMcFYEniT2nPQdtIk6va9tLAnsq6LDDFb0ZNGawG6JGi9fcDpf21gU2CXRwolehY4BzqrA8tn34yriMNLPAS+nj11ZGj7rfuRTNldJ9x+W1+jkY9/c7IQweITYwdsmv2tOMrNskgHW+V0apch3Ro/yuyjeD+n555xFli3WI38dMFsvsr/F08O7s/zPkvXXZrf5/jfKDtOk+Pd9WvxrnYTwYSkhhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEKIP/4D3505bndtyS8AAAAASUVORK5CYII=);
+    background-position: center;
+    background-size: cover;
+    border: 2px solid black;
+    border-radius: 50%;
+    position: sticky;
+    margin: 20px;
+    margin-left: 40%;
+    top: 80vh;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    text-indent: -9999px;
+    transition: all 0.2s ease;
+}
+
+.kr_top:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+/* <프리텐다드> - font-weight : 100~ 900 */
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+/* <인피니티산스> - font-weight : 400, 600, 700 */
+@font-face {
+    font-family: 'InfinitySans-RegularA1';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/InfinitySans-RegularA1.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
