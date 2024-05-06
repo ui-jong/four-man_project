@@ -1,0 +1,36 @@
+header h1 {
+  text-align: center;
+}
+
+body {
+  font-family: 'Pretendard-Regular';
+}
+
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 200vh;
+  margin: auto;
+}
+
+.ko_allConcerthall {
+  background: url('../image/2024공간안내도_국문_240404_1280.jpg')   center/100% 100%;
+  width: 90%;
+  height: 90%;
+  /* width: 100%;
+  height: 300px;  */
+}
+
+main .ko_Concert-hall {
+  background: url('../image/t_sub_img48.gif')center/100% 100%;
+  width: 80%;
+  height: 100%
+  
+}

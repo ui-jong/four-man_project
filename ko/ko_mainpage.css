@@ -15,6 +15,7 @@ body {
 
 /* header 스타일 지정 */
 header {
+  height: 15vh;
   background-color: transparent; /* 초기 투명한 배경색 */
   color: #ffffff0a; /* 초기 투명한 텍스트 색상 */
   padding: 20px 0; /* 위아래로 20px씩 내부 여백 지정 */
@@ -36,24 +37,25 @@ header h1 {
 /* nav의 ul 요소 스타일 */
 nav ul {
   list-style: none; /* 리스트 마커 제거 */
-  opacity: .0; /* 초기 투명도 설정 */
+  /* opacity: .0;/초기 투명도 설정 */
   color: #ffffff0a;
-  
+  display: none;
 }
 
 /* nav의 ul에 마우스 호버 시 스타일 변경 */
-nav ul:hover {
-  opacity: 1; /* 마우스 호버 시 투명도 변경 */
+header:hover nav>div>ul {
+  /* opacity: 1; 마우스 호버 시 투명도 변경 */
+  display: inline-block;
 }
 
 /* nav의 ul 내부의 li 요소 스타일 */
 nav ul li {
   display: inline; /* 인라인 요소로 배치 */
-  margin: 0 20px; /* 좌우 여백 지정 */
+  margin: 0 80px; /* 좌우 여백 지정 */
 }
 
 /* nav의 ul 내부의 li의 하위 a 태그 스타일 */
-nav ul li a {
+nav ul a {
   color: #fff; /* 텍스트 색상 설정 */
   text-decoration: none; /* 밑줄 제거 */
 }
