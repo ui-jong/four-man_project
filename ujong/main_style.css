@@ -13,10 +13,18 @@ body {
 
 
 main {
-    /* width: 70vw; */
+    font-family: 'Pretendard-Regular';
     min-width: 1000px;
     margin: auto;
 }
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
 
 /* ====================================================== */
 
@@ -40,42 +48,69 @@ main {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
+    position: relative;
     display: inline-block;
     height: 100%;
     width: 100vW;
 }
 
-/* ======================================= */
-/* 메인배너 상세설명 */
+.main_ban_introduce {
 
-.detail_in_banner {
     position: absolute;
-    top: 50%;
-    height: 3rem;
-    width: 3rem;
-    background-color: azure;
+    bottom: 0;
+
+    font-size: 1.2rem;
+    width: 100%;
+
+    box-sizing: border-box;
+    padding: 0 8rem 7rem 0;
+
+    text-align: right;
+    color: white;
+
+    z-index: 2;
 }
 
+.main_ban_introduce>p {
+    margin-top: .5rem;
+}
+
+.main_ban_introduce::before {
+    content:"";
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    height: 200%;
+    width: 100%;
+
+    background-image: url(https://ifh.cc/g/ADJwFk.jpg);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0, .7));
+    background-size: cover;
+
+    z-index: -1;
+}
 
 /* ======================================= */
 /* 메인배너 이미지 모음 */
 
 .img1 {
-    background-image: url(https://www.sac.or.kr/upfile/uploadfile/asa/banner/banner/kr/2024/04/48fa4470e35950b9e849e3f43a85b8d3.jpg);
+    background-image: url(https://ifh.cc/g/5CGB2h.jpg);
 }
 
 .img2 {
-    background-image: url(https://www.sac.or.kr/upfile/uploadfile/asa/banner/banner/kr/2024/03/bc447b017436e051a315817ad59bfdba.jpg);
+    background-image: url(https://ifh.cc/g/FSVpgt.jpg);
 } 
 
 .img3 {
-    background-image: url(https://www.sac.or.kr/upfile/uploadfile/asa/banner/banner/kr/2024/04/2cb5b7fbeb003e39b82d2644bea753a3.jpg);
+    background-image: url(https://ifh.cc/g/vvS543.jpg);
 }
 
-
-
-
-
+.img4 {
+    background-image: url(https://ifh.cc/g/AZVc3Q.jpg);
+}
 
 /* ====================================================== */
 /* 메인배너 슬라이드 */
@@ -94,21 +129,27 @@ main {
     transform: translateX(-200vw);
     transition: 1s;
 }
+#banner4:checked ~ #main_banner_container{
+    transform: translateX(-300vw);
+    transition: 1s;
+}
 
 #main_nav_box{
     display: flex;
     position: absolute;
     bottom: 0;
     
-    height: 25%;
+    height: 20%;
     width: 100%;
 
     justify-content: center;
     align-items: end;
-    z-index: 2;
+    z-index: 1;
 
+    overflow: hidden;
+    
     opacity: 0;
-    transition: 1s;
+    transition: .5s;
 }
 
 .main_banner_view>input {
@@ -122,12 +163,15 @@ main {
 
 #main_nav_box>label{
     background-color: gray;
-    height: calc(20vh * .9);
-    width: calc( 20vh * .9 * (3/4));
-    margin: 0 0 2rem 2rem;
+    height: calc(20vh * .8);
+    width: calc( 20vh * .8 * (3/4));
+    margin: 0 0 1rem 2rem;
 
     background-size: cover;
     background-position: center;
+
+    z-index: 3;
+
 }
 
 #main_nav_box>label:hover {
@@ -146,11 +190,20 @@ main {
     align-items: center;
 
     margin: .5rem 0 .5rem 0;
+
+    font-size: 4rem;
 }
 
 #row_ad {
-    display: inline-block;
-    
+    display: flex;
+
+    align-items: center;   
+    justify-content: space-around;
+
+    padding-left: 20%;
+    padding-right: 20%;
+
+    box-sizing: border-box;
     width: 70%;
     height: 90%;
     
@@ -171,7 +224,6 @@ h2 {
     box-sizing: border-box;
 
     width: 70vw;
-    height: 41rem;
     margin: auto;
     padding-bottom: 2rem;
     overflow: hidden;
@@ -195,7 +247,7 @@ h2 {
 
     box-sizing: border-box;
     border: 1.5px solid rgb(0, 0, 0);
-    border-radius: 1rem 1rem 0 0;
+    border-radius: 1rem;
 
     overflow: hidden;
 
@@ -211,15 +263,16 @@ h2 {
 .ticket_open {
     display: inline-block;
     
-    height: calc(((70vw * .25) * 4/3));    
+    height: calc(((70vw * .25 - 1rem) * 4/3));    
     width: 100%;    
     
-    background: 100%/100%;
+    background-position: center;
+    background: 100%/100% no-repeat;
 }
 
 .border > .naration_box {
     box-sizing: border-box;
- 
+
     padding: 0 1rem;
 
 }
@@ -242,7 +295,7 @@ h2 {
     font-size: 0.9rem;
     color: grey;
 }
-
+/* ===================================================== */
 /* 티켓오픈 슬라이드 */
 
     #ticket_open_block{
@@ -286,14 +339,14 @@ h2 {
     #ticket_open_block>nav>label:nth-of-type(1){
         height: 3rem;
         width: 3rem;
-        background-image: url(./images/pngwing.com.png);
+        background-image: url(https://ifh.cc/g/sWwXzB.png);
         background-position: center;
         background-size: 100% 100%;
     }
     #ticket_open_block>nav>label:nth-of-type(2){
         height: 3rem;
         width: 3rem;
-        background-image: url(./images/pngwing.com.png);
+        background-image: url(https://ifh.cc/g/sWwXzB.png);
         transform: scaleX(-1);
         background-position: center;
         background-size: 100% 100%;
@@ -307,17 +360,47 @@ h2 {
     }
 
 /* ====================================================== */
-/* 티켓오픈 이미지 모음 */
+/* 포스터 이미지 모음 */
 
-.t_img1 {
-    background-image: url(https://www.lgart.com/Down/Display/202312/690x905_3.png);
+.poster1 {
+    background-image: url(https://ifh.cc/g/rcZGFZ.jpg);
 }
 
-.t_img2 {
-
+.poster2 {
+    background-image: url(https://ifh.cc/g/kYoglq.webp);
 }
 
+.poster3 {
+    background-image: url(https://ifh.cc/g/mNOO35.jpg);
+}
 
+.poster4 {
+    background-image: url(https://ifh.cc/g/SVWTXS.jpg);
+}
+
+.poster5 {
+    background-image: url(https://ifh.cc/g/xVK3BQ.jpg);
+}
+
+.poster6 {
+    background-image: url(https://ifh.cc/g/TtP9dC.jpg);
+}
+
+.poster7 {
+    background-image: url(https://ifh.cc/g/O133XG.png);
+}
+
+.poster8 {
+    background-image: url(https://ifh.cc/g/hNLkv6.jpg);
+}
+
+.poster9 {
+    background-image: url(https://ifh.cc/g/mqQock.jpg);
+}
+
+.poster10 {
+    background-image: url(https://ifh.cc/g/N2CDax.jpg);
+}
 
 /* ====================================================== */
 /* 이 달의 공연 */
@@ -352,16 +435,37 @@ h2 {
     width: calc(70vw * 0.3);
 
     font-size: medium;
-
 }
 
-.month_main_img {
-    background-image: url(https://img.freepik.com/free-photo/portrait-of-person-with-wavy-texture_23-2150169248.jpg);
+.month_main {
+    
     background-position: center;
+    background-size: 100% 100%;
+
     display: inline-block;
     background-color: black;
     width: 100%;
-    height: 50%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
+    position: relative;
+}
+
+.month_main div{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .5;
+}
+.month_main p{
+    position: absolute;
+    font-size: 4rem;
+    font-weight: bold;
+    white-space: pre-line;
+    color: white;
 }
 
 #month_banner_sub {
@@ -387,7 +491,7 @@ h2 {
     background-color: aliceblue;
 
     box-sizing: border-box;
-    height: calc((70vw * .6) * .5 * .9 * ( 4 /3 ));
+    height: calc((70vw * .6) * .45 * ( 4 / 3 ));
     width: calc((70vw * .6) * .5 * .9);
 
     margin:auto;
@@ -407,31 +511,36 @@ h2 {
 #rightlist {
     height: 100%;
     width: 50%;
-    padding-top: 15rem;
+    padding-top: calc((70vw * .6) * .45 * ( 4 / 9 ));;
 }
 
 
 .left {
     display: inline-block;
     margin-left: calc((100% - 85%)/2); 
-    margin-bottom: 150px;
+    margin-bottom: calc((70vw * .6) * .45 * ( 4 / 9 ));
 }
 
 .right {
     display: inline-block;
     margin-left: calc((100% - 85%)/2); 
-    margin-top: 150px;
+    margin-top: calc((70vw * .6) * .45 * ( 4 / 9 ));
+    margin-bottom: 2rem;
 }
 
-.sub_img1 {
-    background-image: url(https://img.freepik.com/free-photo/portrait-of-person-with-wavy-texture_23-2150169248.jpg);
+.sub {
     display: inline-block;
     
     width: 100%;
-    height: 50%;
+    height: 100%;
     
     background-position: center;    
+    background-size: cover;
 } 
+
+/* ========================================= */
+/* 공연 전체 포스터 이미지 */
+
 
 
 
@@ -448,28 +557,35 @@ h2 {
     flex-direction: row wrap;
 }
 
-#notice_block>:nth-child(1) {
-    display: inline-block;
+#notice_block>div:nth-child(1) {
     background-color:lightgray;
 
     box-sizing: border-box;
-    flex-basis: 25%;
+    flex-basis: 20%;
     height: 70%;
+    position: relative;
 
     white-space: wrap;
+    
+    
+    font-size: 2rem;
+    color: crimson;
+    font-weight: bolder;
 
-    text-align: left;
-    line-height: calc(250px * .7);
+    padding: 1rem;
+}
 
-    font-size: 3rem;
+#notice_block>div:nth-child(1)>span {
+    position: absolute;
+
 }
 
 #notice_container {
-    display: inline-block;
+    display: flex;
     
     background-color:lightgray;
     height: 70%;
-    flex
+    width: 100%;
     
     white-space: nowrap;
     overflow-x: scroll;
@@ -480,11 +596,15 @@ h2 {
 }
 
 .notice {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    font-size: 1rem;
 
     box-sizing: border-box;
     height: 100%;
-    width: 20%;
+    width: 25%;
     padding: 2rem;
 
     border: 0px solid black;
@@ -495,3 +615,7 @@ h2 {
 
 .notice span {
     color: gray;
+
+.notice>p {
+
+}
