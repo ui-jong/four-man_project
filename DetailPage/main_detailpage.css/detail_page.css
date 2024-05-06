@@ -3,6 +3,7 @@
     padding: 0;
     list-style: none;
     scroll-behavior: smooth;
+    font-family: 'Pretendard-Regular';
 }
 
 /* 전체적인 큰 틀속성을 가질 플랙스 클래스====================== */
@@ -35,18 +36,15 @@
 }
 
 /* 메인섹션 - 포스터 (nav)===================================== */
-.kr_home {
-    text-align: center;
-    margin: 7vh;
-}
 
 main .kr_banner {
     text-align: center;
 }
 
 .kr_poster {
-    height: 80vh;
-    margin-bottom: 10px;
+    height: 90vh;
+    margin-bottom: 40px;
+    margin-top: 40px;
 }
 
 /* 메인섹션 - (section)===================================== */
@@ -57,20 +55,20 @@ main .kr_banner {
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
-    background-color: antiquewhite;
+    background-color: white;
     padding: 5px;
 }
 
 .kr_indextable a{
     width: calc((100% / 4) - 10px);
     text-align: center;
-    line-height: 50px;
+    /* line-height: 50px; */
     text-decoration: none;
+    background-color: white;
     color: black;
     font-weight: bold;
-    background-color: rgb(222, 213, 201);
-    height: 50px;
-    /* border-radius: 10%; */
+    height: 30px;
+    border-bottom: 1px solid black;
 }
 
 .kr_detailimg {
@@ -91,6 +89,8 @@ main .kr_banner {
         font-size: small;
         font-weight: normal;
         white-space: pre-line;
+        font-family: 'InfinitySans-RegularA1';
+        font-size: 14px;
     }
     img{
         width: 100%;
@@ -123,6 +123,8 @@ main .kr_banner {
 }
 
 .kr_CKbox p {
+    font-family: 'InfinitySans-RegularA1';
+    font-size: 14px;
     white-space: pre-line;
 }
 
@@ -199,6 +201,7 @@ input[id*="kr_date"]:checked+label,
     color: white;
     font-weight: bold;
     outline: 4px solid red;
+    cursor: pointer;
 }
 
 .kr_reservation {
@@ -251,4 +254,18 @@ main aside>div a {
 .kr_top:hover {
     transform: scale(1.2);
     cursor: pointer;
+}
+/* <프리텐다드> - font-weight : 100~ 900 */
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+/* <인피니티산스> - font-weight : 400, 600, 700 */
+@font-face {
+    font-family: 'InfinitySans-RegularA1';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/InfinitySans-RegularA1.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
