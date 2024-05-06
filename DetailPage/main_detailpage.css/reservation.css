@@ -1,32 +1,25 @@
-footer {
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
     font-family: 'Pretendard-Regular';
-    position: relative;
-    height: 150px;
-    background-color: lightgray;
 }
 
-.kr_ft1 {
-    margin-top: 10px;
-    width: 500px;
-    position: absolute;
-    right: 60%;
-    letter-spacing: 5px;
+main {
+    display: flex;
 }
 
-.kr_ft2 {
-    margin-top: 10px;
-    width: 500px;
-    position: absolute;
-    left: 60%;
-    letter-spacing: 5px;
+.kr_leftbox {
+    flex: 1;
 }
 
-footer>div {
-    text-align: center;
-    width: 600px;
-    position: absolute;
-    bottom: 10px;
-    left: calc(50vw - 300px);
+.kr_resrve {
+    flex: 8;
+    
+}
+
+.kr_rightbox {
+    flex: 1;
 }
 
 /* <프리텐다드> - font-weight : 100~ 900 */
@@ -36,6 +29,7 @@ footer>div {
     font-weight: 400;
     font-style: normal;
 }
+
 /* <인피니티산스> - font-weight : 400, 600, 700 */
 @font-face {
     font-family: 'InfinitySans-RegularA1';
