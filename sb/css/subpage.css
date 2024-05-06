@@ -5,12 +5,31 @@
     list-style: none;
 }
 
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'InfinitySans-RegularA1';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/InfinitySans-RegularA1.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 header:not(.h_open) {
     display: grid;
 
     /* place-content: center; */
     grid-template: 1fr 1fr / 2fr repeat(5, 1fr);
     height: 15vh;
+}
+/* header */
+{
+    position: absolute;
+    right: 0;
+    width: 100vw;
 }
 
 header>div:not(:nth-child(2)) {
@@ -19,7 +38,7 @@ header>div:not(:nth-child(2)) {
 }
 
 header>div a {
-    color: black;
+    /* color: black; */
     text-decoration: none;
 }
 
@@ -96,6 +115,7 @@ header>.h_outer>input{
 
 header>div>a {
     /* font-family: serif; */
+    color: white;
 }
 
 .h_login>a {
@@ -112,15 +132,7 @@ header>div>a {
     display: none;
 }
 
-/* .h_open,  */
-#h_ssearch,
-#h_llogin {
-    /* visibility: hidden; */
-    display: none;
-    position: absolute;
-    top: 10vh;
-    /* background-color: beige; */
-}
+
 
 .h_open {
     position: absolute;
@@ -170,6 +182,8 @@ header>div>a {
 header {
     /* background-color: black; */
     height: 10vh;
+    /* color: white; */
+    background-color: black;
     /* padding-top: 1vh; */
 }
 
@@ -200,135 +214,13 @@ header:hover .h_open {
     cursor: pointer;
 }
 
-/* 검색창 사이즈 */
-.h_open>input {
-    width: ;
-    height: ;
-}
 
-/* 버튼 사이즈 */
-.h_open>button {
-    width: ;
-    height: ;
-}
 
-@font-face {
-    font-family: 'NanumSquareNeo-Variable';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'LINESeedKR-Bd';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
-    font-weight: 700;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Pretendard-Regular';
-    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'TheJamsil5Bold';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2');
-    font-weight: 700;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Orbit-Regular';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/Orbit-Regular.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'InfinitySans-RegularA1';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/InfinitySans-RegularA1.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face{
-font-family:'DNFForgedBlade';font-style:normal;font-weight:300;
-src:url('//cdn.df.nexon.com/img/common/font/DNFForgedBlade-Light.otf')format('opentype')}
 
-@font-face{
-font-family:'DNFForgedBlade';font-style:normal;font-weight:500;
-src:url('//cdn.df.nexon.com/img/common/font/DNFForgedBlade-Medium.otf')format('opentype')}
-
-@font-face{
-font-family:'DNFForgedBlade';font-style:normal;font-weight:700;
-src:url('//cdn.df.nexon.com/img/common/font/DNFForgedBlade-Bold.otf')format('opentype')}
-
-@font-face {
-    font-family: 'SOGANGUNIVERSITYTTF';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/SOGANGUNIVERSITYTTF.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
 .h_notice, .h_introduction, .h_path{
-/* font-family:'DNFForgedBlade';font-style:normal;font-weight:500; */
-font-family: 'InfinitySans-RegularA1';
-font-family: 'Orbit-Regular';
-font-family: 'TheJamsil5Bold';
-font-family: 'Pretendard-Regular';
-font-size: 1.5rem;
-    
-}
-/* ================================================================== */
-@font-face {
-    font-family: 'NanumSquareNeo-Variable';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'LINESeedKR-Bd';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
-    font-weight: 700;
-    font-style: normal;
-}
-@font-face {
     font-family: 'Pretendard-Regular';
-    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'TheJamsil5Bold';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2');
-    font-weight: 700;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Orbit-Regular';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/Orbit-Regular.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'InfinitySans-RegularA1';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/InfinitySans-RegularA1.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face{
-font-family:'DNFForgedBlade';font-style:normal;font-weight:300;
-src:url('//cdn.df.nexon.com/img/common/font/DNFForgedBlade-Light.otf')format('opentype')}
-
-@font-face{
-font-family:'DNFForgedBlade';font-style:normal;font-weight:500;
-src:url('//cdn.df.nexon.com/img/common/font/DNFForgedBlade-Medium.otf')format('opentype')}
-
-@font-face{
-font-family:'DNFForgedBlade';font-style:normal;font-weight:700;
-src:url('//cdn.df.nexon.com/img/common/font/DNFForgedBlade-Bold.otf')format('opentype')}
-
-@font-face {
-    font-family: 'SOGANGUNIVERSITYTTF';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/SOGANGUNIVERSITYTTF.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
+    font-size: 1.5rem;
+    color: white;
 }
 /* ================================================================== */
 
@@ -787,4 +679,49 @@ main>a>div {
     main>a>div {
         height: 14rem;
     }
+}
+
+footer {
+    position: relative;
+    height: 150px;
+    background-color: lightgray;
+}
+
+.kr_ft1 {
+    margin-top: 10px;
+    width: 500px;
+    position: absolute;
+    right: 60%;
+    letter-spacing: 5px;
+}
+
+.kr_ft2 {
+    margin-top: 10px;
+    width: 500px;
+    position: absolute;
+    left: 60%;
+    letter-spacing: 5px;
+}
+
+footer>div {
+    text-align: center;
+    width: 600px;
+    position: absolute;
+    bottom: 10px;
+    left: calc(50vw - 300px);
+}
+
+/* <프리텐다드> - font-weight : 100~ 900 */
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+/* <인피니티산스> - font-weight : 400, 600, 700 */
+@font-face {
+    font-family: 'InfinitySans-RegularA1';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/InfinitySans-RegularA1.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
