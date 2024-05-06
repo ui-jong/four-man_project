@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+/* =========================================================== */
+
+/* 전체 그리드 */
+.sb_note {
+    display: grid;
+    grid-template: 2fr 8fr 1fr 2fr / 2fr 3fr 2fr;
+    height: 100vh;
+    margin: auto;
+    /* aspect-ratio: 1/1; */
+}
+
+/* 전체 안에 그리드 및 중앙정렬 */
+.sb_note>div {
+    display: grid;
+    place-content: center;
+
+}
+
+/* 공지사항 수직수평정렬 */
+.sb_notice {
+    /* margin: auto; */
+    display: grid;
+    place-content: center;
+}
+
+/* 공지사항 디자인 */
+.sb_notice>span {
+    border-bottom: 5px solid rgb(107, 128, 170);
+    /* box-shadow: 5px 5px 2px gray; */
+    /* background-color: rgb(199, 252, 92, .3); */
+    /* border-radius: 10px; */
+    padding: 5px 10px;
+    color: black;
+    font-weight: bold;
+    /* text-shadow: 3px 2px 2px gray; */
+    letter-spacing: 1rem;
+    font-family: 'NanumSquareNeo-Variable';
+    font-size: 2.5rem;
+}
+
+.sb_blank {
+    grid-row: 1 / 3;
+    text-indent: -9999em;
+}
+
+.sb_notice {
+    grid-area: 1 / 2 / 2 / 3;
+    margin-bottom: 20px;
+}
+
+/* 맨 밑 넘버링 + 화살표 정렬 */
+.sb_note>.sb_numbering {
+    /* grid-area: 3 / 2 / 4 / 3; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 넘버링 정렬 */
+.sb_numbering>ul {
+    display: flex;
+}
+
+.sb_numbering>ul li {
+    padding: 10px;
+}
+
+/* 넘버링 디자인 */
+.sb_numbering>ul li a {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+/* 1번 밑줄 */
+.sb_note>.sb_numbering>ul>li:first-child {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* 이미지넣고 정렬 */
+.sb_before {
+    text-indent: -9999em;
+    display: inline-block;
+    width: 25px;
+    height: 20px;
+    background: url(../page_image/left-long.png) center/100% 50% no-repeat;
+}
+
+/* 이미지넣고 정렬 */
+.sb_after {
+    text-indent: -9999em;
+    display: inline-block;
+    width: 25px;
+    height: 20px;
+    background: url(../page_image/right_long.png) center/100% 50% no-repeat;
+}
+
+/* 공지사항 내 그리드 */
+.sb_service {
+    grid-template: 1fr repeat(10, 1fr) / .5fr 3fr 1fr .5fr;
+}
+
+/* 번호, 제목, 날짜, 조회수 글자크기 */
+.sb_note>.sb_service>div {
+    font-size: 1rem;
+}
+
+/* 제목제외 가운데정렬 */
+.sb_service>div:not(:nth-child(4n+6)) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sb_service>div:nth-child(4n+6)>a {
+    flex: 1;
+}
+
+.sb_service>div:nth-child(4n+6)>a {
+    text-decoration: none;
+    color: black;
+}
+
+.sb_service>div:nth-child(4n+6) {
+    display: flex;
+    align-items: center;
+}
+
+.sb_service>div {
+    font-size: .5rem;
+    border-bottom: 1px solid;
+}
+
+.sb_service>div:nth-child(-n+4) {
+    border-bottom: 3px solid;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
