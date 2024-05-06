@@ -5,6 +5,19 @@
     list-style: none;
 }
 
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'InfinitySans-RegularA1';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/InfinitySans-RegularA1.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 header:not(.h_open) {
     display: grid;
 
@@ -12,14 +25,20 @@ header:not(.h_open) {
     grid-template: 1fr 1fr / 2fr repeat(5, 1fr);
     height: 15vh;
 }
+/* header */
+{
+    position: absolute;
+    right: 0;
+    width: 100vw;
+}
 
-header>div {
+header>div:not(:nth-child(2)) {
     display: grid;
     place-content: center;
 }
 
 header>div a {
-    color: black;
+    /* color: black; */
     text-decoration: none;
 }
 
@@ -29,6 +48,11 @@ header>div a {
 
 .h_outer {
     grid-area: 1 / 2 / 2 / 5;
+}
+header>.h_outer{
+    display: flex;
+    align-items: end;
+    /* justify-content: center; */
 }
 
 .h_notice {
@@ -43,13 +67,9 @@ header>div a {
     grid-area: 2 / 4 / 3 / 5;
 }
 
-.h_search {
-    grid-area: 1 / 5 / 3 / 6;
-
-}
 
 .h_login {
-    grid-area: 1 / 6 / 3 / 7;
+    grid-area: 1 / 5 / 3 / 7;
 }
 
 .h_logo>a {
@@ -59,13 +79,43 @@ header>div a {
     background: url(../image/as.png) center / 100% 100% no-repeat;
 }
 
+header>.h_outer>button {
+    width: 50px;
+    border-radius: 20px;
+    height: 40px;
+    outline: none;
+
+}
+header>.h_outer>input{
+    width: 300px;
+    height: 40px;
+    border-radius: 20px;
+    margin-right: 10px;
+    margin-left: 20px;
+    outline: none;
+    padding-left: 10px;
+}
+
 .h_outer>a {
     font-size: 2em;
     font-weight: 800;
+    margin-top: 15px;
+}
+@media (width <=70rem) {
+    .h_notice>a, .h_introduction, .h_path{
+        font-size: .8em;
+    }
+}
+
+@media (width <=40rem) {
+    .h_notice>a, .h_introduction, .h_path{
+        font-size: .5em;
+    }
 }
 
 header>div>a {
     /* font-family: serif; */
+    color: black;
 }
 
 .h_login>a {
@@ -78,24 +128,11 @@ header>div>a {
     text-indent: -9999em;
 }
 
-.h_search {
-    display: grid;
-    place-content: center;
-}
-
 #h_ssearch:not(:checked)+label+.h_open {
     display: none;
 }
 
-/* .h_open,  */
-#h_ssearch,
-#h_llogin {
-    /* visibility: hidden; */
-    display: none;
-    position: absolute;
-    top: 10vh;
-    /* background-color: beige; */
-}
+
 
 .h_open {
     position: absolute;
@@ -104,14 +141,7 @@ header>div>a {
     background-color: none !important;
 }
 
-.h_search>label {
-    position: absolute;
-    top: 5.8vh;
-    right: 20.3%;
-    width: 30px;
-    height: 31px;
-}
-
+/* 고치기 */
 .h_login>label {
     position: absolute;
     top: 5.8vh;
@@ -129,24 +159,19 @@ header>div>a {
     /* display: none; */
 }
 
-/* ========================================= */
-
-
-
-
 /* ===================================================== */
 /* section */
 
 
-/* 검색 아이콘 */
-.h_search::after {
+/* 버튼 아이콘 */
+.h_outer>button::after {
     /* 검색 아이콘의 유니코드 값 */
     content: "\f002";
     /* 또는 "Font Awesome 5 Pro" 등 사용중인 Font Awesome의 패밀리 이름 */
     font-family: "Font Awesome 5 Free";
     /* 없애버리고 싶지만 없애버리면 에러뜨는 asshole */
     font-weight: 900;
-    font-size: 30px;
+    font-size: 15px;
     /* cursor: pointer; */
     color: black;
     text-align: center;
@@ -157,6 +182,8 @@ header>div>a {
 header {
     /* background-color: black; */
     height: 10vh;
+    /* color: white; */
+    /* background-color: black; */
     /* padding-top: 1vh; */
 }
 
@@ -169,13 +196,13 @@ header>div {
 header:hover,
 header:hover div a,
 header:hover div {
-    color: white;
-    background-color: black;
+    /* color: white; */
+    /* background-color: black; */
 }
 
 header:hover .h_search::after,
 header:hover .h_login::before {
-    color: white;
+    /* color: white; */
 }
 
 header:hover .h_open {
@@ -187,16 +214,13 @@ header:hover .h_open {
     cursor: pointer;
 }
 
-/* 검색창 사이즈 */
-.h_open>input {
-    width: ;
-    height: ;
-}
 
-/* 버튼 사이즈 */
-.h_open>button {
-    width: ;
-    height: ;
+
+
+.h_notice, .h_introduction, .h_path{
+    font-family: 'Pretendard-Regular';
+    font-size: 1.5rem;
+    color: white;
 }
 
 /* =========================================================== */
@@ -235,6 +259,7 @@ header:hover .h_open {
     font-weight: bold;
     /* text-shadow: 3px 2px 2px gray; */
     letter-spacing: 1rem;
+    font-family: 'NanumSquareNeo-Variable';
     font-size: 2.5rem;
 }
 
@@ -273,7 +298,7 @@ header:hover .h_open {
 }
 
 /* 1번 밑줄 */
-.sb_note>.sb_numbering>ul>li:nth-child(2) {
+.sb_note>.sb_numbering>ul>li:first-child {
     text-decoration: underline;
     font-weight: bold;
 }
@@ -335,4 +360,56 @@ header:hover .h_open {
 .sb_service>div:nth-child(-n+4) {
     border-bottom: 3px solid;
     font-weight: bold;
+}
+
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+footer {
+    position: relative;
+    height: 150px;
+    background-color: lightgray;
+}
+
+.kr_ft1 {
+    margin-top: 10px;
+    width: 500px;
+    position: absolute;
+    right: 60%;
+    letter-spacing: 5px;
+}
+
+.kr_ft2 {
+    margin-top: 10px;
+    width: 500px;
+    position: absolute;
+    left: 60%;
+    letter-spacing: 5px;
+}
+
+footer>div {
+    text-align: center;
+    width: 600px;
+    position: absolute;
+    bottom: 10px;
+    left: calc(50vw - 300px);
+}
+
+/* <프리텐다드> - font-weight : 100~ 900 */
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+/* <인피니티산스> - font-weight : 400, 600, 700 */
+@font-face {
+    font-family: 'InfinitySans-RegularA1';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/InfinitySans-RegularA1.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
