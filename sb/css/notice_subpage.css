@@ -200,14 +200,12 @@ header:hover .h_open {
     color: white;
 }
 /* =========================================================== */
-main{
-    position: relative;
-}
+
 
 .sb_note {
     display: grid;
-    grid-template: 2fr 8fr 1fr 2fr / 2fr 3fr 2fr;
-    height: 100vh;
+    grid-template: 2fr 8fr / 2fr 3fr 2fr;
+    /* height: 100vh; */
     margin: auto;
     /* aspect-ratio: 1/1; */
 }
