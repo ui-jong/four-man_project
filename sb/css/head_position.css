@@ -91,13 +91,13 @@ header>.h_outer>input{
     margin-top: 15px;
 }
 @media (width <=70rem) {
-    .h_notice>a, .h_introduction, .h_path{
+    .h_notice>a, .h_introduction>a, .h_path>a, .h_csc>a{
         font-size: .8em;
     }
 }
 
 @media (width <=40rem) {
-    .h_notice>a, .h_introduction, .h_path{
+    .h_notice>a, .h_introduction>a, .h_path>a, .h_csc>a{
         font-size: .5em;
     }
 }

@@ -31,13 +31,9 @@
 /* 공지사항 디자인 */
 .sb_notice>span {
     border-bottom: 5px solid rgb(107, 128, 170);
-    /* box-shadow: 5px 5px 2px gray; */
-    /* background-color: rgb(199, 252, 92, .3); */
-    /* border-radius: 10px; */
     padding: 5px 10px;
     color: black;
     font-weight: bold;
-    /* text-shadow: 3px 2px 2px gray; */
     letter-spacing: 1rem;
     font-family: 'NanumSquareNeo-Variable';
     font-size: 2.5rem;
@@ -55,7 +51,6 @@
 
 /* 맨 밑 넘버링 + 화살표 정렬 */
 .sb_note>.sb_numbering {
-    /* grid-area: 3 / 2 / 4 / 3; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -140,11 +135,4 @@
 .sb_service>div:nth-child(-n+4) {
     border-bottom: 3px solid;
     font-weight: bold;
-}
-
-@font-face {
-    font-family: 'NanumSquareNeo-Variable';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
 }
