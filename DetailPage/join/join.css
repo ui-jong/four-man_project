@@ -64,6 +64,7 @@ main {
 
 
 .kr_signup-form button {
+    margin-top: 10px;
     background-color: #007bff;
     color: white;
     padding: 10px;
