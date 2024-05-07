@@ -7,28 +7,21 @@
     text-decoration: none;
 }
 
-body {
-    font-size: 0; /*이격방지*/
-}
-
 
 main {
+    font-size: 0; /*이격방지*/
     font-family: 'Pretendard-Regular';
     min-width: 1000px;
     margin: auto;
 }
 
-@font-face {
-    font-family: 'Pretendard-Regular';
-    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-}
-
-
 /* ====================================================== */
 
 /* 메인배너 */
+
+.main_slider {
+    z-index: 1;
+}
 
 .main_banner_view { /*main_banner_container부모*/
     height: 100vh;
@@ -39,7 +32,6 @@ main {
 #main_banner_container { /*메인배너 이미지 집합 컨테이너*/
     flex-direction: row;
     height: 100%;
-    /* width: 300vw; */
     width: 100vw;
     white-space: nowrap;
 }
@@ -177,19 +169,45 @@ main {
 #main_nav_box>label:hover {
     scale: 110%;
 }
+/* ======================================================= */
+/* 메인 페이지 네비게이터 */
+.to_the_top {
+    display: inline-block;
+    
+    height: 4rem;
+    width: 4rem;
+    
+    
+    border-radius: 50%;
+    border: 1px solid black;
+    
+    font-size: 4rem;
+    text-align: center;
+    line-height: 4rem;
 
+    background: white;
+    
+    position: sticky;
+    top: 90vh;
+    left: 90%;
+
+    bottom: 3rem;
+    right: 3rem;
+
+    color: black;
+}
 
 /* ====================================================== */
 /* 가로광고배너 */
 
-#row_ad_container {
+#row_ad_container {    
     display: flex;
     height: 10vh;
     
     justify-content: center;
     align-items: center;
 
-    margin: .5rem 0 .5rem 0;
+    margin: -3rem 0 .4rem 0;
 
     font-size: 4rem;
 }
@@ -207,9 +225,8 @@ main {
     width: 70%;
     height: 90%;
     
-    border: 1px solid white;
     border-radius: 2rem;
-    background-color: crimson;
+    background-color: rgba(220, 20, 60, 0.959);
 }
 
 
@@ -263,36 +280,36 @@ h2 {
 .ticket_open {
     display: inline-block;
     
-    height: calc(((70vw * .25 - 1rem) * 4/3));    
-    width: 100%;    
+    aspect-ratio: 3 / 4;
+    width: calc(70vw * .25 - 1rem);     
     
     background-position: center;
     background: 100%/100% no-repeat;
 }
 
 .border > .naration_box {
-    box-sizing: border-box;
-
     padding: 0 1rem;
-
 }
 
 
 
 
-.title {
-    font-size: 1.5rem;
+.title + hr {
     color: black;
 }
-.title + hr {
+.title {
+    font-size: 1.5rem;
+    margin: .1rem 0 .1rem 0;
     color: black;
 }
 .venue {
     font-size: 1.2rem;
+    margin: .1rem 0 .1rem 0;
     color: red;
 }
 .date {
     font-size: 0.9rem;
+    margin: .1rem 0 .1rem 0 ;
     color: grey;
 }
 /* ===================================================== */
@@ -406,7 +423,7 @@ h2 {
 /* 이 달의 공연 */
 
 #month_banner_block {
-    background-color: dimgray;
+    background-color: rgb(73, 53, 53);
     
     display: flex;
     flex-flow:row wrap;
@@ -426,7 +443,7 @@ h2 {
 
 #month_banner_main {
     background-color:azure;
-    margin-top: 3rem;
+    margin: 3rem;
 
     position: sticky;
     top: 3rem;
@@ -451,26 +468,31 @@ h2 {
     align-items: center;
     justify-content: end;
 
-    position: relative;
+    overflow: hidden;
 }
 
-.month_main div{
+.month_main div:nth-child(1){
     height: 100%;
     width: 100%;
     background-color: black;
     opacity: .5;
 }
+
+
 .month_main p{
     position: absolute;
+
     font-size: 4rem;
     font-weight: bold;
-    white-space: pre-line;
+
     color: white;
+
+    white-space: pre-line;
+    text-align: right;
 }
 
+
 #month_banner_sub {
-    background-color: dimgray;
-    /* background-color: rgb(68, 67, 67); */
 
     display: flex;
     flex-flow: row wrap;
@@ -484,7 +506,8 @@ h2 {
     scrollbar-width: none;
 
     font-size: medium;
-
+    
+    padding: 2rem 0 2rem 0;
 }
 
 .month_sub {
@@ -496,11 +519,8 @@ h2 {
 
     margin:auto;
     transition: all 0.3s ease;
-}
 
-/* .month_sub:hover {
-    transform: scale(1.05);
-} */
+}
 
 #leftlist {
     padding-top: 2rem;
@@ -511,9 +531,8 @@ h2 {
 #rightlist {
     height: 100%;
     width: 50%;
-    padding-top: calc((70vw * .6) * .45 * ( 4 / 9 ));;
+    padding-top: calc((70vw * .6) * .45 * ( 4 / 9 ));
 }
-
 
 .left {
     display: inline-block;
@@ -525,7 +544,6 @@ h2 {
     display: inline-block;
     margin-left: calc((100% - 85%)/2); 
     margin-top: calc((70vw * .6) * .45 * ( 4 / 9 ));
-    margin-bottom: 2rem;
 }
 
 .sub {
@@ -539,83 +557,136 @@ h2 {
 } 
 
 /* ========================================= */
-/* 공연 전체 포스터 이미지 */
 
-
-
-
+/* 공지와 고객센터 */
 
 /* 공지 */
 
-#notice_block {
-    /* background-color:lightgray; */
-    box-sizing: border-box;
-    height: 250px;
-    padding-top: 15px;
+#notice_customservice {
+    display: grid;
+    grid-template-columns: repeat( 6 , 1fr );
 
-    display: flex;
-    flex-direction: row wrap;
+    box-sizing: border-box;
+    height: 20rem;
+
+    font-size: 1rem;
 }
 
-#notice_block>div:nth-child(1) {
-    background-color:lightgray;
+#notice {
+
+    grid-column: 2 / 4;
+
+    display: grid;
+    grid-row: 1fr 1fr;
 
     box-sizing: border-box;
-    flex-basis: 20%;
-    height: 70%;
-    position: relative;
+    margin: .5rem;
 
-    white-space: wrap;
-    
-    
+    border: 2px solid;
+}
+
+#notice>a {
+    grid-row: 1 / 2;    
+
+    display: grid;
+    grid-template-rows: repeat(5 , 1fr);
+
     font-size: 2rem;
     color: crimson;
     font-weight: bolder;
 
-    padding: 1rem;
-}
-
-#notice_block>div:nth-child(1)>span {
-    position: absolute;
-
+    padding: 2rem;
 }
 
 #notice_container {
-    display: flex;
+    grid-column: 2 / 3;
     
-    background-color:lightgray;
-    height: 70%;
-    width: 100%;
-    
-    white-space: nowrap;
-    overflow-x: scroll;
+    box-sizing: border-box;
+    padding-right: .3rem;
 
-    scrollbar-width: none;
+    display: grid;
+    grid-template-rows: repeat(5 , 1fr);
+    align-items: end;
 
-    /* scrollbar-width: none; */
+
 }
 
 .notice {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-
-    font-size: 1rem;
-
     box-sizing: border-box;
-    height: 100%;
-    width: 25%;
-    padding: 2rem;
 
-    border: 0px solid black;
-    border-width: 0px 0px 0px 1px;
+    border: 0px solid crimson;
+    border-left-width: 4px;
 
-    text-align: center;
+    padding: .3rem;
+
+    color: black;
+    font-size: 1.2rem;
+
+    background-color: rgb(235, 231, 231);
 }
 
 .notice span {
     color: gray;
+    font-size: .9rem;
+}
 
-.notice>p {
+/* 고객센터 */
 
+#custom_service {
+    grid-column: -2 / -4;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 3rem 0 0 0;
+
+    margin: .5rem;
+
+}
+
+#custom_service>a {
+    grid-row: 1 / 2;
+
+    display: grid;
+    grid-template-rows: repeat(5 , 1fr);
+
+    font-size: 2rem;
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+
+    padding: 2rem;
+
+    background-color: ;
+}
+
+#ctm_service_container {
+    grid-column: -1 / -2;
+
+    display: grid;
+    grid-template-rows: repeat( 4 , 1fr );
+    align-items: center;
+
+    box-sizing: border-box;
+    height: 100%;
+    padding: .5rem;
+
+    align-items: center;
+}
+
+#ctm_service_container>a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+    border: 1px solid black;
+
+    height: 90%;
+
+    font-size: 1.5rem;
+    color: black;
+
+    background-color: lightgray;
 }
