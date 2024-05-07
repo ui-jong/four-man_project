@@ -5,28 +5,28 @@
 
 /* 전체 그리드 */
 .sb_grid {
-    display: grid;
-    grid-template: 1fr 7fr / 1fr 3fr 1fr;
-    height: 100vh;
+    /* display: grid; */
+    /* grid-template: 1fr 7fr / 1fr 3fr 1fr; */
+    /* height: 100vh; */
     margin: auto;
     /* aspect-ratio: 1/1; */
 }
 
+/* 고객센터 가운데정렬 */
 .sb_csc {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.sb_check {
-    grid-area: 2 / 2 /3 / 3;
-    display: grid;
-    /* border: 1px solid; */
-    grid-template: 1fr 7fr 2fr / repeat(3, 1fr);
-    place-content: center;
+.sb_check>label {
+    /* margin: auto; */
+    /* text-align: center; */
+    /* display: flex; */
+    /* flex-direction: column; */
 }
 
-.sb_position1{
+.sb_position1 {
     display: grid;
     grid-area: 2 / 1/ 5/ 6;
 }
@@ -41,25 +41,79 @@
     color: black;
 }
 
+.sb_check {
+    width: 50vw;
+    margin: auto;
+}
 
+/* 공연, 편의시설, 주차 체크박스 */
 .sb_check>input {
     display: none;
 }
-.sb_check>label{
+
+.sb_check>label {
     height: 30px;
 }
 
+.sb_position1,
+.sb_position2,
+.sb_position3 {
+    display: none;
+    border: 1px solid;
+}
+
+#sb_concert:checked~.sb_position1 {
+    display: block;
+}
+
+#sb_convenient:checked~.sb_position2 {
+    display: block;
+}
+
+#sb_park:checked~.sb_position3 {
+    display: block;
+}
+
+
+/* ==================================================== */
+/* 스타일 */
+.flex>div {
+    /* border-bottom: 1px solid; */
+}
+
+.sb_width {
+    /* width: 50px; */
+}
+
+/* 안보이게 막는거 */
+.sb_11,
+.sb_22,
+.sb_33,
+.sb_44 {
+    white-space: pre;
+    display: none;
+    margin-left: -30px;
+}
+
+/* 제목 호버 시 커서 포인터 */
+#sb_1+label,
+#sb_2+label,
+#sb_3+label,
+#sb_4+label {
+    cursor: pointer;
+}
 
 
 /* ================================================== */
-/* 누르면 나오는거 */
-#sb_11,
-#sb_22,
-#sb_33,
-#sb_44 {
+/* 체크박스 안보이는거 */
+.sb_11,
+.sb_22,
+.sb_33,
+.sb_44 {
     display: none;
 }
 
+/* 체크박스 */
 #sb_1,
 #sb_2,
 #sb_3,
@@ -67,39 +121,16 @@
     display: none;
 }
 
-.sb_123 {
-    display: none;
+
+/* 체크하면 보이는거 */
+#sb_1:checked+label+div,
+#sb_2:checked+label+div,
+#sb_3:checked+label+div,
+#sb_4:checked+label+div {
+    display: block;
 }
 
-#sb_1:checked+label+div {
-    display: inline-block;
-}
 
-
-
-
-
-.sb_width{
-    width: 50px;
-}
-
-.sb_concert1,
-.sb_concert2,
-.sb_concert3,
-.sb_concert4 {
-    /* display: flex; */
-    /* flex-wrap: wrap; */
-}
-.sb_concert1{
-    display: grid;
-    grid-template: 1fr 1fr / 1fr 1fr 20fr;
-    height: 15vh;
-}
-.sb_concert1>div{
-    /* margin-right: 10px; */
-
-}
-.sb_123{
-    /* white-space: pre; */
-    margin-left: -100px;
+.flex {
+    display: flex;
 }
