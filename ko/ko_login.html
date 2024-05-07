@@ -17,32 +17,29 @@
                     <img src="../image/LOGO.png" alt="로고">
                 </a>
             </div>
-            <h2></h2>
             <form id="ko_login-form" action="#" method="POST">
                 <div class="ko_form-group">
                     <label for="username">아이디</label>
-                    <input type="text" id="username" name="username" required>
+                    <input type="text" id="username" name="username" placeholder="아이디" required>
                 </div>
                 <div class="ko_form-group">
                     <label for="password">비밀번호</label>
-                    <input type="password" id="password" name="password" required>
+                    <input type="password" id="password" name="password" minlength="8" maxlength="16" placeholder="8자이상 15자이하" required>
                 </div>
                 <div class="ko_checkbox-group">
                     <input type="checkbox" id="remember-me" name="remember-me">
                     <label for="remember-me">로그인 상태 유지</label>
                 </div>
-                <div class="ko_form-group">
-                    <button type="submit">로그인</button>
-                    <button type="button"><a href="ko_subpage.html">신규가입</a></button>
-                </div>
-                <div class="ko_links">
-                    <a href="/find-id">아이디 찾기</a>
-                    <span>&#124;</span>
-                    <a href="/reset-password">비밀번호 찾기</a>
-                </div>
-
-        </div>
+                    <button type="submit">로그인</button>  
         </form>
+        <form action="#">
+            <button type="submit">회원가입</button>
+        </form>
+        <div class="ko_links">
+            <a href="#">아이디 찾기</a>
+            <span>&#124;</span>
+            <a href="#">비밀번호 찾기</a>
+        </div>
         </div>
     </main>
 </body>
