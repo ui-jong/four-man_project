@@ -1,36 +1,27 @@
-header h1 {
-  text-align: center;
-}
-
-body {
-  font-family: 'Pretendard-Regular';
-}
-
-@font-face {
-  font-family: 'Pretendard-Regular';
-  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-}
 main{
+  font-family: 'Pretendard-Regular';
+  h1{
+    margin: 20px;
+    text-align: center;
+  }
+}
+
+.ko_setting{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 150vh;
-  margin: auto;
 }
 
-.ko_allConcerthall {
-  background: url('../image/2024공간안내도_국문_240404_1280.jpg')center/100% 100%;
-  width: 90%;
-  height: 90%;
-  /* width: 100%;
-  height: 300px;  */
+.ko_left{
+  flex: 1;
 }
 
-main .ko_Concert-hall {
-  background: url('../image/t_sub_img48.gif')center/100% 100%;
-  width: 80%;
-  height: 100%
-  
+.ko_right{
+  flex: 1;
+}
+
+.center{
+  flex: 4;
+  text-align: center;
+  img{
+    width: 80vw;
+  }
 }
