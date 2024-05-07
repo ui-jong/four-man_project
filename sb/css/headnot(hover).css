@@ -5,9 +5,10 @@
     list-style: none;
 }
 
-header:not(.h_open) {
+header {
     display: grid;
-
+    width: calc(100vw - 19px);
+    z-index: 3;
     /* place-content: center; */
     grid-template: 1fr 1fr / 2fr repeat(6, 1fr);
     height: 15vh;
@@ -52,8 +53,9 @@ header>.h_outer {
 .h_path {
     grid-area: 2 / 4 / 3 / 5;
 }
-.h_tranportation{
-    grid-area: 2 / 5 / 3 / 6 ;
+
+.h_tranportation {
+    grid-area: 2 / 5 / 3 / 6;
 }
 
 .h_login {
