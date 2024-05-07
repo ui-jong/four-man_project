@@ -4,61 +4,7 @@
     list-style: none;
 }
 
-/* ================================================================== */
-@font-face {
-    font-family: 'NanumSquareNeo-Variable';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'LINESeedKR-Bd';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
-    font-weight: 700;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Pretendard-Regular';
-    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'TheJamsil5Bold';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2');
-    font-weight: 700;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Orbit-Regular';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/Orbit-Regular.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'InfinitySans-RegularA1';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/InfinitySans-RegularA1.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face{
-font-family:'DNFForgedBlade';font-style:normal;font-weight:300;
-src:url('//cdn.df.nexon.com/img/common/font/DNFForgedBlade-Light.otf')format('opentype')}
 
-@font-face{
-font-family:'DNFForgedBlade';font-style:normal;font-weight:500;
-src:url('//cdn.df.nexon.com/img/common/font/DNFForgedBlade-Medium.otf')format('opentype')}
-
-@font-face{
-font-family:'DNFForgedBlade';font-style:normal;font-weight:700;
-src:url('//cdn.df.nexon.com/img/common/font/DNFForgedBlade-Bold.otf')format('opentype')}
-
-@font-face {
-    font-family: 'SOGANGUNIVERSITYTTF';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/SOGANGUNIVERSITYTTF.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
 /* ================================================================== */
 
 
@@ -75,6 +21,7 @@ nav div,
 nav>div:first-child {
     height: 500px;
     line-height: 500px;
+    width: 100vw;
 }
 
 /* 공연 예매/일정, 상세검색 가운데 정렬 */
@@ -95,54 +42,24 @@ nav>div:first-of-type,
 }
 
 .sb_none {
-    /* display: flex; */
-    flex-wrap: row wrap;
     width: 62.5rem;
     text-align: center;
     margin-top: 10px;
 }
 
-.sb_none>ul:nth-child(1) {
-    flex-basis: 50%;
-}
-
-.sb_none>ul:nth-child(2) {
-    flex-basis: 50%;
-}
-
-.sb_none>ul:nth-child(3) {
-    flex-basis: 50%;
-}
-
-.sb_none>ul:nth-child(4) {
-    flex-basis: 50%;
-}
-
 .sb_nav>div:nth-child(1) {
-    background: url(https://c1.wallpaperflare.com/path/62/396/41/orchestra-symphony-stage-performing-2c6b88bb1fc3b3107167d9532a11f4bb.jpg)center/cover;
+    background: url(../page_image/orchestra-symphony-stage-performing-2c6b88bb1fc3b3107167d9532a11f4bb.jpg)center/cover;
+    width: 100vw;
 }
 
 /* 공연예매/일정 수평수직 조절 */
 .sb_nav>div:nth-child(1)>span {
-    /* display: block; */
-    /* 수직 가운데 정렬 */
-    /* margin: 0 auto; */
-    /* 부모 요소의 중앙으로부터 위쪽으로 50% 이동 */
-    /* transform: translateY(-50%); */
-    /* position: relative; */
-    /* top: 50%; */
-    /* background: url(https://i.pinimg.com/originals/88/e5/d6/88e5d6c9e1bc26be09b0e1ba07371d64.gif)center/cover; */
     font-family: Cinzel;
     background-color: rgb(226, 224, 224, .6);
     text-shadow: 5px 5px 2px gray;
     font-size: 50px;
     border: 4px solid black;
-    /* box-shadow: 5px 5px 2px gray; */
     padding: 0px 2rem;
-    /* border-radius: 10; */
-    /* 이거 어떻게 바꿀까? */
-    /* width: 70%;
-    height: 15%; */
 }
 
 @media (width <=70rem) {
@@ -161,27 +78,26 @@ nav>div:first-of-type,
 /* 검색창 위치 조절 */
 .sb_upper {
     margin-top: 30px;
-    display: inline-block;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
 }
 
 /* 검색창 위치조절 */
-.sb_upper>div:nth-child(4) {
+.sb_upper>div {
     grid-column: 4 / 6;
     display: flex;
     z-index: 1;
 }
 
 /* 검색어 입력 */
-.sb_upper>div:nth-child(4)>input {
+.sb_upper>div>input {
     width: 12rem;
     height: 2rem;
     margin-right: .5rem;
 }
 
 /* 검색버튼 */
-.sb_upper>div:nth-child(4)>button {
+.sb_upper>div>button {
     width: 4rem;
     height: 2rem;
 }
@@ -191,7 +107,6 @@ nav>div:first-of-type,
 .sb_detail_search {
     text-align: center;
     width: 100%;
-    /* margin-top: -33px; */
     position: relative;
     top: -33px;
     margin-bottom: 10px;
@@ -200,19 +115,16 @@ nav>div:first-of-type,
 /* 상세검색  */
 .sb_detail_search>label {
     margin-bottom: 5px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     display: block;
-    /* align-items: center; */
-    /* justify-content: center; */
     width: 6.25rem;
     margin: auto;
     border: 2px solid;
     border-radius: 20px;
     background-color: antiquewhite;
-    padding: 0px .5rem;
+    padding: .5rem;
     cursor: pointer;
     font-family: 'Pretendard-Regular';
-    /* box-shadow: 3px 3px 2px gray; */
 }
 
 
@@ -225,14 +137,19 @@ nav>div:first-of-type,
 }
 
 /* 위에 전체 크기 지정 */
-/* 백그라운드 gif파일 삽입 필요 but 어떤 gif일지 고민중 */
 nav>div:nth-child(1) {
     width: 100%;
-    /* height: 300px; */
-    /* line-height: 10vh; */
-    /* background-color: gray; */
 }
 
+.sb_hr {
+    margin-top: -20px;
+}
+
+/* 상세검색 정보들의 외모 */
+.sb_detail_search div ul li:first-child {
+    font-family: 'InfinitySans-RegularA1';
+    font-size: 1.2rem;
+}
 
 /* 상세검색의 체크박스 / 상세검색의 내용들 안보이게 하기 */
 .sb_detail_search>div,
@@ -243,31 +160,6 @@ nav>div:nth-child(1) {
 /* 상세검색을 눌렀을 때 밑에 있는 것들이 보이게 하는 것 */
 #sb_dtsearch:checked+label+div {
     display: inline-block;
-}
-
-#sb_dtsearch:checked+label {
-    display: block;
-}
-
-.sb_blank {
-    display: none;
-    height: 100px;
-}
-
-/* 상세검색을 눌렀을 때 메인에 있는 것을 내리게 하는 것  문제는 안됨*/
-#sb_dtsearch:checked+.sb_blank {
-    display: block;
-}
-
-.sb_hr {
-    margin-top: -20px;
-}
-
-
-/* 상세검색 정보들의 외모 */
-.sb_detail_search div ul li:first-child {
-    font-family: 'InfinitySans-RegularA1';
-    font-size: 1.2rem;
 }
 
 /* 상세검색 정보들 외모 */
@@ -305,7 +197,6 @@ nav>div:nth-child(1) {
 }
 
 .sb_none ul {
-    /* border: 1px solid; */
     margin-bottom: 5px;
     margin-top: 5px;
 }
@@ -320,9 +211,7 @@ nav>div:nth-child(1) {
 /* 상세검색의 내용을 호버했을 때 변하게 하는 것 */
 .sb_none>ul>li span:hover {
     background-color: lightgray;
-    /* font-size: 1.2rem; */
     font-weight: bold;
-    /* transition: font-weight .3s background-color .5s ; */
 }
 
 /* 상세검색의 내용을 클릭했을 때 바뀌는 정보 */
@@ -341,13 +230,6 @@ nav>div:nth-child(1) {
     background-color: lightgray;
     font-weight: bold;
 }
-
-
-
-
-
-
-/* =================================================== */
 
 /* ============================================================= */
 /* main */
@@ -383,7 +265,7 @@ main>a:nth-child(4)>div {
 }
 
 main>a:nth-child(5)>div {
-    background: url("http://www.lgart.com/Down/Perf/202312/380W.jpg") center/100% 100% no-repeat;
+    background: url(../page_image/5.jpg) center/100% 100% no-repeat;
     transition-duration: 1s;
     overflow: hidden;
 }
@@ -451,7 +333,7 @@ main>a:nth-child(16)>div{
 main>a>div:hover {
     transform: scale(1.1);
 }
-
+/* 이미지 밑 글씨 마진 */
 main>a>ul {
     margin: 10px 10px 0px 10px;
 }
@@ -505,8 +387,8 @@ main>a>div {
 
 @media (width >=100rem) {
     main {
-        width: 100rem;
-        height: 40rem;
+        width: 64rem;
+        height: 80rem;
     }
 
     main>a {

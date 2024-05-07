@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
@@ -6,23 +6,32 @@
 /* 전체 그리드 */
 .sb_grid {
     display: grid;
-    grid-template: 2fr 1fr 7fr 1fr 2fr / 2fr 3fr 2fr;
+    grid-template: 1fr 7fr / 1fr 3fr 1fr;
     height: 100vh;
     margin: auto;
     /* aspect-ratio: 1/1; */
 }
-.sb_csc{
+
+.sb_csc {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.sb_check{
-    grid-area: 2 / 2  /3 / 3 ;
+
+.sb_check {
+    grid-area: 2 / 2 /3 / 3;
     display: grid;
     /* border: 1px solid; */
-    grid-template-columns: repeat(3, 1fr);
+    grid-template: 1fr 7fr 2fr / repeat(3, 1fr);
+    place-content: center;
 }
-.sb_check>a{
+
+.sb_position1{
+    display: grid;
+    grid-area: 2 / 1/ 5/ 6;
+}
+
+.sb_check>a {
     border: 1px solid;
     border-radius: 10px;
     display: flex;
@@ -30,7 +39,67 @@
     text-decoration: none;
     justify-content: center;
     color: black;
+}
+
+
+.sb_check>input {
+    display: none;
+}
+.sb_check>label{
+    height: 30px;
+}
+
+
+
+/* ================================================== */
+/* 누르면 나오는거 */
+#sb_11,
+#sb_22,
+#sb_33,
+#sb_44 {
+    display: none;
+}
+
+#sb_1,
+#sb_2,
+#sb_3,
+#sb_4 {
+    display: none;
+}
+
+.sb_123 {
+    display: none;
+}
+
+#sb_1:checked+label+div {
+    display: inline-block;
+}
+
+
+
+
+
+.sb_width{
+    width: 50px;
+}
+
+.sb_concert1,
+.sb_concert2,
+.sb_concert3,
+.sb_concert4 {
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+}
+.sb_concert1{
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr 20fr;
+    height: 15vh;
+}
+.sb_concert1>div{
+    /* margin-right: 10px; */
 
 }
-.sb_check>div>a{
+.sb_123{
+    /* white-space: pre; */
+    margin-left: -100px;
 }

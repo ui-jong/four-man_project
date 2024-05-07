@@ -12,8 +12,6 @@
     display: grid;
     grid-template: 2fr 8fr 1fr 2fr / 2fr 3fr 2fr;
     height: 100vh;
-    margin: auto;
-    /* aspect-ratio: 1/1; */
 }
 
 /* 전체 안에 그리드 및 중앙정렬 */
