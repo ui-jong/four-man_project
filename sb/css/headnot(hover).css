@@ -13,9 +13,10 @@ header:not(.h_open) {
     height: 15vh;
 }
 
-.h_csc{
-    grid-area:  2 / 5 / 3 / 6;
+.h_csc {
+    grid-area: 2 / 5 / 3 / 6;
 }
+
 header>div:not(:nth-child(2)) {
     display: grid;
     place-content: center;
@@ -31,9 +32,10 @@ header>div a {
 }
 
 .h_outer {
-    grid-area: 1 / 2 / 2 / 6;
+    grid-area: 1 / 2 / 2 / 5;
 }
-header>.h_outer{
+
+header>.h_outer {
     display: flex;
     align-items: end;
     /* justify-content: center; */
@@ -70,7 +72,8 @@ header>.h_outer>button {
     outline: none;
 
 }
-header>.h_outer>input{
+
+header>.h_outer>input {
     width: 300px;
     height: 40px;
     border-radius: 20px;
@@ -85,14 +88,21 @@ header>.h_outer>input{
     font-weight: 800;
     margin-top: 15px;
 }
+
 @media (width <=70rem) {
-    .h_notice>a, .h_introduction, .h_path{
+
+    .h_notice>a,
+    .h_introduction,
+    .h_path {
         font-size: .8em;
     }
 }
 
 @media (width <=40rem) {
-    .h_notice>a, .h_introduction, .h_path{
+
+    .h_notice>a,
+    .h_introduction,
+    .h_path {
         font-size: .5em;
     }
 }
@@ -143,13 +153,6 @@ header>div>a {
     /* cursor: pointer; */
 }
 
-#h_llogin:checked #h_ssearch:checked+label+.h_open {
-    /* visibility: visible; */
-    /* display: grid; */
-    display: block !important;
-    /* display: none; */
-}
-
 /* ===================================================== */
 /* section */
 
@@ -173,7 +176,7 @@ header>div>a {
 header {
     /* background-color: black; */
     height: 10vh;
-    width: 100vw;
+    /* color: black; */
     /* padding-top: 1vh; */
 }
 
@@ -183,37 +186,9 @@ header>div {
     transition: background-color 0.3s, color 0.3s;
 }
 
-header:hover,
-header:hover div a,
-header:hover div {
-    color: white;
-    background-color: black;
-}
-
-header:hover .h_search::after,
-header:hover .h_login::before {
-    color: white;
-}
-
-header:hover .h_open {
-    background-color: white;
-}
-
 /* 돋보기 커서 */
 .h_search>label {
     cursor: pointer;
-}
-
-/* 검색창 사이즈 */
-.h_open>input {
-    width: ;
-    height: ;
-}
-
-/* 버튼 사이즈 */
-.h_open>button {
-    width: ;
-    height: ;
 }
 
 @font-face {
@@ -222,21 +197,25 @@ header:hover .h_open {
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'Pretendard-Regular';
     src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'InfinitySans-RegularA1';
     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/InfinitySans-RegularA1.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
-.h_notice, .h_introduction, .h_path, .h_csc{
 
-font-family: 'Pretendard-Regular';
-font-size: 1.5rem;
-    
+.h_notice,
+.h_introduction,
+.h_path,
+.h_csc {
+    font-family: 'Pretendard-Regular';
+    font-size: 1.5rem;
 }
