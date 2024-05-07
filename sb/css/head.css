@@ -33,8 +33,12 @@ header {
     width: 100vw;
 }
 
-.h_csc {
+.h_tranportation {
     grid-area: 2 / 5 / 3 / 6;
+}
+
+.h_csc {
+    grid-area: 2 / 6 / 3 / 7;
 }
 
 header>div:not(:nth-child(2)) {
@@ -52,7 +56,7 @@ header>div a {
 }
 
 .h_outer {
-    grid-area: 1 / 2 / 2 / 6;
+    grid-area: 1 / 2 / 2 / 7;
 }
 
 header>.h_outer {
@@ -74,7 +78,7 @@ header>.h_outer {
 
 
 .h_login {
-    grid-area: 1 / 6 / 3 / 8;
+    grid-area: 1 / 7 / 3 / 8;
 }
 
 .h_logo>a {
@@ -113,7 +117,8 @@ header>.h_outer>input {
     .h_notice>a,
     .h_introduction>a,
     .h_path>a,
-    .h_csc>a {
+    .h_csc>a,
+    .h_tranportation>a {
         font-size: .8em;
     }
 }
@@ -123,7 +128,8 @@ header>.h_outer>input {
     .h_notice>a,
     .h_introduction>a,
     .h_path>a,
-    .h_csc>a {
+    .h_csc>a,
+    .h_tranportation>a {
         font-size: .5em;
     }
 }
@@ -214,7 +220,8 @@ header:hover .h_open {
 .h_notice,
 .h_introduction,
 .h_path,
-.h_csc {
+.h_csc,
+.h_tranportation {
 
     font-family: 'Pretendard-Regular';
     font-size: 1.5rem;
