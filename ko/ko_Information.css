@@ -2,37 +2,62 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  scroll-behavior: smooth;
-}
-
-@font-face {
-  font-family: 'Pretendard-Regular';
-  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-}
-
-body {
   font-family: 'Pretendard-Regular';
 }
 
-.ko_topbutton {
-  position: sticky;
-  top: 80vh;
-  margin-left: 75vw;
-  width: 80px;
-  height: 80px;
-  /* border: 1px solid black; */
-  /* border-radius: 50%; */
-}
-
-.ko_topbutton img {
-  width: 100%;
-}
-
-div {
+.ko_way {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+
 }
 
+main h1 {
+  text-align: center;
+  margin: 20px;
+}
+
+.ko_left {
+  flex: 1;
+}
+
+.ko_conter {
+  flex: 4;
+  section{
+    margin: auto;
+    width: 90vh;
+  }  
+  aside {
+    h2{
+      background-color: beige;
+    }
+    h3{
+      text-align: left;
+      padding: 10px;
+    } 
+    display: flex;
+    div{
+      font-weight: bold;
+      line-height: 30px;
+      flex: 1;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      div{
+        font-weight: lighter;
+        text-align: left;
+        padding: 10px;
+      }
+    }
+    .ko_box{
+      flex: 0.1;
+    }
+  }
+}
+
+/* .ko_subway,
+.ko_bus{
+  border: 1px solid black;
+} */
+
+.ko_right {
+  flex: 1;
+}

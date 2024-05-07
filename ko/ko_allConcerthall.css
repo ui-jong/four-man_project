@@ -16,12 +16,12 @@ main{
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 200vh;
+  height: 150vh;
   margin: auto;
 }
 
 .ko_allConcerthall {
-  background: url('../image/2024공간안내도_국문_240404_1280.jpg')   center/100% 100%;
+  background: url('../image/2024공간안내도_국문_240404_1280.jpg')center/100% 100%;
   width: 90%;
   height: 90%;
   /* width: 100%;
