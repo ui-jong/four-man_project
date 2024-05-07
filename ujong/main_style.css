@@ -32,7 +32,6 @@ main {
 #main_banner_container { /*메인배너 이미지 집합 컨테이너*/
     flex-direction: row;
     height: 100%;
-    /* width: 300vw; */
     width: 100vw;
     white-space: nowrap;
 }
@@ -281,8 +280,8 @@ h2 {
 .ticket_open {
     display: inline-block;
     
-    height: calc(((70vw * .25 - 1rem) * 4/3));    
-    width: 100%;    
+    aspect-ratio: 3 / 4;
+    width: calc(70vw * .25 - 1rem);     
     
     background-position: center;
     background: 100%/100% no-repeat;
@@ -295,12 +294,12 @@ h2 {
 
 
 
+.title + hr {
+    color: black;
+}
 .title {
     font-size: 1.5rem;
     margin: .1rem 0 .1rem 0;
-    color: black;
-}
-.title + hr {
     color: black;
 }
 .venue {
@@ -483,7 +482,7 @@ h2 {
 .month_main p{
     position: absolute;
 
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: bold;
 
     color: white;
@@ -507,7 +506,8 @@ h2 {
     scrollbar-width: none;
 
     font-size: medium;
-
+    
+    padding: 2rem 0 2rem 0;
 }
 
 .month_sub {
@@ -519,6 +519,7 @@ h2 {
 
     margin:auto;
     transition: all 0.3s ease;
+
 }
 
 #leftlist {
@@ -530,9 +531,8 @@ h2 {
 #rightlist {
     height: 100%;
     width: 50%;
-    padding-top: calc((70vw * .6) * .45 * ( 4 / 9 ));;
+    padding-top: calc((70vw * .6) * .45 * ( 4 / 9 ));
 }
-
 
 .left {
     display: inline-block;
@@ -544,7 +544,6 @@ h2 {
     display: inline-block;
     margin-left: calc((100% - 85%)/2); 
     margin-top: calc((70vw * .6) * .45 * ( 4 / 9 ));
-    margin-bottom: 2rem;
 }
 
 .sub {
