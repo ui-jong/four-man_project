@@ -31,7 +31,8 @@
 header{
     display: grid;
     position: absolute;
-    width: 100vw;
+    width: calc(100vw - 19px);
+    z-index: 3;
     /* place-content: center; */
     grid-template: 1fr 1fr / 2fr repeat(6, 1fr);
     height: 15vh;
