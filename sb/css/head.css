@@ -5,17 +5,38 @@
     list-style: none;
 }
 
-header:not(.h_open) {
-    display: grid;
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
 
-    /* place-content: center; */
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'InfinitySans-RegularA1';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/InfinitySans-RegularA1.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+header {
+    display: grid;
     grid-template: 1fr 1fr / 2fr repeat(6, 1fr);
     height: 15vh;
+    width: 100vw;
 }
 
-.h_csc{
-    grid-area:  2 / 5 / 3 / 6;
+.h_csc {
+    grid-area: 2 / 5 / 3 / 6;
 }
+
 header>div:not(:nth-child(2)) {
     display: grid;
     place-content: center;
@@ -33,10 +54,10 @@ header>div a {
 .h_outer {
     grid-area: 1 / 2 / 2 / 6;
 }
-header>.h_outer{
+
+header>.h_outer {
     display: flex;
     align-items: end;
-    /* justify-content: center; */
 }
 
 .h_notice {
@@ -70,7 +91,8 @@ header>.h_outer>button {
     outline: none;
 
 }
-header>.h_outer>input{
+
+header>.h_outer>input {
     width: 300px;
     height: 40px;
     border-radius: 20px;
@@ -85,28 +107,33 @@ header>.h_outer>input{
     font-weight: 800;
     margin-top: 15px;
 }
+
 @media (width <=70rem) {
-    .h_notice>a, .h_introduction, .h_path{
+
+    .h_notice>a,
+    .h_introduction>a,
+    .h_path>a,
+    .h_csc>a {
         font-size: .8em;
     }
 }
 
-@media (width <=40rem) {
-    .h_notice>a, .h_introduction, .h_path{
+@media (width <=50rem) {
+
+    .h_notice>a,
+    .h_introduction>a,
+    .h_path>a,
+    .h_csc>a {
         font-size: .5em;
     }
 }
 
-header>div>a {
-    /* font-family: serif; */
-}
 
 .h_login>a {
     font-size: 30px;
 }
 
 .h_search>label,
-/* .h_login>a, */
 .h_logo>a {
     text-indent: -9999em;
 }
@@ -115,14 +142,11 @@ header>div>a {
     display: none;
 }
 
-/* .h_open,  */
 #h_ssearch,
 #h_llogin {
-    /* visibility: hidden; */
     display: none;
     position: absolute;
     top: 10vh;
-    /* background-color: beige; */
 }
 
 .h_open {
@@ -132,22 +156,16 @@ header>div>a {
     background-color: none !important;
 }
 
-/* 고치기 */
 .h_login>label {
     position: absolute;
     top: 5.8vh;
     right: 6%;
-    /* z-index: 100; */
     width: 30px;
     height: 31px;
-    /* cursor: pointer; */
 }
 
 #h_llogin:checked #h_ssearch:checked+label+.h_open {
-    /* visibility: visible; */
-    /* display: grid; */
     display: block !important;
-    /* display: none; */
 }
 
 /* ===================================================== */
@@ -156,30 +174,17 @@ header>div>a {
 
 /* 버튼 아이콘 */
 .h_outer>button::after {
-    /* 검색 아이콘의 유니코드 값 */
     content: "\f002";
-    /* 또는 "Font Awesome 5 Pro" 등 사용중인 Font Awesome의 패밀리 이름 */
     font-family: "Font Awesome 5 Free";
-    /* 없애버리고 싶지만 없애버리면 에러뜨는 asshole */
     font-weight: 900;
     font-size: 20px;
-    /* cursor: pointer; */
     color: black;
     text-align: center;
-    /* line-height: 30px;*/
 }
 
-
-header {
-    /* background-color: black; */
-    height: 10vh;
-    width: 100vw;
-    /* padding-top: 1vh; */
-}
 
 header>div {
     background-color: transparent;
-    /* color: #ffffff0a; */
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -204,39 +209,14 @@ header:hover .h_open {
     cursor: pointer;
 }
 
-/* 검색창 사이즈 */
-.h_open>input {
-    width: ;
-    height: ;
-}
 
-/* 버튼 사이즈 */
-.h_open>button {
-    width: ;
-    height: ;
-}
 
-@font-face {
-    font-family: 'NanumSquareNeo-Variable';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
+.h_notice,
+.h_introduction,
+.h_path,
+.h_csc {
+
     font-family: 'Pretendard-Regular';
-    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'InfinitySans-RegularA1';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/InfinitySans-RegularA1.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-.h_notice, .h_introduction, .h_path, .h_csc{
+    font-size: 1.5rem;
 
-font-family: 'Pretendard-Regular';
-font-size: 1.5rem;
-    
 }
