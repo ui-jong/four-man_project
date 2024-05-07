@@ -472,12 +472,14 @@ h2 {
     overflow: hidden;
 }
 
-.month_main div{
+.month_main div:nth-child(1){
     height: 100%;
     width: 100%;
     background-color: black;
     opacity: .5;
 }
+
+
 .month_main p{
     position: absolute;
 
@@ -584,7 +586,7 @@ h2 {
     border: 2px solid;
 }
 
-#notice>p {
+#notice>a {
     grid-row: 1 / 2;    
 
     display: grid;
@@ -645,7 +647,7 @@ h2 {
 
 }
 
-#custom_service>p {
+#custom_service>a {
     grid-row: 1 / 2;
 
     display: grid;
