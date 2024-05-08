@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>로그인</title>
-    <link rel="stylesheet" href="/forman_project/ko/ko_login.css">
+    <link rel="stylesheet" href="../ko/ko_login.css">
 </head>
 
 <body>
@@ -13,11 +13,11 @@
     <main>
         <div class="ko_login-container">
             <div class="ko_logo">
-                <a href="#">
-                    <img src="../image/LOGO.png" alt="로고">
+                <a href="../index.html">
+                    <img src="../DetailPage/kr_image/logo.png" alt="로고">
                 </a>
             </div>
-            <form id="ko_login-form" action="#" method="POST">
+            <form id="ko_login-form" action="../index.html" method="POST">
                 <div class="ko_form-group">
                     <label for="username">아이디</label>
                     <input type="text" id="username" name="username" placeholder="아이디" required>
@@ -30,18 +30,19 @@
                     <input type="checkbox" id="remember-me" name="remember-me">
                     <label for="remember-me">로그인 상태 유지</label>
                 </div>
-                    <button type="submit">로그인</button>  
-        </form>
-        <form action="#">
+                <button type="submit"><a href="../index.html"> 로그인  </a></button>
+            </form>
+        <form action="../DetailPage/join.html">
             <button type="submit">회원가입</button>
         </form>
         <div class="ko_links">
-            <a href="#">아이디 찾기</a>
+            <a href="../DetailPage/idserch.html">아이디 찾기</a>
             <span>&#124;</span>
-            <a href="#">비밀번호 찾기</a>
+            <a href="../DetailPage/pwserch.html">비밀번호 찾기</a>
         </div>
         </div>
     </main>
+    <div></div><!--충돌 테스트용 쓸모없는 태그-->
 </body>
 
 </html>
