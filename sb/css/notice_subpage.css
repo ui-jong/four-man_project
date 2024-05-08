@@ -10,8 +10,9 @@
 
 .sb_note {
     display: grid;
-    grid-template: 2fr 8fr 1fr 2fr / 2fr 3fr 2fr;
-    height: 100vh;
+    grid-template: 1fr 8fr / 2fr 3fr 2fr;
+    height: auto;
+    /* margin-top: 50px; */
 }
 
 
@@ -26,13 +27,15 @@
     display: grid;
     place-content: center;
 }
+
 /* 공지사항 */
-.sb_notice>span{
+.sb_notice>span {
     border-bottom: 5px solid rgb(107, 128, 170);
     padding: 5px 10px;
     color: black;
     font-weight: bold;
     font-size: 1.5rem;
+    transition: font-size .5s;
     text-align: center;
 }
 
@@ -41,28 +44,51 @@
     margin-bottom: 20px;
 }
 
-.sb_ntcontent>p:first-child{
+.sb_ntcontent>p:first-child {
     text-align: center;
+    margin-bottom: 10px;
 }
-.sb_ntcontent{
+
+.sb_ntcontent {
     font-size: .8rem;
+    transition: font-size .5s;
 }
-.sb_dtnote{
+
+.sb_dtnote {
     white-space: pre;
 }
 
-.sb_grid{
+.sb_grid {
     margin-top: 5px;
     display: grid;
     grid-template-columns: 1fr 1.5fr .7fr;
     grid-template-rows: 1fr 2fr;
     height: 20%;
+    border: 1px solid;
 }
-.sb_grid>div{
+
+.sb_grid>div {
     place-content: center;
     display: grid;
     white-space: pre;
 }
-.sb_grid>div:nth-child(-n+3){
+
+.sb_grid>div:nth-child(-n+3) {
     border-bottom: 1px solid;
-}A
+}
+
+.sb_grid>div:nth-child(3n+1),
+.sb_grid>div:nth-child(3n+2) {
+    border-right: 1px solid;
+}
+
+@media (width <=45rem) {
+
+    .sb_notice>span {
+        font-size: 1rem;
+    }
+
+    .sb_ntcontent {
+        font-size: .5rem;
+    }
+}
