@@ -60,7 +60,7 @@ main .kr_banner {
     padding: 5px;
 }
 
-.kr_indextable a{
+.kr_indextable a {
     width: calc((100% / 4) - 10px);
     text-align: center;
     /* line-height: 50px; */
@@ -79,12 +79,13 @@ main .kr_banner {
 .kr_showinfo,
 .kr_casting_info,
 .kr_saleinfo,
-.kr_expact{
+.kr_expact {
     padding-top: 10px;
     text-align: center;
     /* background-color: beige; */
     font-size: larger;
     font-weight: bold;
+
     p {
         text-align: left;
         font-size: small;
@@ -93,10 +94,12 @@ main .kr_banner {
         font-family: 'InfinitySans-RegularA1';
         font-size: 14px;
     }
-    img{
+
+    img {
         width: 100%;
         margin-top: 30px;
-    } 
+    }
+
     padding-bottom: 30px;
 }
 
@@ -109,11 +112,13 @@ main .kr_banner {
     text-align: left;
     font-size: small;
     font-weight: normal;
-    .kr_subhd{
+
+    .kr_subhd {
         margin-top: 30px;
         font-weight: bold;
     }
 }
+
 .kr_saleinfotable div {
     margin-left: 15px;
 }
@@ -132,7 +137,7 @@ main .kr_banner {
 /* 메인섹션플랙스 - (section / aside)===================================== */
 
 .kr_inflex {
-    margin-top: 30px ;
+    margin-top: 30px;
     display: flex;
 }
 
@@ -150,15 +155,19 @@ main aside {
 }
 
 /* 메인섹션 - (aside calender)===================================== */
+
+aside form {
+    position: sticky;
+    top: 100px;
+}
+
 .kr_daylist {
     border: 1px solid black;
     border-radius: 5%;
     padding: 2%;
-    position: sticky;
-    top: 100px;
     display: grid;
-    height: 350px;
-    grid-template: repeat(7, 42px) / repeat(7, 1fr) ;
+    height: 300px;
+    grid-template: repeat(7, 42px) / repeat(7, 1fr);
 }
 
 .kr_date {
@@ -209,9 +218,22 @@ input[id*="kr_date"]:checked+label,
     transition: all 0.2s ease;
     grid-area: 7 / 1 / 8/ -1;
     font-weight: bold;
+
+    button {
+        margin-top: 10px;
+        border-radius: 15px;
+        border: none;
+        transition: all 0.2s ease;
+        background-color: pink;
+        color: black;
+        text-align: center;
+        line-height: 38px;
+        width: 100%;
+        height: 100%;
+    }
 }
 
-.kr_reservation:hover a {
+.kr_reservation:hover button {
     background-color: red;
     transform: scale(1.05);
     cursor: pointer;
