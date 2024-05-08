@@ -427,7 +427,6 @@ h2 {
     
     display: flex;
     flex-flow:row wrap;
-    /* flex-grow: 2 6 ; */
 
     align-content: center;
     justify-content: center;
@@ -448,8 +447,8 @@ h2 {
     position: sticky;
     top: 3rem;
 
-    height: calc(70vw * 0.3 * (4 / 3));
-    width: calc(70vw * 0.3);
+    height: calc(70vw * 0.28 * (4 / 3));
+    width: calc(70vw * 0.28);
 
     font-size: medium;
 }
