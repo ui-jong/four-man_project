@@ -12,8 +12,6 @@
     display: grid;
     grid-template: 2fr 8fr 1fr 2fr / 2fr 3fr 2fr;
     height: 100vh;
-    margin: auto;
-    /* aspect-ratio: 1/1; */
 }
 
 /* 전체 안에 그리드 및 중앙정렬 */
@@ -33,13 +31,9 @@
 /* 공지사항 디자인 */
 .sb_notice>span {
     border-bottom: 5px solid rgb(107, 128, 170);
-    /* box-shadow: 5px 5px 2px gray; */
-    /* background-color: rgb(199, 252, 92, .3); */
-    /* border-radius: 10px; */
     padding: 5px 10px;
     color: black;
     font-weight: bold;
-    /* text-shadow: 3px 2px 2px gray; */
     letter-spacing: 1rem;
     font-family: 'NanumSquareNeo-Variable';
     font-size: 2.5rem;
@@ -57,7 +51,6 @@
 
 /* 맨 밑 넘버링 + 화살표 정렬 */
 .sb_note>.sb_numbering {
-    /* grid-area: 3 / 2 / 4 / 3; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -79,8 +72,8 @@
     text-align: center;
 }
 
-/* 2번 밑줄 */
-.sb_note>.sb_numbering>ul>li:nth-child(2) {
+/* 1번 밑줄 */
+.sb_note>.sb_numbering>ul>li:first-child {
     text-decoration: underline;
     font-weight: bold;
 }
@@ -108,9 +101,9 @@
     grid-template: 1fr repeat(10, 1fr) / .5fr 3fr 1fr .5fr;
 }
 
-/* 번호, 제목, 날짜, 조회수 글자크기 */
-.sb_note>.sb_service>div {
+.sb_service>div:nth-child(n+5) {
     font-size: 1rem;
+    transition: font-size .5s;
 }
 
 /* 제목제외 가운데정렬 */
@@ -135,7 +128,6 @@
 }
 
 .sb_service>div {
-    font-size: .5rem;
     border-bottom: 1px solid;
 }
 
@@ -144,9 +136,37 @@
     font-weight: bold;
 }
 
-@font-face {
-    font-family: 'NanumSquareNeo-Variable';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
+
+@media (width <=79rem) {
+
+    .sb_service>div:nth-child(n+5) {
+        font-size: .8rem;
+    }
+}
+
+@media (width <=71.25rem) {
+
+    .sb_number,
+    .sb_name,
+    .sb_day,
+    .sb_look {
+        font-size: .8rem;
+    }
+}
+
+@media (width <=66rem) {
+
+    .sb_service>div:nth-child(n+5) {
+        font-size: .6rem;
+    }
+}
+
+@media (width <=58rem) {
+
+    .sb_number,
+    .sb_name,
+    .sb_day,
+    .sb_look {
+        font-size: .6rem;
+    }
 }

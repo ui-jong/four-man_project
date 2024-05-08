@@ -37,6 +37,7 @@
     letter-spacing: 1rem;
     font-family: 'NanumSquareNeo-Variable';
     font-size: 2.5rem;
+    transition: font-size .5s;
 }
 
 .sb_blank {
@@ -101,9 +102,9 @@
     grid-template: 1fr repeat(10, 1fr) / .5fr 3fr 1fr .5fr;
 }
 
-/* 번호, 제목, 날짜, 조회수 글자크기 */
-.sb_note>.sb_service>div {
+.sb_service>div:nth-child(n+5){
     font-size: 1rem;
+    transition: font-size .5s;
 }
 
 /* 제목제외 가운데정렬 */
@@ -128,11 +129,49 @@
 }
 
 .sb_service>div {
-    font-size: .5rem;
     border-bottom: 1px solid;
 }
 
 .sb_service>div:nth-child(-n+4) {
     border-bottom: 3px solid;
     font-weight: bold;
+}
+
+
+@media (width <=79rem) {
+
+    .sb_service>div:nth-child(n+5) {
+        font-size: .8rem;
+    }
+}
+
+@media (width <=71.25rem) {
+
+    .sb_number,
+    .sb_name,
+    .sb_day,
+    .sb_look {
+        font-size: .8rem;
+    }
+}
+
+@media (width <=66rem) {
+
+    .sb_service>div:nth-child(n+5) {
+        font-size: .6rem;
+    }
+    .sb_notice>span{
+        font-size: 1.5rem;
+        padding-top: 20px;
+    }
+}
+
+@media (width <=58rem) {
+
+    .sb_number,
+    .sb_name,
+    .sb_day,
+    .sb_look {
+        font-size: .6rem;
+    }
 }
