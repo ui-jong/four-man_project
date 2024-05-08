@@ -330,17 +330,18 @@ main>a:nth-child(16)>div{
     overflow:hidden
 }
 
-main>a>div:hover {
+main a>div:hover {
     transform: scale(1.1);
 }
 /* 이미지 밑 글씨 마진 */
-main>a>ul {
+main a>ul {
     margin: 10px 10px 0px 10px;
 }
 
 main {
     display: flex;
     flex-wrap: wrap;
+    justify-content: left;
     margin: auto;
     width: 25rem;
     box-sizing: border-box;
@@ -376,11 +377,11 @@ main>a>div {
     }
 
     main>a {
-        width: 11.5rem;
+        width: 12rem;
     }
 
     main>a>div {
-        height: 20rem;
+        height: 16rem;
     }
 }
 
@@ -396,6 +397,6 @@ main>a>div {
     }
 
     main>a>div {
-        height: 14rem;
+        height: 15rem;
     }
 }
