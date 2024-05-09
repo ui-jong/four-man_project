@@ -9,11 +9,16 @@
 
 
 main {
-    font-size: 0; /*이격방지*/
+    font-size: 0;
     font-family: 'Pretendard-Regular';
-    min-width: 1000px;
+    /* min-width: 90rem; */
     margin: auto;
 }
+
+
+
+
+
 
 /* ====================================================== */
 
@@ -39,8 +44,8 @@ main {
 .main_banner { /*메인배너 이미지 클래스*/
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-
+    background-position: 52% center;
+    
     position: relative;
     display: inline-block;
     height: 100%;
@@ -48,19 +53,19 @@ main {
 }
 
 .main_ban_introduce {
-
+    
     position: absolute;
     bottom: 0;
-
+    
     font-size: 1.2rem;
     width: 100%;
-
+    
     box-sizing: border-box;
-    padding: 0 8rem 7rem 0;
-
+    padding: 0 7em 6em 0;
+    
     text-align: right;
     color: white;
-
+    
     z-index: 2;
 }
 
@@ -70,18 +75,18 @@ main {
 
 .main_ban_introduce::before {
     content:"";
-
+    
     position: absolute;
     bottom: 0;
     left: 0;
-
+    
     height: 200%;
     width: 100%;
-
+    
     background-image: url(https://ifh.cc/g/ADJwFk.jpg);
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0, .7));
     background-size: cover;
-
+    
     z-index: -1;
 }
 
@@ -99,6 +104,7 @@ main {
 .img3 {
     background-image: url(https://ifh.cc/g/vvS543.jpg);
 }
+
 
 .img4 {
     background-image: url(https://ifh.cc/g/AZVc3Q.jpg);
@@ -131,7 +137,7 @@ main {
     position: absolute;
     bottom: 0;
     
-    height: 20%;
+    height: 13rem;
     width: 100%;
 
     justify-content: center;
@@ -155,8 +161,8 @@ main {
 
 #main_nav_box>label{
     background-color: gray;
-    height: calc(20vh * .8);
-    width: calc( 20vh * .8 * (3/4));
+    height: 10rem;
+    width: calc( 10rem * (3/4));
     margin: 0 0 1rem 2rem;
 
     background-size: cover;
@@ -169,6 +175,7 @@ main {
 #main_nav_box>label:hover {
     scale: 110%;
 }
+
 /* ======================================================= */
 /* 메인 페이지 네비게이터 */
 .to_the_top {
@@ -197,12 +204,14 @@ main {
     color: black;
 }
 
+
+
 /* ====================================================== */
 /* 가로광고배너 */
 
 #row_ad_container {    
     display: flex;
-    height: 10vh;
+    height: 5rem;
     
     justify-content: center;
     align-items: center;
@@ -259,6 +268,7 @@ h2 {
     padding-top: 1rem; 
 }
 
+
 .border {
     display: inline-block;
 
@@ -269,9 +279,8 @@ h2 {
     overflow: hidden;
 
     width: calc(70vw * .25 - 1rem);    
-
-    /* margin: 0 0 0 0; */
 }
+
 
 .border:hover {
     box-shadow: 2px 2px 2px 2px rgb(194, 194, 194);
@@ -426,7 +435,7 @@ h2 {
     background-color: rgb(73, 53, 53);
     
     display: flex;
-    flex-flow:row wrap;
+    flex-flow:row nowrap;
 
     align-content: center;
     justify-content: center;
@@ -441,7 +450,6 @@ h2 {
 }
 
 #month_banner_main {
-    background-color:azure;
     margin: 3rem;
 
     position: sticky;
@@ -481,7 +489,7 @@ h2 {
 .month_main p{
     position: absolute;
 
-    font-size: 4rem;
+    font-size: 4em;
     font-weight: bold;
 
     color: white;
@@ -552,7 +560,7 @@ h2 {
     height: 100%;
     
     background-position: center;    
-    background-size: cover;
+    background-size: 100% 100%;
 } 
 
 /* ========================================= */
@@ -689,3 +697,81 @@ h2 {
 
     background-color: lightgray;
 }
+
+/* ====================================================== */
+/* 미디어쿼리 */
+@media (width < 1610px) {
+    .main_banner_view,
+    .main_slider {
+        position: relative;
+        width: 100vw-19px;
+        height: calc(100vw * 9/16);
+        transition: 1s;
+    }
+
+    .main_ban_introduce {
+        font-size: .8rem;
+    }
+
+    #month_banner_block>#month_banner_main {
+        font-size: .7rem;
+    }
+}
+
+
+@media (width < 800px) {
+    .main_banner_view,
+    .main_slider {
+        position: relative;
+        width: 100vw-19px;
+        height: 60vh;
+    }
+    
+    .main_ban_introduce {
+        font-size: .8rem;
+        white-space: wrap;
+        padding: 2em;
+    }
+
+
+
+    #ticket_open_block {
+        width: 90vw;
+    }
+
+    #ticket_open_container {
+        display: flex;
+        width: 360vw;
+    }
+
+    .border,
+    .ticket_open {
+        width: calc(90vw * .5 - 1rem);  
+    }
+
+
+
+    #month_banner_block {
+        padding: 0;
+        display: flex;
+    }
+
+    #month_banner_main {
+        display: none;
+    }
+
+    #month_banner_sub {
+        width: 90vw;
+    }
+
+    .leftlist, .rightlist {
+        width: 100%;
+    }
+
+    .month_sub {
+        height: calc(90vw * .9 * 3 / 4);
+        width: 90%;
+    }
+
+}
+
