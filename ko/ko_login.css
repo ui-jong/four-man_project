@@ -40,6 +40,8 @@ main  {
   }
 }
 
+
+
 .ko_logo {
   text-align: center;
   margin-bottom: 20px;
@@ -63,6 +65,9 @@ main  {
   }
 }
 
+form a {
+  text-align: center;
+}
 
 
 .ko_checkbox-group {
@@ -78,14 +83,17 @@ main  {
   color: #fff;
 }
 
-button {
-  margin: 5px;
-  margin-left: -0px; 
+
+
+#ko_centeredLink {
+  display: flex;
+  justify-content: center;
 }
 
 .ko_links {
   display: flex;
   justify-content: center;
+  
 }
 
 .ko_links span {
