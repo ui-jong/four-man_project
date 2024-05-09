@@ -5,13 +5,13 @@
     margin: 0;
     list-style: none;
     text-decoration: none;
+    scroll-behavior: smooth;
 }
 
 
 main {
-    font-size: 0;
     font-family: 'Pretendard-Regular';
-    /* min-width: 90rem; */
+    /* min-width: 90em; */
     margin: auto;
 }
 
@@ -53,11 +53,11 @@ main {
 }
 
 .main_ban_introduce {
-    
+    font-size: 1.2rem;
+
     position: absolute;
     bottom: 0;
     
-    font-size: 1.2rem;
     width: 100%;
     
     box-sizing: border-box;
@@ -70,7 +70,7 @@ main {
 }
 
 .main_ban_introduce>p {
-    margin-top: .5rem;
+    margin-top: .5em;
 }
 
 .main_ban_introduce::before {
@@ -137,7 +137,7 @@ main {
     position: absolute;
     bottom: 0;
     
-    height: 13rem;
+    height: 13em;
     width: 100%;
 
     justify-content: center;
@@ -161,9 +161,9 @@ main {
 
 #main_nav_box>label{
     background-color: gray;
-    height: 10rem;
-    width: calc( 10rem * (3/4));
-    margin: 0 0 1rem 2rem;
+    height: 10em;
+    width: calc( 10em * (3/4));
+    margin: 0 0 1em 2em;
 
     background-size: cover;
     background-position: center;
@@ -180,6 +180,7 @@ main {
 /* 메인 페이지 네비게이터 */
 .to_the_top {
     display: inline-block;
+    font-size: 4rem;
     
     height: 4rem;
     width: 4rem;
@@ -188,7 +189,6 @@ main {
     border-radius: 50%;
     border: 1px solid black;
     
-    font-size: 4rem;
     text-align: center;
     line-height: 4rem;
 
@@ -211,12 +211,12 @@ main {
 
 #row_ad_container {    
     display: flex;
-    height: 5rem;
+    height: 6rem;
     
     justify-content: center;
     align-items: center;
 
-    margin: -3rem 0 .4rem 0;
+    margin: -3em 0 .4em 0;
 
     font-size: 4rem;
 }
@@ -234,7 +234,7 @@ main {
     width: 70%;
     height: 90%;
     
-    border-radius: 2rem;
+    border-radius: 2em;
     background-color: rgba(220, 20, 60, 0.959);
 }
 
@@ -242,8 +242,8 @@ main {
 /* ====================================================== */
 /* 티켓오픈 */
 h2 {
-    font-size:2rem;
-    margin: 1rem 0 0 1rem;
+    font-size:2em;
+    margin: 1em 0 0 1em;
 }
 
 #ticket_open_block{
@@ -251,7 +251,7 @@ h2 {
 
     width: 70vw;
     margin: auto;
-    padding-bottom: 2rem;
+    padding-bottom: 2em;
     overflow: hidden;
 }
 
@@ -264,8 +264,8 @@ h2 {
     white-space: nowrap;
     
     margin: auto;
-    margin-bottom: 2rem;
-    padding-top: 1rem; 
+    margin-bottom: 2em;
+    padding-top: 1em; 
 }
 
 
@@ -274,11 +274,11 @@ h2 {
 
     box-sizing: border-box;
     border: 1.5px solid rgb(0, 0, 0);
-    border-radius: 1rem;
+    border-radius: 1em;
 
     overflow: hidden;
 
-    width: calc(70vw * .25 - 1rem);    
+    width: calc(70vw * .25 - 1em);    
 }
 
 
@@ -290,14 +290,14 @@ h2 {
     display: inline-block;
     
     aspect-ratio: 3 / 4;
-    width: calc(70vw * .25 - 1rem);     
+    width: calc(70vw * .25 - 1em);     
     
     background-position: center;
     background: 100%/100% no-repeat;
 }
 
 .border > .naration_box {
-    padding: 0 1rem;
+    padding: 0 1em;
 }
 
 
@@ -307,18 +307,18 @@ h2 {
     color: black;
 }
 .title {
-    font-size: 1.5rem;
-    margin: .1rem 0 .1rem 0;
+    font-size: 1.5em;
+    margin: .1em 0 .1em 0;
     color: black;
 }
 .venue {
-    font-size: 1.2rem;
-    margin: .1rem 0 .1rem 0;
+    font-size: 1.2em;
+    margin: .1em 0 .1em 0;
     color: red;
 }
 .date {
-    font-size: 0.9rem;
-    margin: .1rem 0 .1rem 0 ;
+    font-size: 1em;
+    margin: .1em 0 .1em 0 ;
     color: grey;
 }
 /* ===================================================== */
@@ -355,23 +355,23 @@ h2 {
         justify-content: space-between;
         
         box-sizing: border-box;
-        height: 3rem;
-        width: 12rem;
+        height: 3em;
+        width: 12em;
 
         margin: auto;
         background-color: transparent;
     }
 
     #ticket_open_block>nav>label:nth-of-type(1){
-        height: 3rem;
-        width: 3rem;
+        height: 3em;
+        width: 3em;
         background-image: url(https://ifh.cc/g/sWwXzB.png);
         background-position: center;
         background-size: 100% 100%;
     }
     #ticket_open_block>nav>label:nth-of-type(2){
-        height: 3rem;
-        width: 3rem;
+        height: 3em;
+        width: 3em;
         background-image: url(https://ifh.cc/g/sWwXzB.png);
         transform: scaleX(-1);
         background-position: center;
@@ -379,10 +379,10 @@ h2 {
     }
 
     #ticket_open_block>label[for*="prev"] {
-        left: calc(50% - 6rem);
+        left: calc(50% - 6em);
     }
     #ticket_open_block>label[for*="next"] {
-        left: calc(50% + 6rem);
+        left: calc(50% + 6em);
     }
 
 /* ====================================================== */
@@ -450,10 +450,10 @@ h2 {
 }
 
 #month_banner_main {
-    margin: 3rem;
+    margin: 3em;
 
     position: sticky;
-    top: 3rem;
+    top: 3em;
 
     height: calc(70vw * 0.28 * (4 / 3));
     width: calc(70vw * 0.28);
@@ -514,7 +514,7 @@ h2 {
 
     font-size: medium;
     
-    padding: 2rem 0 2rem 0;
+    padding: 2em 0 2em 0;
 }
 
 .month_sub {
@@ -530,7 +530,7 @@ h2 {
 }
 
 #leftlist {
-    padding-top: 2rem;
+    padding-top: 2em;
     height: 100%;
     width: 50%;
 }
@@ -560,7 +560,7 @@ h2 {
     height: 100%;
     
     background-position: center;    
-    background-size: 100% 100%;
+    background-size: cover;
 } 
 
 /* ========================================= */
@@ -570,26 +570,44 @@ h2 {
 /* 공지 */
 
 #notice_customservice {
+    font-size: 1em;
+
     display: grid;
-    grid-template-columns: repeat( 6 , 1fr );
+    grid-template-columns: repeat( 2 , 1fr );
 
     box-sizing: border-box;
-    height: 20rem;
+    height: 20em;
+    width: 70vw;
+    margin: auto;
 
-    font-size: 1rem;
+    font-size: 1em;
 }
 
 #notice {
 
-    grid-column: 2 / 4;
+    grid-column: 1 / 2;
 
     display: grid;
     grid-row: 1fr 1fr;
 
+
     box-sizing: border-box;
-    margin: .5rem;
+    margin: .5em;
 
     border: 2px solid;
+}
+
+#notice_container {
+    grid-column: 2 / 3;
+    
+    box-sizing: border-box;
+    height: 100%;
+    padding-right: .3em;
+
+    display: grid;
+
+    grid-template-rows: repeat(5 , 1fr);
+    align-items: end;
 }
 
 #notice>a {
@@ -598,25 +616,15 @@ h2 {
     display: grid;
     grid-template-rows: repeat(5 , 1fr);
 
-    font-size: 2rem;
+
+    font-size: 1.5em;
     color: crimson;
     font-weight: bolder;
 
-    padding: 2rem;
+    padding: 2em;
 }
 
-#notice_container {
-    grid-column: 2 / 3;
-    
-    box-sizing: border-box;
-    padding-right: .3rem;
 
-    display: grid;
-    grid-template-rows: repeat(5 , 1fr);
-    align-items: end;
-
-
-}
 
 .notice {
     box-sizing: border-box;
@@ -624,32 +632,32 @@ h2 {
     border: 0px solid crimson;
     border-left-width: 4px;
 
-    padding: .3rem;
+    padding: .3em;
 
     color: black;
-    font-size: 1.2rem;
+    font-size: 1.2em;
 
     background-color: rgb(235, 231, 231);
 }
 
 .notice span {
     color: gray;
-    font-size: .9rem;
+    font-size: .9em;
 }
 
 /* 고객센터 */
 
 #custom_service {
-    grid-column: -2 / -4;
+    grid-column: -1 / -2;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
 
     box-sizing: border-box;
     border: 2px solid black;
-    border-radius: 3rem 0 0 0;
+    border-radius: 3em 0 0 0;
 
-    margin: .5rem;
+    margin: .5em;
 
 }
 
@@ -659,11 +667,13 @@ h2 {
     display: grid;
     grid-template-rows: repeat(5 , 1fr);
 
-    font-size: 2rem;
+    font-size: 2em;
     color: rgb(0, 0, 0);
     font-weight: bolder;
 
-    padding: 2rem;
+    overflow: hidden;
+
+    padding: 2em;
 
     background-color: ;
 }
@@ -677,7 +687,7 @@ h2 {
 
     box-sizing: border-box;
     height: 100%;
-    padding: .5rem;
+    padding: .5em;
 
     align-items: center;
 }
@@ -692,7 +702,7 @@ h2 {
 
     height: 90%;
 
-    font-size: 1.5rem;
+    font-size: 1.5em;
     color: black;
 
     background-color: lightgray;
@@ -713,9 +723,77 @@ h2 {
         font-size: .8rem;
     }
 
-    #month_banner_block>#month_banner_main {
-        font-size: .7rem;
+    .naration_box {
+        font-size: .8rem;
     }
+
+    #month_banner_block>#month_banner_main {
+        font-size: .8vw;
+    }
+
+
+    #notice_customservice {
+        font-size: 1vw;
+    }
+}
+
+
+
+
+
+
+
+@media (width < 1200px) {
+    
+        
+    #ticket_open_block {
+        width: 90vw;
+    }
+
+    #ticket_opem_block>h2 {
+        font-size: 3rem;
+    }
+
+
+    #ticket_open_container {
+        display: flex;
+        width: 240vw;
+    }
+
+    .border,
+    .ticket_open {
+        width: calc(90vw * .3 - 1em);  
+    }
+
+
+
+
+
+
+    #month_banner_block {
+        padding: 0 5vw 0 5vw;
+    }
+
+    #month_banner_main {
+        width: calc(90vw * .3);
+        height: calc(90vw * .3 * 4/3);
+    }
+
+    #month_banner_sub {
+        width: calc(90vw * .6);
+    }
+
+    .month_sub {
+        height: calc(90vw * .6 * .9 * 3 / 4);
+        width: 90%;
+    }
+
+
+    #notice_customservice {
+        width: 90vw;
+    }
+
+
 }
 
 
@@ -730,14 +808,18 @@ h2 {
     .main_ban_introduce {
         font-size: .8rem;
         white-space: wrap;
-        padding: 2em;
+        padding: 2rem;
     }
-
 
 
     #ticket_open_block {
         width: 90vw;
     }
+
+    #ticket_opem_block>h2 {
+        font-size: 3rem;
+    }
+
 
     #ticket_open_container {
         display: flex;
@@ -746,7 +828,7 @@ h2 {
 
     .border,
     .ticket_open {
-        width: calc(90vw * .5 - 1rem);  
+        width: calc(90vw * .5 - 1em);  
     }
 
 
@@ -758,6 +840,20 @@ h2 {
 
     #month_banner_main {
         display: none;
+    }
+
+    #month_banner_block::before {
+        content: "2024 공연 / 전시";
+        display: block;
+
+        position: absolute;
+
+        color: rgb(255, 255, 255);
+        height: 3rem;
+        line-height: 3rem;
+
+        font-weight: bold;
+        font-size: 2rem;
     }
 
     #month_banner_sub {
@@ -773,5 +869,44 @@ h2 {
         width: 90%;
     }
 
+
+
+
+
+    #notice_customservice {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        width: 90vw;
+        height: 20vh;
+        font-size: .7rem;
+    }
+
+    #notice {
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+
+        display: grid;
+        grid-template: 1fr / 1fr 1fr;
+
+        height: 15rem;
+    }
+
+    #notice>a {
+        display: grid;
+        font-size: 1.2rem;
+    }
+
+    #custom_service {
+        grid-column: 1 / 3;
+        grid-row: 2 / 3;
+    }
+
+    #notice_container {
+    }
+
+
+    .to_the_top {
+        visibility: hidden;
+    }
 }
 
