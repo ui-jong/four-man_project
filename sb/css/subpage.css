@@ -21,7 +21,7 @@ nav div,
 nav>div:first-child {
     height: 500px;
     line-height: 500px;
-    width: 100vw;
+    width: calc(100vw - 19px);
 }
 
 /* 공연 예매/일정, 상세검색 가운데 정렬 */
@@ -236,10 +236,19 @@ nav>div:nth-child(1) {
 
 
 
-main>a>ul>li {
+main a>ul>li {
     font-family: 'Pretendard-Regular';
 }
 
+main ul>li:nth-child(1) {
+    font-weight: bold;
+    /* font-size: 1.25rem; */
+}
+
+main ul>li:nth-child(2), 
+main ul>li:nth-child(3){
+    font-size: .8rem;
+}
 
 
 main {
@@ -251,8 +260,8 @@ main {
     margin-top: 2rem;
     gap: 1.5rem;
     transition: width .5s height .5s;
-    min-width: 35rem;
-    margin-bottom: 20px;
+    /* min-width: 35rem; */
+    margin-bottom: 500px;
 }
 
 main a {
@@ -426,10 +435,18 @@ main>div div {
 
 @media (width <=69rem) {
     main {
-        width: 35rem;
-        height: 190rem;
+        width: 30rem;
+        height: 180rem;
         grid-template: repeat(8, 1fr) / repeat(2, 1fr);
 
+    }
+
+
+}
+
+@media (width <=58rem) {
+    .sb_none {
+        display: none !important;
     }
 
 
@@ -439,7 +456,7 @@ main>div div {
 
 @media (width <=42rem) {
     main {
-    
+
         height: 510rem;
         grid-template: repeat(15, 1fr) / repeat(1, 1fr);
 
@@ -465,24 +482,10 @@ main>div div {
     .sb_upper>div>form>button:after {
         font-size: .8rem;
     }
+
     .sb_detail_search>label {
-        font-size: .6rem!important;
-        width: 4rem!important;
+        font-size: .6rem !important;
+        width: 4rem !important;
 
     }
-}
-
-
-.sb_detail_search>label {
-    margin-bottom: 5px;
-    font-size: 1.2rem;
-    display: block;
-    width: 6.25rem;
-    margin: auto;
-    border: 2px solid;
-    border-radius: 20px;
-    background-color: antiquewhite;
-    padding: .5rem;
-    cursor: pointer;
-    font-family: 'Pretendard-Regular';
 }

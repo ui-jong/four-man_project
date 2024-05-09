@@ -35,7 +35,8 @@ header {
     z-index: 3;
     grid-template: 1fr .5fr .5fr / 2fr repeat(8, .5fr) 1fr 1fr;
     height: 11.8rem;
-    background: black;
+    /* background: rgb(167, 240, 240); */
+    /* opacity: 0; */
 }
 
 header>div:not(:nth-child(2)) {
@@ -91,6 +92,10 @@ header>.h_outer {
     width: 20vw;
     height: 15vh;
     background: url(../page_image/logo.png) center / 100% 170% no-repeat;
+    /* opacity: 0; */
+}
+header>div:not(.h_outer){
+    opacity: 0;
 }
 
 .h_logo>a {
@@ -167,6 +172,21 @@ header:hover .h_login::before {
     transition: font-size .5s;
 }
 
+
+header:hover,
+header:hover div a,
+header:hover div {
+    color: white;
+    background-color: black;
+    opacity: 1;
+}
+
+header:hover .h_search::after,
+header:hover .h_login::before {
+    color: white;
+}
+
+
 @media (width <=85rem) {
 
     .h_notice>a,
@@ -211,8 +231,9 @@ header:hover .h_login::before {
         height: 15px;
         font-size: .5rem;
     }
-
-
+    .h_login>a {
+        font-size: 1rem;
+    }
 }
 
 @media (width <=35rem) {
@@ -220,9 +241,6 @@ header:hover .h_login::before {
         font-size: .3em;
     }
 
-    .h_login>a {
-        font-size: 1rem;
-    }
 }
 
 @media (width <=28rem) {

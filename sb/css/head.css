@@ -107,6 +107,7 @@ header>.h_outer {
     color: black;
     text-align: center;
     transition: font-size .5s;
+    width: 50px;
 }
 
 /* 검색창 사이즈 */
@@ -210,7 +211,9 @@ header:hover .h_login::before {
         height: 15px;
         font-size: .5rem;
     }
-
+    .h_login>a {
+        font-size: 1rem;
+    }
 
 }
 
@@ -219,9 +222,7 @@ header:hover .h_login::before {
         font-size: .3em;
     }
 
-    .h_login>a {
-        font-size: 1rem;
-    }
+
 }
 
 @media (width <=28rem) {
