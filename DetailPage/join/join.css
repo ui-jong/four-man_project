@@ -78,6 +78,64 @@ main {
     background-color: #0056b3;
 }
 
+.kr_signup-form>a {
+    display: block;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 95%;
+    text-align: center;
+    text-decoration: none;
+}
+
+.kr_signup-form>a:hover {
+    background-color: #0056b3;
+}
+
+.kr_signup-form>.kr_flex {
+    display: flex;
+    gap: 6px;
+}
+
+.kr_signup-form>.kr_login>a {
+    text-align: center;
+    display: block;
+    color: black;
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 95%;
+    text-align: center;
+    text-decoration: none;
+}
+
+.kr_signup-form>.kr_login>a:hover {
+    color: lightgray;
+}
+
+.kr_signup-form>.kr_flex>a {
+    display: block;
+    color: black;
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 95%;
+    text-align: center;
+    text-decoration: none;
+}
+
+.kr_signup-form>.kr_flex>a:hover {
+    color: lightgray;
+}
+
 @font-face {
     font-family: 'Pretendard-Regular';
     src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
