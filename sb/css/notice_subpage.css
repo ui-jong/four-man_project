@@ -70,7 +70,7 @@
 .sb_grid>div {
     place-content: center;
     display: grid;
-    white-space: pre;
+    white-space: pre-line;
 }
 
 .sb_grid>div:nth-child(-n+3) {
