@@ -21,7 +21,7 @@ nav div,
 nav>div:first-child {
     height: 500px;
     line-height: 500px;
-    width: 100vw;
+    width: calc(100vw - 19px);
 }
 
 /* 공연 예매/일정, 상세검색 가운데 정렬 */
@@ -236,10 +236,19 @@ nav>div:nth-child(1) {
 
 
 
-main>a>ul>li {
+main a>ul>li {
     font-family: 'Pretendard-Regular';
 }
 
+main ul>li:nth-child(1) {
+    font-weight: bold;
+    /* font-size: 1.25rem; */
+}
+
+main ul>li:nth-child(2), 
+main ul>li:nth-child(3){
+    font-size: .8rem;
+}
 
 
 main {
@@ -251,7 +260,7 @@ main {
     margin-top: 2rem;
     gap: 1.5rem;
     transition: width .5s height .5s;
-    min-width: 35rem;
+    padding-bottom: 30px;
 }
 
 main a {
@@ -263,6 +272,7 @@ main a {
 main>div {
     border: 1px solid;
     overflow: hidden;
+    transition: width .5s height .5s;
     border-radius: 15px;
 }
 
@@ -276,8 +286,8 @@ main>div div {
 
 .sb_p1 {
     background: url("http://www.lgart.com/Down/Perf/202403/380x380_1.jpg") center/100% 100% no-repeat;
-
-
+    transition-duration: 1s;
+    overflow: hidden;
 }
 
 .sb_p2 {
@@ -414,7 +424,7 @@ main>div div {
 
 
 
-@media (width <= 100rem) {
+@media (width <=100rem) {
     main {
         width: 64rem;
         height: 90rem;
@@ -422,61 +432,61 @@ main>div div {
 
     }
 
-    /* main>a {
-        width: 11.5rem;
-    }
-
-    main>a>div {
-        height: 15rem;
-    } */
 }
 
-@media (width <= 69rem) {
+@media (width <=69rem) {
     main {
-        width: 35rem;
-        height: 190rem;
+        width: 30rem;
+        height: 180rem;
         grid-template: repeat(8, 1fr) / repeat(2, 1fr);
 
     }
 
-    /* main>a {
-        width: 12rem;
+
+}
+
+@media (width <=58rem) {
+    .sb_none {
+        display: none !important;
     }
 
-    main>a>div {
-        height: 16rem;
-    } */
+
 }
 
 
 
-/* @media (width <= 60rem) {
+@media (width <=42rem) {
     main {
-        width: 50rem;
-        height: 105rem;
+
+        height: 510rem;
+        grid-template: repeat(15, 1fr) / repeat(1, 1fr);
+
     }
 
-    main>a {
-        width: 12rem;
+    main>div {
+        width: 20rem;
+        height: 30rem;
+        margin: auto;
     }
 
-    main>a>div {
-        height: 16rem;
+    .sb_upper>div>form>input {
+        width: 6rem;
+        height: 1rem;
+    }
+
+    .sb_upper>div>form>button {
+        height: 1rem;
+        width: 2rem;
+        font-size: ;
+    }
+
+    .sb_upper>div>form>button:after {
+        font-size: .8rem;
+    }
+
+    .sb_detail_search>label {
+        font-size: .6rem !important;
+        width: 4rem !important;
+
     }
 }
-
-
-@media (width <= 100rem) {
-    main {
-        width: 64rem;
-        height: 80rem;
-    }
-
-    main>a {
-        width: 11.5rem;
-    }
-
-    main>a>div {
-        height: 15rem;
-    }
-} */
