@@ -193,9 +193,7 @@ header>div {
 
 
 @media (width <=38.75rem) {
-    .h_tranportation>a {
-        /* font-size: .3em; */
-    }
+    
     .h_notice {
         grid-area: 2 / 2 / 3 / 5;
     }
