@@ -108,15 +108,13 @@ main {
 }
 
 .kr_signup-form>.kr_login>a {
-    text-align: center;
+    margin: auto;
+    width: 30%;
     display: block;
     color: black;
     margin-top: 10px;
     padding: 10px;
-    border: none;
-    border-radius: 4px;
     cursor: pointer;
-    width: 95%;
     text-align: center;
     text-decoration: none;
 }
@@ -130,8 +128,6 @@ main {
     color: black;
     margin-top: 10px;
     padding: 10px;
-    border: none;
-    border-radius: 4px;
     cursor: pointer;
     width: 95%;
     text-align: center;

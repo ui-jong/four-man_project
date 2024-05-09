@@ -20,11 +20,33 @@
             </div>
             <h1>비밀번호 찿기</h1>
 
-            <form action="../ko/ko_login.html"> <!-- 로그인 페이지로 연동 -->
+            <form action="./pwserch_sub.html"> <!-- 로그인 페이지로 연동 -->
                 <div>아이디</div>
                 <label>
                     <input type="text" placeholder="아이디" required>
                 </label>
+                <div>이름</div>
+                <label>
+                    <input type="text" placeholder="이름" required>
+                </label>
+
+                <div>이메일</div>
+                <div class="kr_emailinput">
+                    <div>
+                        <input type="text" placeholder="이메일" required>
+                    </div>
+                    <div>
+                        <p>@</p>
+                    </div>
+                    <div>
+                        <input type="text" list="kr_adress" placeholder="직접입력" required>
+                        <datalist id="kr_adress">
+                            <option value="gmail.com">
+                            <option value="naver.com">
+                            <option value="daum.net">
+                        </datalist>
+                    </div>
+                </div>
                 <button type="submit">비밀번호 검색</button>
             </form>
             <div class="kr_flex">
