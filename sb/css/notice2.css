@@ -72,8 +72,8 @@
     text-align: center;
 }
 
-/* 1번 밑줄 */
-.sb_note>.sb_numbering>ul>li:first-child {
+/* 2번 밑줄 */
+.sb_note>.sb_numbering>ul>li:nth-child(2) {
     text-decoration: underline;
     font-weight: bold;
 }
