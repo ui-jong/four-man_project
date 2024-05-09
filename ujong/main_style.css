@@ -876,8 +876,10 @@ h2 {
     #notice_customservice {
         display: grid;
         grid-template-rows: 1fr 1fr;
+        margin-bottom: 10px;
+
         width: 90vw;
-        height: 20vh;
+        height: 30rem;
         font-size: .7rem;
     }
 
