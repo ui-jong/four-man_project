@@ -252,6 +252,7 @@ main {
     gap: 1.5rem;
     transition: width .5s height .5s;
     min-width: 35rem;
+    margin-bottom: 20px;
 }
 
 main a {
@@ -263,6 +264,7 @@ main a {
 main>div {
     border: 1px solid;
     overflow: hidden;
+    transition: width .5s height .5s;
     border-radius: 15px;
 }
 
@@ -276,8 +278,8 @@ main>div div {
 
 .sb_p1 {
     background: url("http://www.lgart.com/Down/Perf/202403/380x380_1.jpg") center/100% 100% no-repeat;
-
-
+    transition-duration: 1s;
+    overflow: hidden;
 }
 
 .sb_p2 {
@@ -412,7 +414,7 @@ main>div div {
 
 
 
-@media (width <= 100rem) {
+@media (width <=100rem) {
     main {
         width: 64rem;
         height: 90rem;
@@ -420,16 +422,9 @@ main>div div {
 
     }
 
-    /* main>a {
-        width: 11.5rem;
-    }
-
-    main>a>div {
-        height: 15rem;
-    } */
 }
 
-@media (width <= 69rem) {
+@media (width <=69rem) {
     main {
         width: 35rem;
         height: 190rem;
@@ -437,44 +432,57 @@ main>div div {
 
     }
 
-    /* main>a {
-        width: 12rem;
-    }
 
-    main>a>div {
-        height: 16rem;
-    } */
 }
 
 
 
-/* @media (width <= 60rem) {
+@media (width <=42rem) {
     main {
-        width: 50rem;
-        height: 105rem;
+    
+        height: 510rem;
+        grid-template: repeat(15, 1fr) / repeat(1, 1fr);
+
     }
 
-    main>a {
-        width: 12rem;
+    main>div {
+        width: 20rem;
+        height: 30rem;
+        margin: auto;
     }
 
-    main>a>div {
-        height: 16rem;
+    .sb_upper>div>form>input {
+        width: 6rem;
+        height: 1rem;
+    }
+
+    .sb_upper>div>form>button {
+        height: 1rem;
+        width: 2rem;
+        font-size: ;
+    }
+
+    .sb_upper>div>form>button:after {
+        font-size: .8rem;
+    }
+    .sb_detail_search>label {
+        font-size: .6rem!important;
+        width: 4rem!important;
+
     }
 }
 
 
-@media (width <= 100rem) {
-    main {
-        width: 64rem;
-        height: 80rem;
-    }
-
-    main>a {
-        width: 11.5rem;
-    }
-
-    main>a>div {
-        height: 15rem;
-    }
-} */
+.sb_detail_search>label {
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+    display: block;
+    width: 6.25rem;
+    margin: auto;
+    border: 2px solid;
+    border-radius: 20px;
+    background-color: antiquewhite;
+    padding: .5rem;
+    cursor: pointer;
+    font-family: 'Pretendard-Regular';
+}
