@@ -328,74 +328,46 @@ main>div div {
     overflow: hidden;
 }
 
-<<<<<<< HEAD
-main>a:nth-child(10)>div {
-=======
+
 .sb_p10 {
->>>>>>> sb_project
     background: url("http://www.lgart.com/Down/Perf/202402/380_380_ccc_3.jpg") center/100% 100% no-repeat;
     transition-duration: 1s;
     overflow: hidden
 }
 
-<<<<<<< HEAD
-main>a:nth-child(11)>div {
-=======
 .sb_p11 {
->>>>>>> sb_project
     background: url("http://www.lgart.com/Down/Perf/202312/1218-CB_Main(%EC%A0%95%EB%B0%A9%ED%98%95).jpg") center/100% 100% no-repeat;
     transition-duration: 1s;
     overflow: hidden
 }
 
-<<<<<<< HEAD
-main>a:nth-child(12)>div {
-=======
 .sb_p12 {
->>>>>>> sb_project
     background: url("http://www.lgart.com/Down/Perf/202312/380x380_5.png") center/100% 100% no-repeat;
     transition-duration: 1s;
     overflow: hidden
 }
 
-<<<<<<< HEAD
-main>a:nth-child(13)>div {
-=======
 .sb_p13 {
->>>>>>> sb_project
     background: url("http://www.lgart.com/Down/Perf/202312/380x380_6.png") center/100% 100% no-repeat;
     transition-duration: 1s;
     overflow: hidden
 }
 
-<<<<<<< HEAD
-main>a:nth-child(14)>div {
-=======
 .sb_p14 {
->>>>>>> sb_project
     background: url("http://www.lgart.com/Down/Perf/202401/%EC%83%A4%EC%9E%A0-380X380_%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%EC%9A%A9.jpg") center/100% 100% no-repeat;
     transition-duration: 1s;
     overflow: hidden
 }
 
-<<<<<<< HEAD
-main>a:nth-child(15)>div {
-    background: url("http://www.lgart.com/Down/Perf/202312/380x380_8.png");
-=======
+
 .sb_p15 {
     background: url("http://www.lgart.com/Down/Perf/202312/380x380_8.png")center/100% 100% no-repeat;
->>>>>>> sb_project
     transition-duration: 1s;
     overflow: hidden
 }
 
-<<<<<<< HEAD
-main>a:nth-child(16)>div {
-    background: url("http://www.lgart.com/Down/Perf/202312/380x380_10.png");
-=======
 .sb_p16 {
     background: url("http://www.lgart.com/Down/Perf/202312/380x380_10.png")center/100% 100% no-repeat;
->>>>>>> sb_project
     transition-duration: 1s;
     overflow: hidden
 }

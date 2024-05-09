@@ -14,8 +14,12 @@
 <body>
     <header>
         <div class="h_logo"><a href="../main.html">logo</a></div>
-        <div class="h_outer"> <input type="search" id="h_sssearch" placeholder="검색어 입력" >
-            <button type="button"></button></div>
+        <div class="h_outer">
+            <form action="search">
+                <input type="search" id="h_sssearch" placeholder="검색어 입력">
+                <button type="button"></button>
+            </form>
+        </div>
         <div class="h_notice"><a href="../sb/notice.html">공지사항</a></div>
         <div class="h_introduction"><a href="../sb/outerpark_subpage.html">공연안내</a></div>
         <div class="h_path"><a href="../ko/ko_allConcerthall.html">찾아오시는길</a></div>
@@ -35,35 +39,35 @@
                 <label for="banner3" class="img3"></label>
                 <label for="banner4" class="img4"></label>
             </div>
-            
+
             <div class="main_banner_view">
                 <input type="radio" name="main_slide" id="banner1" checked>
                 <input type="radio" name="main_slide" id="banner2">
                 <input type="radio" name="main_slide" id="banner3">
                 <input type="radio" name="main_slide" id="banner4">
-                
-                
+
+
                 <div id="main_banner_container">
                     <a href="./DetailPage/detail_page_1.html" class="main_banner img1">
-                        <div class="main_ban_introduce"> 
+                        <div class="main_ban_introduce">
                             <h1>미하일 플레트네트 라흐마니노프 피아노 협주곡 전곡</h1>
                             <p>아우터홀 5월 8일 18:00</p>
                         </div>
                     </a>
                     <a href="./DetailPage/detail_page_2.html" class="main_banner img2">
-                        <div class="main_ban_introduce"> 
+                        <div class="main_ban_introduce">
                             <h1>푸치니 서거 100주년 기념 오페라 갈라콘서트 &lt;Great Puccini&gt;</h1>
                             <p>미금그린컴퓨터 5월 8일 18:00</p>
                         </div>
                     </a>
                     <a href="./DetailPage/detail_page_3.html" class="main_banner img3">
-                        <div class="main_ban_introduce"> 
+                        <div class="main_ban_introduce">
                             <h1>크루즈 디에즈 &lt;RGB, 세기의 컬러&gt;</h1>
                             <p>미금그린컴퓨터 5월 8일 18:00</p>
                         </div>
                     </a>
                     <a href="#" class="main_banner img4">
-                        <div class="main_ban_introduce"> 
+                        <div class="main_ban_introduce">
                             <h1>연극 &lt;실종법칙&gt;</h1>
                             <p>미금그린컴퓨터 5월 8일 18:00</p>
                         </div>
@@ -72,9 +76,9 @@
             </div>
         </div>
         <a class="to_the_top" href="#">
-                <i class="fa-solid fa-arrow-up"></i>
+            <i class="fa-solid fa-arrow-up"></i>
         </a>
-        
+
         <div id="row_ad_container"> <!--광고/홍보배너-->
             <div id="row_ad">
                 <i class="fa-brands fa-facebook"></i>
@@ -83,105 +87,105 @@
                 <i class="fa-brands fa-tiktok"></i>
             </div>
         </div>
-        
-        
-            <div id="ticket_open_block">
-                <h2>티켓 오픈</h2> 
-                <hr>
-                <input type="radio" name="ticket_slide" id="prev" checked>
-                <input type="radio" name="ticket_slide" id="next">
 
 
-                <div id="ticket_open_container">
-                    <a href="./DetailPage/detail_page_2.html" class="border">
-                        <div class="ticket_open poster1"></div>
-                        <div class="naration_box">
-                            <h3 class="title"> 그레이트 푸치니 </h3>
-                            <hr>
-                            <p class="venue">아우터홀</p>
-                            <span class="date"> 2237.05.17 ~ 07.28</span>
-                        </div>
-                    </a>
-                    <a href="./DetailPage/detail_page_1.html" class="border">
-                        <div class="ticket_open poster2"></div>
-                        <div class="naration_box">
-                            <h3 class="title"> 미하일 플레트네트 </h3>
-                            <hr>
-                            <p class="venue">아우터홀</p>
-                            <span class="date"> 2237.05.17 ~ 07.28</span>
-                        </div>
-                    </a>
-                    <a href="./DetailPage/detail_page_3.html" class="border">
-                        <div class="ticket_open poster3"></div>
-                        <div class="naration_box">
-                            <h3 class="title"> RGB,세기의 컬러들 </h3>
-                            <hr>
-                            <p class="venue">아우터홀</p>
-                            <span class="date"> 2237.05.17 ~ 07.28</span>
-                        </div>
-                    </a>
-                    <a href="#" class="border">
-                        <div class="ticket_open poster4"></div>
-                        <div class="naration_box">
-                            <h3 class="title"> 실종법칙 </h3>
-                            <hr>
-                            <p class="venue">아우터홀</p>
-                            <span class="date"> 2237.05.17 ~ 07.28</span>
-                        </div>
-                    </a>
-                    <a href="#" class="border">
-                        <div class="ticket_open poster5"></div>
-                        <div class="naration_box">
-                            <h3 class="title"> 벛꽃동산 </h3>
-                            <hr>
-                            <p class="venue">아우터홀</p>
-                            <span class="date"> 2237.05.17 ~ 07.28</span>
-                        </div>
-                    </a>
-                    <a href="#" class="border">
-                        <div class="ticket_open poster6"></div>
-                        <div class="naration_box">
-                            <h3 class="title"> 피나와 함께 춤을 </h3>
-                            <hr>
-                            <p class="venue">아우터홀</p>
-                            <span class="date"> 2237.05.17 ~ 07.28</span>
-                        </div>
-                    </a>
-                    <a href="#" class="border">
-                        <div class="ticket_open poster7"></div>
-                        <div class="naration_box">
-                            <h3 class="title"> 고티에 & 장이브</h3>
-                            <hr>
-                            <p class="venue">아우터홀</p>
-                            <span class="date"> 2237.05.17 ~ 07.28</span>
-                        </div>
-                    </a>
-                    <a href="#" class="border">
-                        <div class="ticket_open poster8"></div>
-                        <div class="naration_box">
-                            <h3 class="title"> 다시,봄 </h3>
-                            <hr>
-                            <p class="venue">아우터홀</p>
-                            <span class="date"> 2237.05.17 ~ 07.28</span>
-                        </div>
-                    </a>
+        <div id="ticket_open_block">
+            <h2>티켓 오픈</h2>
+            <hr>
+            <input type="radio" name="ticket_slide" id="prev" checked>
+            <input type="radio" name="ticket_slide" id="next">
 
 
-                </div>
-                <nav>
-                    <label for="prev"></label>
-                    <label for="next"></label>
-                </nav>
+            <div id="ticket_open_container">
+                <a href="./DetailPage/detail_page_2.html" class="border">
+                    <div class="ticket_open poster1"></div>
+                    <div class="naration_box">
+                        <h3 class="title"> 그레이트 푸치니 </h3>
+                        <hr>
+                        <p class="venue">아우터홀</p>
+                        <span class="date"> 2237.05.17 ~ 07.28</span>
+                    </div>
+                </a>
+                <a href="./DetailPage/detail_page_1.html" class="border">
+                    <div class="ticket_open poster2"></div>
+                    <div class="naration_box">
+                        <h3 class="title"> 미하일 플레트네트 </h3>
+                        <hr>
+                        <p class="venue">아우터홀</p>
+                        <span class="date"> 2237.05.17 ~ 07.28</span>
+                    </div>
+                </a>
+                <a href="./DetailPage/detail_page_3.html" class="border">
+                    <div class="ticket_open poster3"></div>
+                    <div class="naration_box">
+                        <h3 class="title"> RGB,세기의 컬러들 </h3>
+                        <hr>
+                        <p class="venue">아우터홀</p>
+                        <span class="date"> 2237.05.17 ~ 07.28</span>
+                    </div>
+                </a>
+                <a href="#" class="border">
+                    <div class="ticket_open poster4"></div>
+                    <div class="naration_box">
+                        <h3 class="title"> 실종법칙 </h3>
+                        <hr>
+                        <p class="venue">아우터홀</p>
+                        <span class="date"> 2237.05.17 ~ 07.28</span>
+                    </div>
+                </a>
+                <a href="#" class="border">
+                    <div class="ticket_open poster5"></div>
+                    <div class="naration_box">
+                        <h3 class="title"> 벛꽃동산 </h3>
+                        <hr>
+                        <p class="venue">아우터홀</p>
+                        <span class="date"> 2237.05.17 ~ 07.28</span>
+                    </div>
+                </a>
+                <a href="#" class="border">
+                    <div class="ticket_open poster6"></div>
+                    <div class="naration_box">
+                        <h3 class="title"> 피나와 함께 춤을 </h3>
+                        <hr>
+                        <p class="venue">아우터홀</p>
+                        <span class="date"> 2237.05.17 ~ 07.28</span>
+                    </div>
+                </a>
+                <a href="#" class="border">
+                    <div class="ticket_open poster7"></div>
+                    <div class="naration_box">
+                        <h3 class="title"> 고티에 & 장이브</h3>
+                        <hr>
+                        <p class="venue">아우터홀</p>
+                        <span class="date"> 2237.05.17 ~ 07.28</span>
+                    </div>
+                </a>
+                <a href="#" class="border">
+                    <div class="ticket_open poster8"></div>
+                    <div class="naration_box">
+                        <h3 class="title"> 다시,봄 </h3>
+                        <hr>
+                        <p class="venue">아우터홀</p>
+                        <span class="date"> 2237.05.17 ~ 07.28</span>
+                    </div>
+                </a>
+
+
             </div>
-        
-        
+            <nav>
+                <label for="prev"></label>
+                <label for="next"></label>
+            </nav>
+        </div>
+
+
 
         <div id="month_banner_block"><!--메인공연-->
             <a id="month_banner_main" href="./sb/outerpark_subpage.html">
                 <div class="month_main poster1">
                     <div></div>
                     <p> 2024
-                    공연 &middot; 전시</p>
+                        공연 &middot; 전시</p>
                 </div>
             </a>
 
@@ -191,107 +195,107 @@
                     <a class="month_sub left" href="#">
                         <div class="sub poster1"></div>
 
-                    </a>             
+                    </a>
                     <a class="month_sub left" href="#">
                         <div class="sub poster2"></div>
 
-                    </a> 
+                    </a>
                     <a class="month_sub left" href="#">
                         <div class="sub poster3"></div>
 
-                    </a> 
+                    </a>
                     <a class="month_sub left" href="#">
                         <div class="sub poster4"></div>
 
-                    </a> 
+                    </a>
                     <a class="month_sub left" href="#">
                         <div class="sub poster5"></div>
 
-                    </a> 
+                    </a>
 
                 </div>
 
                 <div id="rightlist">
                     <a class="month_sub right" href="#">
                         <div class="sub poster6"></div>
-                        
+
                     </a>
                     <a class="month_sub right" href="#">
                         <div class="sub poster7"></div>
 
-                    </a> 
+                    </a>
                     <a class="month_sub right" href="#">
                         <div class="sub poster8"></div>
 
-                    </a> 
+                    </a>
                     <a class="month_sub right" href="#">
                         <div class="sub poster9"></div>
 
-                    </a> 
+                    </a>
                     <a class="month_sub right" href="#">
                         <div class="sub poster10"></div>
 
-                    </a> 
+                    </a>
 
                 </div>
             </div>
         </div>
 
-    <div id="notice_customservice">
-        
-        <div id="notice">
-            <a href="./sb/notice.html">공연장 소식</a>
-            
-            <div id="notice_container">
-            <a class="notice" href="#notice"> 
-                <span>2024.04.20</span>
-                <p> 어린이날 휴관 안내</p>
-            </a>
-            <a class="notice" href="#notice"> 
-                <span>2024.04.28</span>
-                <p> 어린이날 대체휴일 휴관 안내</p>
-            </a>
-            <a class="notice" href="#notice"> 
-                <span>2024.05.03</span>
-                <p> 어버이날 휴관 안내</p>
-            </a>
-            <a class="notice" href="#notice"> 
-                <span>2024.05.05</span>
-                <p> 휴관 안내</p>
-            </a>
-            <a class="notice" href="#notice"> 
-                <span>2024.05.08</span>
-                <p> 폐관 안내</p>
-            </a>
+        <div id="notice_customservice">
+
+            <div id="notice">
+                <a href="./sb/notice.html">공연장 소식</a>
+
+                <div id="notice_container">
+                    <a class="notice" href="#notice">
+                        <span>2024.04.20</span>
+                        <p> 어린이날 휴관 안내</p>
+                    </a>
+                    <a class="notice" href="#notice">
+                        <span>2024.04.28</span>
+                        <p> 어린이날 대체휴일 휴관 안내</p>
+                    </a>
+                    <a class="notice" href="#notice">
+                        <span>2024.05.03</span>
+                        <p> 어버이날 휴관 안내</p>
+                    </a>
+                    <a class="notice" href="#notice">
+                        <span>2024.05.05</span>
+                        <p> 휴관 안내</p>
+                    </a>
+                    <a class="notice" href="#notice">
+                        <span>2024.05.08</span>
+                        <p> 폐관 안내</p>
+                    </a>
+                </div>
+            </div>
+
+
+            <div id="custom_service">
+                <a href="">고객지원</a>
+
+                <div id="ctm_service_container">
+                    <a href="#custom_service">공연 안내</a>
+                    <a href="#custom_service">편의 시설</a>
+                    <a href="#custom_service">주차 문의</a>
+                    <a href="#custom_service">자주 묻는 질문</a>
+                </div>
             </div>
         </div>
 
+    </main>
 
-        <div id="custom_service">
-            <a href="">고객지원</a>
-            
-            <div id="ctm_service_container">
-                <a href="#custom_service">공연 안내</a>
-                <a href="#custom_service">편의 시설</a>
-                <a href="#custom_service">주차 문의</a>
-                <a href="#custom_service">자주 묻는 질문</a>
-            </div>
-        </div>
-    </div>
-
-</main>
-
-<footer>
-    <div><strong>대표자</strong> : 4MEN</div>
-    <div><strong>사업자등록번호</strong> : 123-987-123456</div>
-    <div><strong>통신판매업신고</strong> : 미금 제 1234호</div>
-    <div><strong>사업장 주소</strong> : (우)123456 경기도 예술시 뮤지컬로 334 아우터파크</div>
-    <div><strong>상호</strong> : 아우터파크</div>
-    <div><strong>콜 센터</strong> : 1588 - 1234</div>
-    <div><strong>팩스</strong> : 031-123-1234</div>
-    <div><strong>e-mail</strong> : helpdesk@Outerpark.com</div>
-    <div>Copyright © Outerpark 2024 All right reserved</div>
-</footer>
+    <footer>
+        <div><strong>대표자</strong> : 4MEN</div>
+        <div><strong>사업자등록번호</strong> : 123-987-123456</div>
+        <div><strong>통신판매업신고</strong> : 미금 제 1234호</div>
+        <div><strong>사업장 주소</strong> : (우)123456 경기도 예술시 뮤지컬로 334 아우터파크</div>
+        <div><strong>상호</strong> : 아우터파크</div>
+        <div><strong>콜 센터</strong> : 1588 - 1234</div>
+        <div><strong>팩스</strong> : 031-123-1234</div>
+        <div><strong>e-mail</strong> : helpdesk@Outerpark.com</div>
+        <div>Copyright © Outerpark 2024 All right reserved</div>
+    </footer>
 </body>
 
 </html>
