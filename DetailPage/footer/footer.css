@@ -12,7 +12,8 @@ footer {
         ". e . ."
         "j j j j";
     height: 300px;
-    background-color: lightgray;
+    background-color: rgb(48, 48, 48);
+    color: white;
 }
 
 footer>div:nth-child(1) {
