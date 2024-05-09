@@ -49,7 +49,7 @@ nav>div:first-of-type,
 
 .sb_nav>div:nth-child(1) {
     background: url(../page_image/orchestra-symphony-stage-performing-2c6b88bb1fc3b3107167d9532a11f4bb.jpg)center/cover;
-    width: 100vw;
+    width: calc(100vw - 19px);
 }
 
 /* 공연예매/일정 수평수직 조절 */
@@ -240,98 +240,159 @@ main>a>ul>li {
     font-family: 'Pretendard-Regular';
 }
 
-main>a:nth-child(1)>div {
-    background: url("http://www.lgart.com/Down/Perf/202403/380x380_1.jpg") center/100% 100% no-repeat;
+
+
+main {
+    display: grid;
+    grid-template: repeat(4, 1fr) / repeat(5, 1fr);
+    margin: auto;
+    width: 70rem;
+    height: 90rem;
+    margin-top: 2rem;
+    gap: 1.5rem;
+}
+
+main a {
+    text-decoration: none;
+    color: black;
+}
+
+
+main>div {
+    border: 1px solid;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+main>div div {
+    width: 100%;
+    height: 75%;
     transition-duration: 1s;
     overflow: hidden;
 }
 
-main>a:nth-child(2)>div {
+.sb_p1 {
+    background: url("http://www.lgart.com/Down/Perf/202403/380x380_1.jpg") center/100% 100% no-repeat;
+
+
+}
+
+.sb_p2 {
     background: url("http://www.lgart.com/Down/Perf/202403/380_380_ccc1.jpg") center/100% 100% no-repeat;
     transition-duration: 1s;
     overflow: hidden;
 }
 
-main>a:nth-child(3)>div {
+.sb_p3 {
     background: url("http://www.lgart.com/Down/Perf/202404/%EB%A7%88%EB%B9%84%EB%85%B8%EA%B8%B0new-1080x1080.jpg") center/100% 100% no-repeat;
     transition-duration: 1s;
     overflow: hidden;
 }
 
-main>a:nth-child(4)>div {
+.sb_p4 {
     background: url("http://www.lgart.com/Down/Perf/202312/380x380_1.png") center/100% 100% no-repeat;
     transition-duration: 1s;
     overflow: hidden;
 }
 
-main>a:nth-child(5)>div {
+.sb_p5 {
     background: url(../page_image/5.jpg) center/100% 100% no-repeat;
     transition-duration: 1s;
     overflow: hidden;
 }
 
-main>a:nth-child(6)>div {
+.sb_p6 {
     background: url("http://www.lgart.com/Down/Perf/202403/%EC%A0%95%EC%82%AC%EA%B0%81PC_MO%EA%B3%B5%ED%86%B5_380x380_1.jpg") center/100% 100% no-repeat;
     transition-duration: 1s;
     overflow: hidden;
 }
 
-main>a:nth-child(7)>div {
+.sb_p7 {
     background: url("http://www.lgart.com/Down/Perf/202405/%EB%B2%9A%EA%BD%83%EB%8F%99%EC%82%B0-poster-1080x1080.jpg") center/100% 100% no-repeat;
     transition-duration: 1s;
     overflow: hidden;
 }
 
-main>a:nth-child(8)>div {
+.sb_p8 {
     background: url("http://www.lgart.com/Down/Perf/202404/380_380_ccc2.jpg") center/100% 100% no-repeat;
     transition-duration: 1s;
     overflow: hidden;
 }
 
-main>a:nth-child(9)>div {
+.sb_p9 {
     background: url("http://www.lgart.com/Down/Perf/202404/380-380_1.jpg") center/100% 100% no-repeat;
     transition-duration: 1s;
     overflow: hidden;
 }
 
+<<<<<<< HEAD
 main>a:nth-child(10)>div {
+=======
+.sb_p10 {
+>>>>>>> sb_project
     background: url("http://www.lgart.com/Down/Perf/202402/380_380_ccc_3.jpg") center/100% 100% no-repeat;
     transition-duration: 1s;
     overflow: hidden
 }
 
+<<<<<<< HEAD
 main>a:nth-child(11)>div {
+=======
+.sb_p11 {
+>>>>>>> sb_project
     background: url("http://www.lgart.com/Down/Perf/202312/1218-CB_Main(%EC%A0%95%EB%B0%A9%ED%98%95).jpg") center/100% 100% no-repeat;
     transition-duration: 1s;
     overflow: hidden
 }
 
+<<<<<<< HEAD
 main>a:nth-child(12)>div {
+=======
+.sb_p12 {
+>>>>>>> sb_project
     background: url("http://www.lgart.com/Down/Perf/202312/380x380_5.png") center/100% 100% no-repeat;
     transition-duration: 1s;
     overflow: hidden
 }
 
+<<<<<<< HEAD
 main>a:nth-child(13)>div {
+=======
+.sb_p13 {
+>>>>>>> sb_project
     background: url("http://www.lgart.com/Down/Perf/202312/380x380_6.png") center/100% 100% no-repeat;
     transition-duration: 1s;
     overflow: hidden
 }
 
+<<<<<<< HEAD
 main>a:nth-child(14)>div {
+=======
+.sb_p14 {
+>>>>>>> sb_project
     background: url("http://www.lgart.com/Down/Perf/202401/%EC%83%A4%EC%9E%A0-380X380_%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%EC%9A%A9.jpg") center/100% 100% no-repeat;
     transition-duration: 1s;
     overflow: hidden
 }
 
+<<<<<<< HEAD
 main>a:nth-child(15)>div {
     background: url("http://www.lgart.com/Down/Perf/202312/380x380_8.png");
+=======
+.sb_p15 {
+    background: url("http://www.lgart.com/Down/Perf/202312/380x380_8.png")center/100% 100% no-repeat;
+>>>>>>> sb_project
     transition-duration: 1s;
     overflow: hidden
 }
 
+<<<<<<< HEAD
 main>a:nth-child(16)>div {
     background: url("http://www.lgart.com/Down/Perf/202312/380x380_10.png");
+=======
+.sb_p16 {
+    background: url("http://www.lgart.com/Down/Perf/202312/380x380_10.png")center/100% 100% no-repeat;
+>>>>>>> sb_project
     transition-duration: 1s;
     overflow: hidden
 }
@@ -342,42 +403,77 @@ main a>div:hover {
 
 /* 이미지 밑 글씨 마진 */
 main a>ul {
-    margin: 10px 10px 0px 10px;
+    margin: 20px 10px 0px 10px;
 }
 
 main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: left;
+    display: grid;
+    grid-template: repeat(4, 1fr) / repeat(5, 1fr);
     margin: auto;
-    width: 25rem;
-    box-sizing: border-box;
-    height: 170rem;
+    width: 70rem;
+    height: 90rem;
+    margin-top: 2rem;
+    gap: 1.5rem;
 }
 
-/* 이미지를 포함한 공연 정보 크기 */
-main>a {
-    border: 1px solid black;
-    border-radius: 15px;
-    overflow: hidden;
+main a {
     text-decoration: none;
     color: black;
-    box-sizing: border-box;
-    width: 11.5rem;
-    margin: auto;
-    /* margin: 10px 0px; */
-}
-
-/* 이미지 크기 */
-main>a>div {
-    border-bottom: 1px solid black;
-    height: 15rem;
 }
 
 
+main>div {
+    border: 1px solid;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+main>div div {
+    width: 100%;
+    height: 75%;
+    transition-duration: 1s;
+    overflow: hidden;
+}
 
 
-@media (width >=60rem) {
+@media (width <= 60rem) {
+    main {
+        width: 50rem;
+        height: 105rem;
+        /* grid-template: repeat(4, 1fr) / repeat(5, 1fr); */
+
+    }
+
+    /* main>a {
+        width: 12rem;
+    }
+
+    main>a>div {
+        height: 16rem;
+    } */
+}
+
+
+@media (width <= 100rem) {
+    main {
+        width: 64rem;
+        height: 90rem;
+        grid-template: repeat(4, 1fr) / repeat(4, 1fr);
+
+    }
+
+    /* main>a {
+        width: 11.5rem;
+    }
+
+    main>a>div {
+        height: 15rem;
+    } */
+}
+
+
+
+/* @media (width <= 60rem) {
     main {
         width: 50rem;
         height: 105rem;
@@ -393,7 +489,7 @@ main>a>div {
 }
 
 
-@media (width >=100rem) {
+@media (width <= 100rem) {
     main {
         width: 64rem;
         height: 80rem;
@@ -406,4 +502,4 @@ main>a>div {
     main>a>div {
         height: 15rem;
     }
-}
+} */
