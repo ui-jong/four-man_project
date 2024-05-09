@@ -103,6 +103,13 @@ main .kr_banner {
     padding-bottom: 30px;
 }
 
+.kr_rowbox {
+    display: block;
+    font-size: 0.2rem;
+    height: 30px;
+    content: '&nbsp;';
+}
+
 .kr_saleinfotable {
     height: 50vh;
     margin-top: 10px;
@@ -166,7 +173,7 @@ aside form {
     border-radius: 5%;
     padding: 2%;
     display: grid;
-    height: 350px;
+    height: 355px;
     grid-template: repeat(8, 42px) / repeat(7, 1fr);
 }
 
