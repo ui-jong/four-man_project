@@ -31,7 +31,7 @@ nav>div:first-of-type,
 
 }
 
-.sb_none>ul li:not(:first-of-type)>input>span {
+.sb_none>ul li:not(:first-of-type)>input+label>span {
     cursor: pointer;
 }
 
@@ -90,16 +90,17 @@ nav>div:first-of-type,
 }
 
 /* 검색어 입력 */
-.sb_upper>div>input {
+.sb_upper>div>form>input {
     width: 12rem;
     height: 2rem;
     margin-right: .5rem;
 }
 
 /* 검색버튼 */
-.sb_upper>div>button {
+.sb_upper>div>form>input+button {
     width: 4rem;
     height: 2rem;
+    cursor: pointer;
 }
 
 
@@ -474,12 +475,12 @@ main>div div {
         height: 1rem;
     }
 
-    .sb_upper>div>form>button {
+    .sb_upper>div>form>input+button {
         height: 1rem;
         width: 2rem;
     }
 
-    .sb_upper>div>form>button:after {
+    .sb_upper>div>form>input+button:after {
         font-size: .8rem;
     }
 

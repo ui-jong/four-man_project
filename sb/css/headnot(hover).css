@@ -126,6 +126,7 @@ header>.h_outer>form>button {
     height: 40px;
     transition: width .5s, height .5s;
     outline: none;
+    cursor: pointer;
 }
 
 /* 로그인 사이즈 */
