@@ -260,8 +260,7 @@ main {
     margin-top: 2rem;
     gap: 1.5rem;
     transition: width .5s height .5s;
-    /* min-width: 35rem; */
-    margin-bottom: 500px;
+    padding-bottom: 30px;
 }
 
 main a {

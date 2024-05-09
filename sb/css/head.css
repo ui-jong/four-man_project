@@ -167,33 +167,21 @@ header:hover .h_login::before {
     transition: font-size .5s;
 }
 
-@media (width <=85rem) {
-
+@media (width <=75rem) {
     .h_notice>a,
     .h_introduction>a,
     .h_path>a,
     .h_csc>a,
     .h_tranportation>a {
-        font-size: .8em;
-    }
-}
-
-
-
-@media (width <=75rem) {
-    .h_tranportation>a {
-        font-size: .6em;
+        font-size: .7em;
     }
 }
 
 @media (width <=52rem) {
 
-    .h_notice>a,
-    .h_introduction>a,
-    .h_path>a,
-    .h_csc>a,
+
     .h_tranportation>a {
-        font-size: .4em;
+        font-size: .6em;
     }
 
     .h_logo>a {
@@ -217,16 +205,10 @@ header:hover .h_login::before {
 
 }
 
-@media (width <=35rem) {
+@media (width <=38.75rem) {
     .h_tranportation>a {
-        font-size: .3em;
+        /* font-size: .3em; */
     }
-
-
-}
-
-@media (width <=28rem) {
-
     .h_notice {
         grid-area: 2 / 2 / 3 / 5;
     }
@@ -242,14 +224,12 @@ header:hover .h_login::before {
     .h_tranportation {
         grid-area: 3 / 5 / 4 / 10;
     }
-
-    .h_login>a {
-        /* font-size: 1rem; */
+    .h_notice>a,
+    .h_introduction>a,
+    .h_path>a,
+    .h_csc>a,
+    .h_tranportation>a{
+        font-size: 1rem;
     }
-}
 
-@media(width<=22rem) {
-    .h_csc>a {
-        font-size: .45rem;
-    }
 }

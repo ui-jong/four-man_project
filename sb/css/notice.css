@@ -10,7 +10,7 @@
 /* 전체 그리드 */
 .sb_note {
     display: grid;
-    grid-template: 2fr 8fr 1fr 2fr / 2fr 3fr 2fr;
+    grid-template: 2fr 8fr 1fr / 2fr 3fr 2fr;
     height: 100vh;
 }
 
