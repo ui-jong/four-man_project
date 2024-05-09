@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: 'Pretendard-Regular';
+}
+
+main {
+  background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.ko_signup-form>div>a>img {
+  margin-left: -10px;
+  width: 200px;
+}
+
+.ko_signup-form>h1 {
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.ko_logo {
+  text-align: center;
+}
+
+.ko_signup-form h2 {
+  margin: 20px;
+  text-align: center;
+}
+
+.ko_signup-form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 25px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.ko_signup-form input {
+  width: 93%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.ko_emailinput {
+  display: flex;
+
+  div {
+      p {
+          line-height: 40px;
+      }
+  }
+}
+
+.ko_emailinput>div {
+  margin-right: 20px;
+}
+
+
+.ko_signup-form button {
+  margin-top: 10px;
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.ko_signup-form button:hover {
+  background-color: #0056b3;
+}
+
+.ko_signup-form>a {
+  display: block;
+  margin-top: 10px;
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 95%;
+  text-align: center;
+  text-decoration: none;
+}
+
+.ko_signup-form>a:hover {
+  background-color: #0056b3;
+}
+
+.ko_signup-form>.ko_flex {
+  display: flex;
+  gap: 6px;
+}
+
+.ko_signup-form>.ko_login>a {
+  margin: auto;
+  width: 30%;
+  display: block;
+  color: black;
+  margin-top: 10px;
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+
+.ko_signup-form>.ko_login>a:hover {
+  color: lightgray;
+}
+
+.ko_signup-form>.ko_flex>a {
+  display: block;
+  color: black;
+  margin-top: 10px;
+  padding: 10px;
+  cursor: pointer;
+  width: 95%;
+  text-align: center;
+  text-decoration: none;
+}
+
+.ko_signup-form>.ko_flex>a:hover {
+  color: lightgray;
+}
+
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
