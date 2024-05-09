@@ -166,8 +166,17 @@ aside form {
     border-radius: 5%;
     padding: 2%;
     display: grid;
-    height: 300px;
-    grid-template: repeat(7, 42px) / repeat(7, 1fr);
+    height: 350px;
+    grid-template: repeat(8, 42px) / repeat(7, 1fr);
+}
+
+.kr_mounth {
+    grid-column: 1 / 8;
+    text-align: center;
+    place-content: center;
+    background-color: antiquewhite;
+    /* background-image: url(../kr_image/); */
+    border-radius: 10px;
 }
 
 .kr_date {
@@ -216,9 +225,8 @@ input[id*="kr_date"]:checked+label,
 
 .kr_reservation {
     transition: all 0.2s ease;
-    grid-area: 7 / 1 / 8/ -1;
+    grid-area: 8 / 1 / 9/ -1;
     font-weight: bold;
-
     button {
         margin-top: 10px;
         border-radius: 15px;
