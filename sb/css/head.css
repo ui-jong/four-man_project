@@ -28,8 +28,8 @@
 
 header {
     display: grid;
-    grid-template: 1fr .5fr .5fr / 2fr repeat(6, 1fr);
-    height: 15vh;
+    grid-template: 1fr .5fr .5fr / 2fr repeat(8, .5fr) 1fr 1fr;
+    height: 11.8rem;
     width: calc(100vw - 19px);
     z-index: 3;
 }
@@ -56,32 +56,32 @@ header>.h_outer {
 }
 
 .h_outer {
-    grid-area: 1 / 2 / 2 / 7;
+    grid-area: 1 / 2 / 2 / 10;
 }
 
 .h_notice {
-    grid-area: 2 / 2 / 4 / 3;
+    grid-area: 2 / 2 / 4 / 4;
 }
 
 .h_introduction {
-    grid-area: 2 / 3 / 4 / 4;
+    grid-area: 2 / 4 / 4 / 6;
     transition: grid-area .5s;
 }
 
 .h_path {
-    grid-area: 2 / 4 / 4 / 5;
+    grid-area: 2 / 6 / 4 / 8;
 }
 
 .h_login {
-    grid-area: 1 / 7 / 4 / 8;
+    grid-area: 1 / 11 / 4 / 12;
 }
 
 .h_tranportation {
-    grid-area: 2 / 5 / 4 / 6;
+    grid-area: 2 / 8 / 4 / 10;
 }
 
 .h_csc {
-    grid-area: 2 / 6 / 4 / 7;
+    grid-area: 2 / 10 / 4 / 11;
 }
 
 .h_logo>a {
@@ -111,23 +111,23 @@ header>.h_outer {
 
 /* 검색창 사이즈 */
 .h_outer>form>input {
-    width: 200px;
-    height: 23px;
+    width: 300px;
+    height: 40px;
     transition: width .5s, height .5s;
 }
 
 /* 검색창버튼 사이즈 */
 header>.h_outer>form>button {
-    width: 30px;
+    width: 50px;
     border-radius: 20px;
-    height: 23px;
+    height: 40px;
     transition: width .5s, height .5s;
     outline: none;
 }
 
 /* 로그인 사이즈 */
 .h_login>a {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     transition: font-size .5s;
 }
 
@@ -204,7 +204,7 @@ header:hover .h_login::before {
     }
 
     .h_outer>form>input {
-        width: 100px;
+        width: 150px;
         height: 15px;
         font-size: .5rem;
     }
@@ -216,28 +216,31 @@ header:hover .h_login::before {
     .h_tranportation>a {
         font-size: .3em;
     }
+    .h_login>a {
+        font-size: 1rem;
+    }
 }
 
 @media (width <=28rem) {
 
     .h_notice {
-        grid-area: 2 / 2 / 3 / 4;
+        grid-area: 2 / 2 / 3 / 5;
     }
 
     .h_introduction {
-        grid-area: 3 / 2 / 4 / 4;
+        grid-area: 3 / 2 / 4 / 5;
     }
 
     .h_path {
-        grid-area: 2 / 4 / 3 / 6;
+        grid-area: 2 / 5 / 3 / 10;
     }
 
     .h_tranportation {
-        grid-area: 3 / 4 / 4 / 6;
+        grid-area: 3 / 5 / 4 / 10;
     }
 
     .h_login>a {
-        font-size: 1rem;
+        /* font-size: 1rem; */
     }
 }
 

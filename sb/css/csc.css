@@ -5,11 +5,7 @@
 
 /* 전체 그리드 */
 .sb_grid {
-    /* display: grid; */
-    /* grid-template: 1fr 7fr / 1fr 3fr 1fr; */
-    /* height: 100vh; */
     margin: auto;
-    /* aspect-ratio: 1/1; */
 }
 
 /* 고객센터 가운데정렬 */
@@ -17,13 +13,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.sb_check>label {
-    /* margin: auto; */
-    /* text-align: center; */
-    /* display: flex; */
-    /* flex-direction: column; */
 }
 
 .sb_position1 {
@@ -77,13 +66,7 @@
 
 /* ==================================================== */
 /* 스타일 */
-.flex>div {
-    /* border-bottom: 1px solid; */
-}
 
-.sb_width {
-    /* width: 50px; */
-}
 
 /* 안보이게 막는거 */
 .sb_11,
