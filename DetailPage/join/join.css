@@ -47,7 +47,7 @@ main {
 }
 
 .kr_signup-form input {
-    width: 90%;
+    width: 93%;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
@@ -56,6 +56,12 @@ main {
 
 .kr_emailinput {
     display: flex;
+
+    div {
+        p {
+            line-height: 40px;
+        }
+    }
 }
 
 .kr_emailinput>div {
