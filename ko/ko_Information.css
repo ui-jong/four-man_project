@@ -31,8 +31,18 @@ main h1 {
     margin: auto;
     width: 80vw;
   }  
+/* 
+@media screen and (width < 985px) {
+    aside {
+      display: flex;
+      flex-direction: row;
+    }
+} */
+
   aside {
     margin: 0;
+    /* gap: 10px */
+  ;
     h2{
       margin: 14px;
     }
@@ -85,11 +95,12 @@ main h1 {
   }
 }
 
-/* .ko_subway,
-.ko_bus{
-  border: 1px solid black;
-} */
-
 .ko_right {
   flex: 1;
+}
+
+@media screen and (width < 1077px) {
+  aside {
+    flex-direction: column;
+  }
 }
