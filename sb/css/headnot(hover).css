@@ -195,9 +195,6 @@ header>div {
 }
 
 @media (width <=38.75rem) {
-<<<<<<< HEAD
-    
-=======
     header{
         grid-template-columns: repeat(8, .5fr) 1fr 1fr!important;
     }
@@ -207,7 +204,6 @@ header>div {
     .h_logo>a{
         display: none!important;
     }
->>>>>>> sb_project
     .h_notice {
         grid-area: 2 / 1 / 3 / 4;
     }
